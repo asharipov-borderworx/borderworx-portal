@@ -1,0 +1,114 @@
+[
+  {
+    "id": "warehousing",
+    "title": "Warehousing",
+    "description": "Secure, climate-controlled warehouse facilities with advanced inventory management systems. Our strategic locations ensure optimal storage and quick access to your goods.",
+    "features": [
+      "Climate-controlled storage",
+      "Real-time inventory tracking",
+      "Security surveillance 24/7",
+      "Flexible storage solutions"
+    ],
+    "imageUrl": "/images/services/warehousing.jpg",
+    "imageAlt": "Modern warehouse facility with organized storage systems",
+    "detailsLink": "/services/warehousing"
+  },
+  {
+    "id": "warehousing-distribution",
+    "title": "Warehousing & Distribution",
+    "description": "Complete end-to-end warehousing and distribution services that streamline your supply chain from storage to final delivery.",
+    "features": [
+      "Order fulfillment",
+      "Pick, pack, and ship services",
+      "Multi-channel distribution",
+      "Last-mile delivery coordination"
+    ],
+    "imageUrl": "/images/services/warehousingAndDistribution.png",
+    "imageAlt": "Distribution center with workers managing order fulfillment",
+    "detailsLink": "/services/warehousing-distribution"
+  },
+  {
+    "id": "customs-brokerage",
+    "title": "Customs Brokerage – Canada & USA",
+    "description": "Expert customs clearance services for seamless cross-border trade between Canada and the United States. Navigate complex regulations with confidence.",
+    "features": [
+      "CBSA and CBP compliance",
+      "Duty and tax optimization",
+      "Document preparation",
+      "Expedited clearance"
+    ],
+    "imageUrl": "/images/services/customsBrokerage.png",
+    "imageAlt": "Customs clearance documentation and border crossing",
+    "detailsLink": "/services/customs-brokerage"
+  },
+  {
+    "id": "trade-compliance",
+    "title": "Trade Compliance Consulting",
+    "description": "Strategic consulting to ensure your business remains compliant with evolving international trade regulations and maximize duty savings opportunities.",
+    "features": [
+      "Regulatory compliance audit",
+      "Tariff classification",
+      "Free trade agreement utilization",
+      "Risk assessment and mitigation"
+    ],
+    "imageUrl": "/images/services/tradeCompliance.png",
+    "imageAlt": "Business professionals reviewing trade compliance documents",
+    "detailsLink": "/services/trade-compliance"
+  },
+  {
+    "id": "section-321",
+    "title": "Section 321 Fulfillment Canada",
+    "description": "Specialized fulfillment services leveraging Section 321 de minimis provisions for duty-free shipments under $800 USD to the United States.",
+    "features": [
+      "Duty-free shipments under $800",
+      "Cross-border e-commerce",
+      "Expedited processing",
+      "Cost-effective solutions"
+    ],
+    "imageUrl": "/images/services/Section321.png",
+    "imageAlt": "Cross-border shipping packages for e-commerce fulfillment",
+    "detailsLink": "/services/section-321"
+  },
+  {
+    "id": "amazon-fbm",
+    "title": "Amazon FBM Fulfillment",
+    "description": "Professional Fulfillment by Merchant (FBM) services to help Amazon sellers manage inventory, orders, and shipping without using Amazon warehouses.",
+    "features": [
+      "FBM order processing",
+      "Amazon seller integration",
+      "Prime-eligible shipping",
+      "Inventory management"
+    ],
+    "imageUrl": "/images/services/AmazonFBMFullfilment.png",
+    "imageAlt": "Amazon FBM fulfillment center with package processing",
+    "detailsLink": "/services/amazon-fbm"
+  },
+  {
+    "id": "container-freight",
+    "title": "Container Freight Station (CFS) Shipping Services",
+    "description": "Comprehensive CFS services for consolidation, deconsolidation, and handling of Less than Container Load (LCL) shipments with efficient cargo processing.",
+    "features": [
+      "LCL consolidation/deconsolidation",
+      "Cargo inspection and sorting",
+      "Container loading/unloading",
+      "Documentation and tracking"
+    ],
+    "imageUrl": "/images/services/cfsShipping.png",
+    "imageAlt": "Container freight station with cargo handling operations",
+    "detailsLink": "/services/cfs-shipping"
+  },
+  {
+    "id": "fba-prep",
+    "title": "Fulfillment by Amazon (FBA) Prepping Services",
+    "description": "Complete FBA preparation services ensuring your products meet Amazon's strict requirements for labeling, packaging, and shipping to FBA centers.",
+    "features": [
+      "FBA labeling and prep",
+      "Quality inspection",
+      "Packaging compliance",
+      "Direct shipment to Amazon"
+    ],
+    "imageUrl": "/images/services/amazonFBAPrepping.png",
+    "imageAlt": "FBA preparation facility with product labeling and packaging",
+    "detailsLink": "/services/amazon-fba-prep"
+  }
+]

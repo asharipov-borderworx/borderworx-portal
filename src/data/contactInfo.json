@@ -1,0 +1,61 @@
+{
+  "company": {
+    "name": "BorderWorx Logistics",
+    "tagline": "Global Freight & Supply Chain Solutions",
+    "description": "Professional logistics and freight forwarding services. We deliver your goods safely and efficiently worldwide with our comprehensive supply chain solutions."
+  },
+  "contact": {
+    "email": {
+      "primary": "mail@borderworx.com"
+    },
+    "address": {
+      "Canada": {
+        "street": "6060 Burnside Court Unit 3",
+        "city": "Mississauga",
+        "state": "Ontario",
+        "zipCode": "L5T 2T5",
+        "country": "Canada",
+        "full": "6060 Burnside Court Unit 3, Mississauga, Ontario L5T 2T5 Canada",
+        "phone": "+1 (905)-877-6036",
+        "fax": "+1 (877)-329-2995",
+        "email": "mail@borderworx.com"
+      },
+      "USA": {
+        "street": "6405 Inducon Drive West",
+        "city": "Sanborn",
+        "state": "New York",
+        "zipCode": "14132",
+        "country": "USA",
+        "full": "6405 Inducon Drive West, Sanborn, New York 14132",
+        "phone": "+1 (716)-216-6714",
+        "fax": "+1 (877)-342-6339",
+        "email": "mail@borderworx.com"
+      }
+    }
+  },
+  "businessHours": {
+    "weekdays": "Mon–Sun",
+    "hours": "24 hours",
+    "timezone": "EST",
+    "support": "24/7 support available for urgent needs"
+  },
+  "social": {
+    "linkedin": "https://www.linkedin.com/company/borderworx-logistics-llc/",
+    "twitter": "#",
+    "facebook": "#"
+  },
+  "emergency": {
+    "phone": "+1 (905) 877-6036",
+    "email": "emergency@borderworx.com",
+    "description": "24/7 Emergency Support"
+  },
+  "calendly": {
+    "url": "https://calendly.com/arthur-maratovich-dev/30min",
+    "prefill": {
+      "email": "sharipov@sheridancollege.ca",
+      "firstName": "",
+      "lastName": "",
+      "name": ""
+    }
+  }
+}
