@@ -17,7 +17,6 @@ export default function WarehousingPage() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
 
       {/* Hero Section */}
       <HeroSection
@@ -301,7 +300,7 @@ export default function WarehousingPage() {
         </section>
       </main>
 
-      <Footer />
+      
       <Chatbot />
     </div>
   )

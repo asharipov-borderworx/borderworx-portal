@@ -1,4 +1,3 @@
-import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import QuoteFormWizard from '@/components/QuoteFormWizard'
 import QuoteSlideshow from '@/components/QuoteSlideshow'
@@ -34,7 +33,6 @@ export default function QuotePage() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
       {HeroSection()}
       {/* Quote form */}
       <main className="flex-grow">
@@ -73,7 +71,7 @@ export default function QuotePage() {
         </section>
       </main>
 
-      <Footer />
+      
     </div>
   )
 }

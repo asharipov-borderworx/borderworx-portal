@@ -116,7 +116,6 @@ export default function Section321Page() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
       
       {/* Hero Section */}
       <HeroSection 
@@ -355,7 +354,7 @@ export default function Section321Page() {
         </section>
       </main>
       
-      <Footer />
+      
       <Chatbot />
     </div>
   )

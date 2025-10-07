@@ -145,7 +145,6 @@ export default function AmazonFBMPage() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
       
       {/* Hero Section */}
       <HeroSection 
@@ -414,7 +413,7 @@ export default function AmazonFBMPage() {
         </section>
       </main>
       
-      <Footer />
+      
       <Chatbot />
     </div>
   )

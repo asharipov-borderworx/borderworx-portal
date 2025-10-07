@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import BlogImage from '@/components/BlogImage'
-import Header from '@/components/Header'
+import { blogPosts } from '@/data/blogPosts'
 
 export const metadata: Metadata = {
     title: 'Blog - BorderWorx Logistics',
@@ -9,36 +9,10 @@ export const metadata: Metadata = {
 }
 
 // Blog post data structure
-interface BlogPost {
-    id: string
-    title: string
-    excerpt: string
-    author: string
-    date: string
-    readTime: string
-    image: string
-    category: string
-    slug: string
-}
-
-// Sample blog posts data
-const blogPosts: BlogPost[] = [
-    {
-        id: '1',
-        title: 'CEO Insights: Canadian Businesses Moving Operations to the US',
-        excerpt: 'Our CEO discusses the growing trend of Canadian businesses relocating their operations to the United States, exploring the logistics challenges and opportunities this presents.',
-        author: 'BorderWorx Team',
-        date: '2024-01-15',
-        readTime: '5 min read',
-        image: '/images/blog/ceo-insights.png',
-        category: 'Industry Insights',
-        slug: 'ceo-insights-canadian-businesses-moving-to-us'
-    },
-    // Add more blog posts here as needed
-]
+// Using centralized data module
 function HeroSection() {
     return (
-              <section className="relative bg-gradient-to-r from-primary to-orange-600 text-white pt-72 overflow-hidden">
+              <section className="relative bg-gradient-to-r from-primary to-orange-600 text-white pt-48 overflow-hidden">
               {/* Background Image */}
               <div className="absolute inset-0 z-0">
                 <img
@@ -65,7 +39,6 @@ function HeroSection() {
 export default function BlogPage() {
     return (
         <>
-            <Header />
             {HeroSection()}
             <div className="min-h-screen bg-gray-50">
 
@@ -79,7 +52,7 @@ export default function BlogPage() {
                                 <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                                     <div className="md:flex">
                                         <div className="md:w-1/2">
-                                            <div className="relative h-64 md:h-full">
+                                            <div className="relative h-64 md:h-full bg-gray-100">
                                                 <BlogImage
                                                     src="/images/blog/ceo-insights.png"
                                                     alt="CEO discussing business migration"
@@ -93,7 +66,7 @@ export default function BlogPage() {
                                                 <span className="px-3 py-1 bg-primary text-white text-sm font-medium rounded-full">
                                                     Industry Insights
                                                 </span>
-                                                <span className="text-gray-500 text-sm">5 min read</span>
+                                                
                                             </div>
                                             <h3 className="text-2xl font-bold text-secondary mb-4">
                                                 CEO Insights: Canadian Businesses Moving Operations to the US
@@ -129,20 +102,19 @@ export default function BlogPage() {
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                                     {blogPosts.map((post) => (
                                         <article key={post.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                                            <div className="relative h-48">
+                                            <div className="relative h-48 bg-white">
                                                 <BlogImage
-                                                    src={post.image}
+                                                    src={post.thumbnail || '/images/logo.png'}
                                                     alt={post.title}
                                                     fill
-                                                    className="object-cover"
+                                                    className={post.thumbnail ? 'object-cover' : 'object-contain p-6'}
                                                 />
                                             </div>
-                                            <div className="p-6">
+                                            <div className="p-6 flex flex-col flex-1">
                                                 <div className="flex items-center gap-2 mb-3">
                                                     <span className="px-3 py-1 bg-primary text-white text-sm font-medium rounded-full">
                                                         {post.category}
                                                     </span>
-                                                    <span className="text-gray-500 text-sm">{post.readTime}</span>
                                                 </div>
                                                 <h3 className="text-xl font-bold text-secondary mb-3 line-clamp-2">
                                                     {post.title}
@@ -150,7 +122,7 @@ export default function BlogPage() {
                                                 <p className="text-gray-600 mb-4 line-clamp-3">
                                                     {post.excerpt}
                                                 </p>
-                                                <div className="flex items-center justify-between">
+                                                <div className="flex items-center justify-between mt-auto pt-2">
                                                     <div className="flex items-center gap-2">
                                                         <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
                                                             <span className="text-white font-bold text-xs">BW</span>

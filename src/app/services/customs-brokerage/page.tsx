@@ -123,7 +123,6 @@ export default function CustomsBrokeragePage() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
       
       {/* Hero Section */}
       <HeroSection 
@@ -311,12 +310,12 @@ export default function CustomsBrokeragePage() {
         {/* Benefits Section */}
         <section className="section-padding bg-white">
           <div className="container-max">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="flex flex-row justify-center gap-12 items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-8">
                   Why Choose Our Customs Brokerage Services?
                 </h2>
-                <div className="space-y-6">
+                <div className="space-y-6 flex flex-col items-center">
                   <div className="flex items-start">
                     <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -356,45 +355,7 @@ export default function CustomsBrokeragePage() {
                 </div>
               </div>
               
-              <div className="bg-gradient-to-br from-primary to-orange-600 p-8 rounded-xl text-white">
-                <h3 className="text-2xl font-bold mb-6">Ready to Streamline Your Customs Process?</h3>
-                <p className="text-orange-100 mb-6 leading-relaxed">
-                  Let our customs brokerage experts handle the complexities while you focus on growing your business. 
-                  Get started with our comprehensive cross-border trade solutions today.
-                </p>
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
-                    </svg>
-                    Expert tariff classification
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
-                    </svg>
-                    Duty optimization strategies
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
-                    </svg>
-                    Proactive compliance management
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
-                    </svg>
-                    Electronic processing systems
-                  </li>
-                </ul>
-                <Link
-                  href="#contact"
-                  className="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 inline-block"
-                >
-                  Get Expert Consultation
-                </Link>
-              </div>
+              
             </div>
           </div>
         </section>
@@ -413,15 +374,12 @@ export default function CustomsBrokeragePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 
-                <a 
-                  href={`mailto:${contactInfo.contact.email.primary}`}
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-all duration-300 inline-flex items-center justify-center"
-                >
+                <Link href="/quote" className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 inline-flex items-center justify-center">
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                   </svg>
                   Get a Quote
-                </a>
+                </Link>
                 <Link 
                   href="/services"
                   className="border-2 border-orange-200 text-orange-100 px-8 py-4 rounded-lg font-semibold hover:bg-orange-200 hover:text-primary transition-all duration-300 inline-flex items-center justify-center"
@@ -437,7 +395,7 @@ export default function CustomsBrokeragePage() {
         </section>
       </main>
       
-      <Footer />
+      
       <Chatbot />
     </div>
   )

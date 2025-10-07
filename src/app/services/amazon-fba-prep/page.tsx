@@ -80,7 +80,6 @@ export default function AmazonFBAPrepPage() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
       <HeroSection
         title="Fulfillment by Amazon (FBA) Prep Center"
         description="Simplifying Your Amazon FBA Preparation Process"
@@ -156,14 +155,14 @@ export default function AmazonFBAPrepPage() {
               {processSteps.map((step, index) => (
                 <div key={index} className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12`}>
                   {/* Image */}
-                  <div className="lg:w-1/2">
-                    <div className="relative h-80 rounded-xl overflow-hidden shadow-lg">
+                  <div className="lg:w-1/2 w-full">
+                    <div className="relative w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-xl overflow-hidden shadow-lg">
                       <Image
                         src={step.image}
                         alt={step.imageAlt}
                         fill
                         className="object-cover"
-                        sizes="(max-width: 768px) 100vw, 50vw"
+                        sizes="100vw"
                       />
                     </div>
                   </div>
@@ -215,7 +214,7 @@ export default function AmazonFBAPrepPage() {
         </section>
       </main>
 
-      <Footer />
+      
     </div>
   )
 }

@@ -16,10 +16,9 @@ export default function ServicesPage() {
   const services = getServiceInfo()
   return (
     <div className="min-h-screen">
-      <Header />
       
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-r from-primary to-orange-600 text-white pt-60  overflow-hidden">
+        <section className="relative bg-gradient-to-r from-primary to-orange-600 text-white pt-48 overflow-hidden">
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <img
@@ -73,24 +72,18 @@ export default function ServicesPage() {
             Get in touch with our logistics experts to discuss your specific needs 
             and discover how we can streamline your supply chain operations.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-row sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
               className="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 transition-colors duration-300"
             >
               Get Free Consultation
             </Link>
-            <Link
-              href="tel:+19058776036"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-secondary transition-all duration-300"
-            >
-              Call: +1 (905) 877-6036
-            </Link>
           </div>
         </div>
       </section>
 
-      <Footer />
+      
       <Chatbot />
     </div>
   )

@@ -128,7 +128,6 @@ export default function WarehousingDistributionPage() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
     
       <HeroSection 
         title="Warehousing and Distribution Solutions for Every Business" 
@@ -411,7 +410,7 @@ export default function WarehousingDistributionPage() {
         </section>
       </main>
       
-      <Footer />
+      
       <Chatbot />
     </div>
   )

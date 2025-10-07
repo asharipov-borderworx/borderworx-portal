@@ -132,7 +132,6 @@ export default function TradeCompliancePage() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
       
       {/* Hero Section */}
       <HeroSection 
@@ -355,7 +354,7 @@ export default function TradeCompliancePage() {
         </section>
       </main>
       
-      <Footer />
+      
       <Chatbot />
     </div>
   )
