@@ -98,7 +98,7 @@ export default function ProfessionalServices() {
                     View Our Services
                   </a>
                   <a
-                    href="#contact"
+                    href="/contact"
                     className="border-2 border-orange-500 text-orange-400 px-6 py-3 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 text-center"
                   >
                     Get Started Today

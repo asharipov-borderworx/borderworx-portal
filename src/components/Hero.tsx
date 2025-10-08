@@ -65,7 +65,8 @@ export default function Hero() {
               <p className="mb-2">Your Trusted Partner for</p>
               <TypingAnimation 
                 words={['Warehousing', 'Transportation', 'Customs Brokerage', 'Trade Compliance', 'Fulfillment Services']}
-                className="text-2xl md:text-3xl font-semibold text-black"
+                finalText="One stop shop for 3PL"
+                className="text-2xl md:text-4xl font-bold text-orange-100"
               />
             </motion.div>
             <motion.div 
@@ -73,13 +74,13 @@ export default function Hero() {
               variants={itemVariants}
             >
               <Link
-                href="#contact"
+                href="/contact"
                 className="bg-black text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-900 transition-colors duration-300 text-center shadow-lg"
               >
                 Get Started
               </Link>
               <Link
-                href="#services"
+                href="/services"
                 className="border-2 border-black text-black px-8 py-4 rounded-lg font-semibold hover:bg-black hover:text-white transition-all duration-300 text-center"
               >
                 Our Services
@@ -94,7 +95,7 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.5, ease: [0.25, 0.4, 0.25, 1] as const }}
           >
-            <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-8 border border-black/20">
+            <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-8 border-2 border-black/100">
               <motion.div 
                 className="grid grid-cols-2 gap-6"
                 initial="hidden"
@@ -148,7 +149,7 @@ export default function Hero() {
             <motion.div 
               className="absolute -top-4 -right-4 w-20 h-20 bg-white bg-opacity-20 rounded-full"
               animate={{ 
-                scale: [1, 1.2, 1],
+                scale: [1, 1.1, 1],
                 opacity: [0.5, 0.8, 0.5]
               }}
               transition={{ 
@@ -164,7 +165,7 @@ export default function Hero() {
                 opacity: [0.3, 0.6, 0.3]
               }}
               transition={{ 
-                duration: 2.5,
+                duration: 2,
                 repeat: Infinity,
                 ease: "easeInOut",
                 delay: 0.5

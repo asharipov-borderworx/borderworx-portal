@@ -21,8 +21,6 @@ export interface ContactInfo {
   }
   social: {
     linkedin: string
-    twitter: string
-    facebook: string
   }
   emergency: {
     phone: string
