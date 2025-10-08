@@ -38,7 +38,7 @@ export default function Header() {
   ]
 
   return (
-    <header className="fixed w-full top-0 z-50 bg-white shadow-md h-20">
+    <header className="fixed w-full top-0 z-50 h-20 shadow-md bg-white">
         <nav className="container-max px-4 sm:px-6 lg:px-8 h-full">
         <div className="h-full flex items-center justify-between">
           {/* Logo */}
@@ -214,7 +214,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4">
+          <div className="md:hidden mt-4 pb-4 bg-white border-t border-gray-100 shadow-md">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigation.map((item) => (
                 <Link

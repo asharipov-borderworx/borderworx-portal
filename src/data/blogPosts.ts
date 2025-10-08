@@ -1857,6 +1857,471 @@ export const blogPosts: BlogPostItem[] = [
       },
     ],
   },
+  {
+    id: '25',
+    slug: 'why-us-businesses-should-expand-to-amazon-canada',
+    title: 'Why US Businesses Should Expand to Amazon Canada',
+    author: 'BorderWorx Team',
+    date: '2024-04-23',
+    category: 'Amazon FBA',
+    excerpt:
+      'Opportunities and strategies for US brands expanding to Amazon Canada: market potential, similarities, USMCA, logistics, pricing, and localization.',
+    thumbnail: '/images/blog/amazon-FBA.png',
+    tags: ['Amazon Canada', 'Expansion', 'USMCA', 'E-commerce'],
+    blocks: [
+      {
+        type: 'text',
+        content:
+          'Expanding a U.S.-based business to Amazon Canada can provide numerous opportunities for growth and increased revenue. Here are reasons why—and strategies for how—a U.S. business might successfully make this move.',
+      },
+      { type: 'heading', level: 3, text: 'Market Potential' },
+      {
+        type: 'text',
+        content:
+          'Canada is a lucrative market with strong online-shopping adoption. Amazon.ca is a top e-commerce platform, offering broad reach and a critical gateway for U.S. businesses seeking Canadian consumers.',
+      },
+      { type: 'heading', level: 3, text: 'Cultural and Economic Similarities' },
+      {
+        type: 'text',
+        content:
+          'Shared language, similar consumer behavior, and aligned tastes reduce localization needs and risk—often enabling existing US assortments to translate well with minimal changes.',
+      },
+      { type: 'heading', level: 3, text: 'Legal and Trade Agreements' },
+      {
+        type: 'text',
+        content:
+          'USMCA (which replaced NAFTA) improves trade by reducing tariffs and simplifying import/export procedures between the US, Canada, and Mexico—lowering barriers and easing cross-border logistics.',
+      },
+      { type: 'heading', level: 3, text: 'Strategies for Successful Expansion' },
+      {
+        type: 'list',
+        items: [
+          'Understand Canadian Regulations: Taxes, consumer protection, labeling, and digital-product rules. Quebec requires bilingual packaging and French support.',
+          'Localize When Needed: Adjust packaging, sizing, or messaging where regional preferences or regulations differ.',
+          'Use FBA or a 3PL: Offload storage, packing, shipping, and returns to Amazon FBA or a reliable 3PL to reduce operational friction.',
+          'Optimize for Local SEO and Marketing: Tune keywords to Canadian search patterns and leverage local promos (e.g., Boxing Day).',
+          'Manage Currency and Pricing: Price competitively in CAD, considering exchange rates, duties, and local purchasing power.',
+          'Cultivate Local Partnerships: Tap local expertise to refine assortment and operations for Canadian demand.',
+        ],
+      },
+      { type: 'heading', level: 3, text: 'Conclusion' },
+      {
+        type: 'text',
+        content:
+          'Amazon Canada offers US businesses a familiar, stable market with fewer barriers thanks to USMCA and cultural alignment. With the right regulatory prep, fulfillment strategy, and localized marketing, brands can grow efficiently across the border.',
+      },
+      {
+        type: 'text',
+        content:
+          'If you are looking for a Canadian 3PL to handle Amazon FBM or an FBA prep center, look no further than Borderworx!',
+      },
+    ],
+  },
+  {
+    id: '24',
+    slug: 'the-art-of-handling-fba-returns-a-guide-for-amazon-sellers',
+    title: 'The Art of Handling FBA Returns: A Guide for Amazon Sellers',
+    author: 'BorderWorx Team',
+    date: '2024-05-10',
+    category: 'Amazon FBA',
+    excerpt:
+      'Understand common FBA return reasons, use Amazon’s return tools, protect seller metrics, and know when third-party shipping can help.',
+    thumbnail: '/images/blog/handling-fba-returns.png',
+    tags: ['Amazon FBA', 'Returns', 'ODR', 'Safe-T Claims', 'Logistics'],
+    blocks: [
+      {
+        type: 'text',
+        content:
+          'Returns are an inevitable part of selling on Amazon, even with Fulfillment by Amazon (FBA) handling the logistics. As a seller, understanding the process, anticipating common return reasons, and staying on top of your seller metrics is crucial for a successful business.',
+      },
+      { type: 'heading', level: 3, text: 'Why Customers Return FBA Items' },
+      {
+        type: 'text',
+        content:
+          'Amazon offers a generous return policy, which leads to several reasons why buyers return products:',
+      },
+      {
+        type: 'list',
+        items: [
+          '“No longer needed/wanted”: Impulse buys or changing one’s mind.',
+          '“Wrong size/color”: Inaccurate product descriptions or the customer misjudging their needs.',
+          '“Defective/not as described”: The item arrives damaged or doesn’t match the listing.',
+          '“Arrived too late”: Missed special events or the buyer found an alternative.',
+          '“Accidental order”: Mistakes during the purchase process.',
+        ],
+      },
+      { type: 'heading', level: 3, text: 'Anticipating Returns' },
+      {
+        type: 'list',
+        items: [
+          'Crystal-clear product listings: Accurate descriptions, high-quality images, and all relevant details.',
+          'Excellent customer service: Prompt answers and proactive resolution to avoid returns.',
+          'Competitive pricing: Avoid inflated prices that drive buyer’s remorse.',
+        ],
+      },
+      { type: 'heading', level: 3, text: 'Amazon’s Tools for Return Management' },
+      {
+        type: 'list',
+        items: [
+          'Returns Reports: Track return rates and reasons to find and fix issues.',
+          'Automated Returns Authorizations: Rules to auto-approve certain returns and save time.',
+          'Refund at First Scan: Issue refunds as soon as Amazon scans a return.',
+          'Safe-T Claims: Request reimbursement if Amazon damages or loses inventory.',
+        ],
+      },
+      { type: 'heading', level: 3, text: 'Impact on Your Seller Rating' },
+      {
+        type: 'text',
+        content:
+          'Excessive returns can increase your Order Defect Rate (ODR)—a critical seller-health metric. High ODRs risk account action, including suspension. Reducing avoidable returns protects your account.',
+      },
+      { type: 'heading', level: 3, text: 'Making Use of 3rd Party Shipping for Returns' },
+      {
+        type: 'text',
+        content:
+          'While Amazon handles FBA returns, there are cases where third-party shipping (e.g., Borderworx) makes sense:',
+      },
+      {
+        type: 'list',
+        items: [
+          'International Returns: Specialists can navigate customs and offer lower rates.',
+          'Bulky/Oversized Items: Third-party rates based on weight/dimensions can be cheaper than FBA options.',
+          'Consolidating Returns: Combine items before sending back to FBA to cut costs.',
+          'Customer Preference: Offer a third-party option alongside FBA for convenience or savings.',
+        ],
+      },
+      { type: 'heading', level: 3, text: 'Important Considerations' },
+      {
+        type: 'list',
+        items: [
+          'Cost Comparison: Compare FBA fees vs third-party shipping on a case-by-case basis.',
+          'Labeling: Provide clear instructions and labels to avoid confusion and extra fees.',
+          'Tracking: Track every return to confirm status and proper processing by Amazon.',
+        ],
+      },
+      { type: 'heading', level: 3, text: 'The Takeaway' },
+      {
+        type: 'text',
+        content:
+          'Returns are normal on Amazon, even with FBA. Understand the reasons, use Amazon’s tools, leverage third-party shipping strategically, and protect your seller metrics to manage returns effectively. If you are looking for a third-party shipping service to handle your Amazon orders, please reach out!',
+      },
+    ],
+  },
+  {
+    id: '26',
+    slug: 'how-to-import-inventory-to-canada-from-the-usa-utilizing-foreign-trade-zones',
+    title: 'How to Import Inventory to Canada from the USA: Utilizing Foreign Trade Zones',
+    author: 'BorderWorx Team',
+    date: '2024-04-26',
+    category: 'Resources',
+    excerpt:
+      'Use Foreign Trade Zones to defer/reduce duties and streamline imports from the USA to Canada. Learn the steps, benefits, and implementation tips.',
+    thumbnail: '/images/blog/utilzing-foreign-trades-zones.png',
+    tags: ['FTZ', 'Imports', 'Canada', 'Trade Compliance'],
+    blocks: [
+      {
+        type: 'text',
+        content:
+          'When importing inventory from the USA to Canada, businesses must navigate a complex web of regulations, duties, and logistics. Successfully managing these elements is crucial for minimizing costs and risks. One effective strategy is utilizing Foreign Trade Zones (FTZs), which can significantly reduce the duties paid and streamline the import process.',
+      },
+      { type: 'heading', level: 3, text: 'Understanding the Import Process' },
+      {
+        type: 'text',
+        content:
+          'The process of importing goods into Canada from the USA involves several key steps. First, determine eligibility and tariff classification—this drives the duties and taxes due at entry. Ensure all paperwork (commercial invoices, certificates of origin, cargo control documents) is complete and accurate to avoid border delays. Compliance with Canada Border Services Agency (CBSA) requirements is mandatory, including declaring imported goods and paying duties/taxes. A licensed customs broker can help navigate regulations and maintain compliance.',
+      },
+      { type: 'heading', level: 3, text: 'The Role of Foreign Trade Zones' },
+      {
+        type: 'text',
+        content:
+          'Foreign Trade Zones are designated areas where goods can be landed, handled, manufactured, or reconfigured, and re-exported without the normal intervention of customs authorities. Goods in an FTZ are not subject to duties/taxes until they enter the Canadian market; re-exports from an FTZ generally avoid Canadian duties/taxes entirely. FTZs can substantially lower total cost and risk by deferring duty outlay and enabling operational flexibility (e.g., kitting, repackaging, or light assembly) before import.',
+      },
+      { type: 'heading', level: 3, text: 'Advantages of Foreign Trade Zones' },
+      {
+        type: 'list',
+        items: [
+          'Duty Deferral: Pay duties only when goods leave the FTZ and enter Canada—improves cash flow.',
+          'Duty Reduction: If the finished item has a lower duty rate than the inputs, assembling in-zone can lower total duties.',
+          'Duty Elimination: Goods imported to an FTZ and re-exported avoid Canadian duties and taxes.',
+        ],
+      },
+      { type: 'heading', level: 3, text: 'Implementing the Strategy' },
+      {
+        type: 'text',
+        content:
+          'Assess logistics flows and product fit for FTZ regulations. Consult customs brokers and logistics experts to design a compliant, cost-optimized process. Maintain rigorous records and internal controls for all FTZ activity to ensure smooth operations and preserve the financial benefits.',
+      },
+      { type: 'heading', level: 3, text: 'Conclusion' },
+      {
+        type: 'text',
+        content:
+          'Importing inventory from the USA to Canada can be complex and costly. Leveraging FTZs can defer or reduce duties while improving operational flexibility—an invaluable strategy for competitive markets. Borderworx is a registered Foreign Trade Zone and can help improve your business’s bottom line. Please reach out to get started.',
+      },
+    ],
+  },
+  {
+    id: '27',
+    slug: 'how-to-sell-on-amazon-usa-from-canada',
+    title: 'How to sell on Amazon USA from Canada',
+    author: 'BorderWorx Team',
+    date: '2024-05-21',
+    category: 'Amazon FBA',
+    excerpt:
+      'Register for Amazon US with a unified account, plan fulfillment, pricing, tax, compliance, and service to scale successfully south of the border.',
+    thumbnail: '/images/blog/amazon-FBA.png',
+    tags: ['Amazon USA', 'Registration', 'Fulfillment', 'Sales Tax'],
+    blocks: [
+      {
+        type: 'text',
+        content:
+          'Thinking of expanding your Amazon business beyond Canada? The US marketplace offers a vast customer base and immense potential for growth. If you’re a Canadian seller, the good news is that registering to sell in the US is surprisingly straightforward. However, there are several key factors to consider before diving in. Let’s explore the process and important things to know.',
+      },
+      { type: 'heading', level: 3, text: 'How to Register as a Canadian Seller on Amazon US' },
+      { type: 'heading', level: 4, text: 'North America Unified Account' },
+      {
+        type: 'text',
+        content:
+          'Amazon makes it easy for Canadian sellers to access the US (and Mexican) markets through the North America Unified Account. When you register on Amazon.ca, you’re automatically eligible to list on Amazon.com—no separate US account required.',
+      },
+      { type: 'heading', level: 4, text: 'Tax Information' },
+      {
+        type: 'text',
+        content:
+          'Provide your Canadian business info and TIN. Depending on structure and sales, you may also need a US EIN. Consult a tax professional to ensure compliance.',
+      },
+      { type: 'heading', level: 4, text: 'Listing Your Products' },
+      {
+        type: 'text',
+        content:
+          'Reuse your Amazon.ca listings and adjust for the US market. Consider language nuances, competitive pricing, and category differences.',
+      },
+      { type: 'heading', level: 3, text: 'Important Considerations Before Expanding to Amazon US' },
+      { type: 'heading', level: 4, text: 'Shipping and Fulfillment' },
+      {
+        type: 'text',
+        content:
+          'Choose between FBM (ship from Canada) or FBA (stock in US FCs). FBA can improve delivery speed and Buy Box odds but adds fees and logistics.',
+      },
+      { type: 'heading', level: 4, text: 'Pricing and Competition' },
+      {
+        type: 'text',
+        content:
+          'Research US price points and competitors. Account for shipping, FX rates, and import costs when setting prices.',
+      },
+      { type: 'heading', level: 4, text: 'Sales Tax' },
+      {
+        type: 'text',
+        content:
+          'Understand US sales tax nexus rules. Depending on states and volume, you may need to collect and remit sales tax.',
+      },
+      { type: 'heading', level: 4, text: 'Product Compliance' },
+      {
+        type: 'text',
+        content:
+          'Ensure your products meet US regulations and safety standards. Some categories require specific certifications.',
+      },
+      { type: 'heading', level: 4, text: 'Returns and Customer Service' },
+      {
+        type: 'text',
+        content:
+          'Publish a clear return policy and prepare for US customer inquiries and returns handling.',
+      },
+      { type: 'heading', level: 4, text: 'Marketing and Advertising' },
+      {
+        type: 'text',
+        content:
+          'Plan US-focused marketing. Use Amazon Ads to build visibility and refine keywords for US search behavior.',
+      },
+      { type: 'heading', level: 3, text: 'Tips for Success in the US Market' },
+      {
+        type: 'list',
+        items: [
+          'Start Small: Pilot top sellers on Amazon.com first.',
+          'Optimize Listings: Use relevant keywords, strong titles, and images.',
+          'Customer Feedback: Proactively request and respond to reviews.',
+          'Competitive Analysis: Track competitor pricing and messaging.',
+          'Stay Informed: Keep up with Amazon policy updates.',
+        ],
+      },
+      { type: 'heading', level: 3, text: 'Partnering with Borderworx for a Seamless US Expansion' },
+      {
+        type: 'text',
+        content:
+          'Borderworx simplifies cross-border expansion: warehousing in Canada/US, customs brokerage, transportation, and returns management—so you can focus on growth.',
+      },
+      { type: 'heading', level: 3, text: 'Conclusion' },
+      {
+        type: 'text',
+        content:
+          'Expanding to the US Amazon marketplace can be highly rewarding. Understand registration, logistics, and regulations, and apply smart strategies to tap into a massive customer base and increase sales.',
+      },
+    ],
+  }
+  ,
+  {
+    id: '28',
+    slug: 'tiktok-shop-3pl-warehousing-and-fulfillment-scale-your-business',
+    title: 'TikTok Shop 3PL Warehousing and Fulfillment: The benefit of being able to scale your business',
+    author: 'BorderWorx Team',
+    date: '2024-05-28',
+    category: '3PL',
+    excerpt:
+      'How 3PL warehousing and fulfillment help TikTok Shop sellers scale: focus on growth, faster shipping, lower costs, and better CX.',
+    thumbnail: '/images/blog/tiktok-shop.png',
+    tags: ['TikTok Shop', '3PL', 'Fulfillment', 'E-commerce'],
+    blocks: [
+      {
+        type: 'text',
+        content:
+          'TikTok Shop has exploded in popularity, offering brands and creators a powerful platform to reach massive audiences and drive sales. However, as your TikTok Shop business grows, managing inventory, order fulfillment, and shipping logistics can become a major challenge. This is where 3PL (third-party logistics) warehousing and fulfillment services step in to save the day.',
+      },
+      { type: 'heading', level: 3, text: 'What is 3PL Warehousing and Fulfillment?' },
+      {
+        type: 'text',
+        content:
+          '3PL providers specialize in managing the entire back-end of your ecommerce business. They offer services such as:',
+      },
+      {
+        type: 'list',
+        items: [
+          'Warehousing: Storing your inventory in secure, climate-controlled facilities.',
+          'Inventory Management: Tracking stock levels, reordering, and handling returns.',
+          'Order Fulfillment: Picking, packing, and shipping orders to customers.',
+        ],
+      },
+      { type: 'heading', level: 3, text: 'Why 3PL for TikTok Shop? The Key Benefits' },
+      {
+        type: 'list',
+        items: [
+          'Focus on Growth: Free time and resources to create content, connect with your audience, and grow your brand.',
+          'Scalability: Adapt quickly to surges or steady growth with established infrastructure and expertise.',
+          'Cost Efficiency: Benefit from economies of scale on warehousing, shipping, and supplies.',
+          'Faster Shipping and Happy Customers: Strategic warehouse locations and carrier relationships enable faster delivery.',
+          'Expertise and Technology: Advanced WMS and tracking tools drive accuracy and efficiency.',
+        ],
+      },
+      { type: 'heading', level: 3, text: 'Is 3PL Right for Your TikTok Shop?' },
+      {
+        type: 'list',
+        items: [
+          'Your order volume is increasing and in-house fulfillment is overwhelming.',
+          'You want to expand into new regions with strategic warehouse placement.',
+          'You are spending too much time on logistics instead of growth activities.',
+        ],
+      },
+      { type: 'heading', level: 3, text: 'Choosing the Right 3PL Partner' },
+      {
+        type: 'list',
+        items: [
+          'Ecommerce Fulfillment Expertise: Deep experience with DTC/marketplace operations.',
+          'TikTok Shop Integration: Seamless order sync and tracking visibility.',
+          'Customer Service: Clear communication and responsive support.',
+        ],
+      },
+      { type: 'heading', level: 3, text: 'The Bottom Line' },
+      {
+        type: 'text',
+        content:
+          '3PL warehousing and fulfillment can be a powerful tool for scaling your TikTok Shop business—streamlining operations, reducing costs, and improving customer satisfaction.',
+      },
+      { type: 'heading', level: 3, text: 'Borderworx: Your Ideal TikTok Shop 3PL Partner' },
+      {
+        type: 'text',
+        content:
+          'Borderworx specializes in cross-border ecommerce fulfillment with seamless TikTok Shop integration. Strategic warehouses in the US and Canada enable faster delivery and reduced shipping costs. With technology-driven solutions and exceptional support, Borderworx empowers you to scale confidently while we handle fulfillment.',
+      },
+    ],
+  }
+  ,
+  {
+    id: '29',
+    slug: 'how-to-sell-stuff-on-tiktok-shop-registration-walkthrough',
+    title: 'How to Sell Stuff on TikTok Shop: A Step-by-Step Registration Walkthrough',
+    author: 'BorderWorx Team',
+    date: '2024-06-04',
+    category: 'TikTok Shop',
+    excerpt:
+      'Step-by-step guide to register for TikTok Shop and set up your store, with docs, links, and best-practice tips.',
+    thumbnail: '/images/blog/tiktok-shop.png',
+    tags: ['TikTok Shop', 'Registration', 'E-commerce'],
+    blocks: [
+      {
+        type: 'text',
+        content:
+          'Ready to tap into TikTok’s massive audience and sell your products directly on the platform? Here’s a detailed breakdown of the registration process and essential tips to set you up for success.',
+      },
+      { type: 'heading', level: 3, text: '1. Prepare Your Business Information' },
+      {
+        type: 'list',
+        items: [
+          'Business Type: Sole proprietorship, partnership, LLC, or corporation.',
+          'Business Registration Documents: Business license or registration certificate.',
+          'Contact Details: Valid email address and phone number.',
+          'Tax Information: Tax ID or social security number (if applicable).',
+          'Banking Information: Bank account details for payouts.',
+        ],
+      },
+      { type: 'heading', level: 3, text: '2. Create a TikTok Business Account' },
+      {
+        type: 'text',
+        content:
+          'Create a TikTok Business Account to access the Seller Center. Go to <a href="https://www.tiktok.com/business/en/" target="_blank" rel="noopener">TikTok Business</a>, click “Get Started,” follow the prompts, and choose “Merchant.”',
+      },
+      { type: 'heading', level: 3, text: '3. Visit the TikTok Seller Center' },
+      {
+        type: 'text',
+        content:
+          'The Seller Center is your hub. Visit <a href="https://seller-us.tiktok.com/" target="_blank" rel="noopener">seller-us.tiktok.com</a> and log in with your TikTok Business Account.',
+      },
+      { type: 'heading', level: 3, text: '4. Complete the TikTok Shop Seller Application' },
+      {
+        type: 'list',
+        items: [
+          'Select Region: Choose the region where your business operates.',
+          'Provide Business Info: Business type, registration, contact, tax, and banking details.',
+          'Review and Submit: Double-check everything before submitting.',
+        ],
+      },
+      { type: 'heading', level: 3, text: '5. Verification Process' },
+      {
+        type: 'text',
+        content:
+          'TikTok will review your application in a few business days and may request additional documentation. Be patient.',
+      },
+      { type: 'heading', level: 3, text: '6. Set Up Your TikTok Shop' },
+      {
+        type: 'list',
+        items: [
+          'Add Products: Detailed descriptions, high-quality images, accurate pricing.',
+          'Set Up Shipping: Configure options, rates, and delivery times.',
+          'Create a Shop Profile: Add a banner, logo, and compelling description.',
+          'Explore Marketing Tools: Learn TikTok Ads and promotions.',
+        ],
+      },
+      { type: 'heading', level: 3, text: 'Availability' },
+      {
+        type: 'text',
+        content:
+          'TikTok Shop is currently available in Southeast Asia (ID, MY, PH, SG, TH, VN), the UK, and the US. Check the official Seller Center for updates: <a href="https://seller-us.tiktok.com/" target="_blank" rel="noopener">seller-us.tiktok.com</a>.',
+      },
+      { type: 'heading', level: 3, text: 'Additional Tips for a Smooth Registration' },
+      {
+        type: 'list',
+        items: [
+          'Read the Guidelines: Review TikTok Shop seller policies for compliance.',
+          'Prepare Documents: Keep all business documents ready for upload.',
+          'Be Patient: Verification can take time—avoid rushing.',
+          'Plan Content: Start ideating engaging videos to promote your shop.',
+        ],
+      },
+      { type: 'heading', level: 3, text: 'Get Ready to Thrive on TikTok Shop!' },
+      {
+        type: 'text',
+        content:
+          'Follow this guide to navigate registration and launch successfully. Be creative, engage your audience, and leverage TikTok’s unique features to maximize sales potential.',
+      },
+    ],
+  }
 ]
 
 
