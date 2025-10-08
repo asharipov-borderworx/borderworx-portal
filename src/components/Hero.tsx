@@ -46,7 +46,7 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Hero Content */}
           <motion.div
-            className="text-white"
+            className="text-black"
             initial="hidden"
             animate="visible"
             variants={containerVariants}
@@ -59,13 +59,13 @@ export default function Hero() {
               <span className="block">Solutions</span>
             </motion.h1>
             <motion.div 
-              className="text-xl md:text-2xl mb-8 text-orange-100 leading-relaxed"
+              className="text-xl md:text-2xl mb-8 text-gray-800 leading-relaxed"
               variants={itemVariants}
             >
               <p className="mb-2">Your Trusted Partner for</p>
               <TypingAnimation 
                 words={['Warehousing', 'Transportation', 'Customs Brokerage', 'Trade Compliance', 'Fulfillment Services']}
-                className="text-2xl md:text-3xl font-semibold text-white"
+                className="text-2xl md:text-3xl font-semibold text-black"
               />
             </motion.div>
             <motion.div 
@@ -74,13 +74,13 @@ export default function Hero() {
             >
               <Link
                 href="#contact"
-                className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 text-center"
+                className="bg-black text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-900 transition-colors duration-300 text-center shadow-lg"
               >
                 Get Started
               </Link>
               <Link
                 href="#services"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-all duration-300 text-center"
+                className="border-2 border-black text-black px-8 py-4 rounded-lg font-semibold hover:bg-black hover:text-white transition-all duration-300 text-center"
               >
                 Our Services
               </Link>
@@ -94,7 +94,7 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.5, ease: [0.25, 0.4, 0.25, 1] as const }}
           >
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8">
+            <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-8 border border-black/20">
               <motion.div 
                 className="grid grid-cols-2 gap-6"
                 initial="hidden"
@@ -110,36 +110,36 @@ export default function Hero() {
               >
                 {/* Stats Cards */}
                 <motion.div 
-                  className="bg-white bg-opacity-20 rounded-xl p-6 text-center"
+                  className="bg-white bg-opacity-60 rounded-xl p-6 text-center backdrop-blur-sm border border-black/5"
                   variants={cardVariants}
                   whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
                 >
-                  <div className="text-3xl font-bold text-white mb-2">100+</div>
-                  <div className="text-orange-100">Global Partners</div>
+                  <div className="text-3xl font-bold text-black mb-2">100+</div>
+                  <div className="text-gray-700">Global Partners</div>
                 </motion.div>
                 <motion.div 
-                  className="bg-white bg-opacity-20 rounded-xl p-6 text-center"
+                  className="bg-white bg-opacity-60 rounded-xl p-6 text-center backdrop-blur-sm border border-black/5"
                   variants={cardVariants}
                   whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
                 >
-                  <div className="text-3xl font-bold text-white mb-2">$3 Billion+</div>
-                  <div className="text-orange-100">Goods Managed</div>
+                  <div className="text-3xl font-bold text-black mb-2">$3 Billion+</div>
+                  <div className="text-gray-700">Goods Managed</div>
                 </motion.div>
                 <motion.div 
-                  className="bg-white bg-opacity-20 rounded-xl p-6 text-center"
+                  className="bg-white bg-opacity-60 rounded-xl p-6 text-center backdrop-blur-sm border border-black/5"
                   variants={cardVariants}
                   whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
                 >
-                  <div className="text-3xl font-bold text-white mb-2">24/7</div>
-                  <div className="text-orange-100">Support</div>
+                  <div className="text-3xl font-bold text-black mb-2">24/7</div>
+                  <div className="text-gray-700">Support</div>
                 </motion.div>
                 <motion.div 
-                  className="bg-white bg-opacity-20 rounded-xl p-6 text-center"
+                  className="bg-white bg-opacity-60 rounded-xl p-6 text-center backdrop-blur-sm border border-black/5"
                   variants={cardVariants}
                   whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
                 >
-                  <div className="text-3xl font-bold text-white mb-2">99%</div>
-                  <div className="text-orange-100">On-Time</div>
+                  <div className="text-3xl font-bold text-black mb-2">99%</div>
+                  <div className="text-gray-700">On-Time</div>
                 </motion.div>
               </motion.div>
             </div>
@@ -177,7 +177,7 @@ export default function Hero() {
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <svg
-          className="w-6 h-6 text-white"
+          className="w-6 h-6 text-black"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"

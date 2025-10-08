@@ -38,7 +38,7 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary to-orange-600 text-white pt-48 overflow-hidden">
+      <section className="relative hero-gradient text-black pt-48 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
@@ -62,7 +62,7 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
               Comprehensive Logistics Services
             </motion.h1>
             <motion.p 
-              className="text-xl md:text-2xl text-orange-100 leading-relaxed"
+              className="text-xl md:text-2xl  leading-relaxed"
               variants={itemVariants}
             >
               From warehousing to customs brokerage, we provide end-to-end logistics solutions 

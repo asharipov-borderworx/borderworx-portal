@@ -37,7 +37,7 @@ export default function ResourcesPageClient({ resources }: ResourcesPageClientPr
   return (
     <main className="flex-grow">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary to-orange-600 text-white pt-48 overflow-hidden">
+      <section className="relative hero-gradient text-white pt-48 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
