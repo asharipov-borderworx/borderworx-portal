@@ -70,13 +70,6 @@ export default function TypingAnimation({ words, className = '', finalText }: Ty
       ) : (
         <span className={className} style={{ textShadow: '0 0 20px rgba(237, 90, 40, 0.4), 0 0 40px rgba(255, 165, 0, 0.3)' }}>
           {displayedText}
-          <motion.span
-            animate={{ opacity: [1,0] }}
-            transition={{ duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
-            className="inline-block ml-1"
-          >
-            |
-          </motion.span>
         </span>
       )}
     </>

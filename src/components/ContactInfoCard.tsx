@@ -53,7 +53,7 @@ export default function ContactInfoCard({ country }: { country: string }) {
     [@keyframes_fadeIn]{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}} `}
     >
       {country === "Canada" && (
-        <div className="absolute inset-0 opacity-5 rounded-xl">
+        <div className="absolute inset-0 opacity-20 rounded-xl">
           <Image
             src="/images/services/canadianFlag.png"
             alt="Canadian Flag Background"
@@ -65,7 +65,7 @@ export default function ContactInfoCard({ country }: { country: string }) {
       {country === "USA" && (
         <div>
 
-          <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 opacity-20">
             <Image
               src="/images/services/usaFlag.png"
               alt="USA Flag Background"

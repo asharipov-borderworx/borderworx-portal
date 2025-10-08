@@ -40,7 +40,7 @@ export default function ContactPage() {
                 <img
                   src="/images/background-images/servicePage.png"
                   alt="Logistics operations background"
-                  className="w-full h-full object-cover opacity-15"
+                  className="w-full h-full object-cover opacity-20"
                 />
     
               </div>
