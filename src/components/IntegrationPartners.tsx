@@ -1,6 +1,7 @@
 "use client"
 
 import Image from 'next/image'
+import AnimationWrapper from './AnimationWrapper'
 
 const partners = [
   { name: 'Amazon', logo: '/images/integrationPartners/amazon.png' },
@@ -27,40 +28,42 @@ export default function IntegrationPartners() {
   return (
     <section className="py-16 bg-gray-100">
       <div className="container-max section-padding">
-        <div className="text-center mb-12">
+        <AnimationWrapper animation="fadeInUp" className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
             Trusted Integration Partners
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
           We support over 110+ different platforms and marketplaces!
           </p>
-        </div>
+        </AnimationWrapper>
 
         {/* Infinite scroll container */}
-        <div className="relative overflow-hidden">
-          {/* Gradient overlays for smooth edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-gray-100 to-transparent pointer-events-none z-10"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-gray-100 to-transparent pointer-events-none z-10"></div>
-          
-          <div className="flex animate-scroll hover:[animation-play-state:paused]">
-            {infinitePartners.map((partner, index) => (
-              <div
-                key={`${partner.name}-${index}`}
-                className="flex-shrink-0 w-48 h-24 mx-6 flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-600 group"
-              >
-                <div className="relative w-32 h-16 transition-all duration-300">
-                  <Image
-                    src={partner.logo}
-                    alt={`${partner.name} logo`}
-                    fill
-                    className="object-contain"
-                    sizes="128px"
-                  />
+        <AnimationWrapper animation="fadeIn" delay={0.2}>
+          <div className="relative overflow-hidden">
+            {/* Gradient overlays for smooth edges */}
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-gray-100 to-transparent pointer-events-none z-10"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-gray-100 to-transparent pointer-events-none z-10"></div>
+            
+            <div className="flex animate-scroll hover:[animation-play-state:paused]">
+              {infinitePartners.map((partner, index) => (
+                <div
+                  key={`${partner.name}-${index}`}
+                  className="flex-shrink-0 w-48 h-24 mx-6 flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-600 group"
+                >
+                  <div className="relative w-32 h-16 transition-all duration-300">
+                    <Image
+                      src={partner.logo}
+                      alt={`${partner.name} logo`}
+                      fill
+                      className="object-contain"
+                      sizes="128px"
+                    />
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
+        </AnimationWrapper>
       </div>
 
       <style jsx>{`

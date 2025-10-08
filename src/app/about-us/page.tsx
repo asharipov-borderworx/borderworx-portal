@@ -1,12 +1,38 @@
 'use client'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import CountUp from '@/components/CountUp'
+import AnimationWrapper from '@/components/AnimationWrapper'
+import StaggerContainer, { StaggerItem } from '@/components/StaggerContainer'
 
 export default function AboutUsPage() {
 
   function HeroSection() {
+    const containerVariants = {
+      hidden: { opacity: 0 },
+      visible: {
+        opacity: 1,
+        transition: {
+          staggerChildren: 0.2,
+          delayChildren: 0.3
+        }
+      }
+    }
+  
+    const itemVariants = {
+      hidden: { opacity: 0, y: 30 },
+      visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.6,
+          ease: [0.25, 0.4, 0.25, 1] as const
+        }
+      }
+    }
+
     return (
               <section className="relative bg-gradient-to-r from-primary to-orange-600 text-white pt-72 overflow-hidden">
               {/* Background Image */}
@@ -19,15 +45,25 @@ export default function AboutUsPage() {
     
               </div>
             <div className="container-max section-padding relative z-10">
-              <div className="text-center max-w-4xl mx-auto">
-                <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                About BorderWorx
-                </h1>
-                <p className="text-xl md:text-2xl text-orange-100 leading-relaxed">
-                Two decades of excellence in cross-border logistics, connecting businesses across North America with seamless supply chain solutions.
-
-                </p>
-              </div>
+              <motion.div 
+                className="text-center max-w-4xl mx-auto"
+                initial="hidden"
+                animate="visible"
+                variants={containerVariants}
+              >
+                <motion.h1 
+                  className="text-4xl md:text-5xl font-bold mb-6"
+                  variants={itemVariants}
+                >
+                  About BorderWorx
+                </motion.h1>
+                <motion.p 
+                  className="text-xl md:text-2xl text-orange-100 leading-relaxed"
+                  variants={itemVariants}
+                >
+                  Two decades of excellence in cross-border logistics, connecting businesses across North America with seamless supply chain solutions.
+                </motion.p>
+              </motion.div>
             </div>
           </section>
     
@@ -45,24 +81,24 @@ export default function AboutUsPage() {
         {/* Statistics Section */}
         <section className="py-16 bg-gray-50">
           <div className="container-max section-padding">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="text-center">
+            <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-8" staggerDelay={0.15}>
+              <StaggerItem className="text-center">
                 <CountUp end={20} suffix="+" className="text-4xl md:text-5xl font-bold text-primary mb-2" />
                 <div className="text-gray-600 font-medium">Years Experience</div>
-              </div>
-              <div className="text-center">
+              </StaggerItem>
+              <StaggerItem className="text-center">
                 <CountUp end={3.5} decimals={1} prefix="$" suffix="B+" className="text-4xl md:text-5xl font-bold text-primary mb-2" />
                 <div className="text-gray-600 font-medium">Goods Managed</div>
-              </div>
-              <div className="text-center">
+              </StaggerItem>
+              <StaggerItem className="text-center">
                 <CountUp end={250} suffix="K+" className="text-4xl md:text-5xl font-bold text-primary mb-2" />
                 <div className="text-gray-600 font-medium">Customs Clearances</div>
-              </div>
-              <div className="text-center">
+              </StaggerItem>
+              <StaggerItem className="text-center">
                 <CountUp end={2} className="text-4xl md:text-5xl font-bold text-primary mb-2" />
                 <div className="text-gray-600 font-medium">Countries Served</div>
-              </div>
-            </div>
+              </StaggerItem>
+            </StaggerContainer>
           </div>
         </section>
         {/* Our Story Section */}
@@ -71,7 +107,7 @@ export default function AboutUsPage() {
           <div className="container-max section-padding relative">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               {/* Left: Image */}
-              <div className="relative">
+              <AnimationWrapper animation="fadeInLeft" className="relative">
                 <div className="relative h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                   <Image
                     src="/images/about-us/agreementBackground.png"
@@ -82,36 +118,36 @@ export default function AboutUsPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                 </div>
-              </div>
+              </AnimationWrapper>
 
               {/* Right: Content */}
-              <div className="space-y-8">
-                <div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-6">
-                    Our Story
-                  </h2>
-                  <div className="w-16 h-1 bg-primary rounded-full mb-8" />
-                </div>
+              <AnimationWrapper animation="fadeInRight" delay={0.2}>
+                <div className="space-y-8">
+                  <div>
+                    <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-6">
+                      Our Story
+                    </h2>
+                    <div className="w-16 h-1 bg-primary rounded-full mb-8" />
+                  </div>
 
-                <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
-                  <p>
-                    Founded in 2003, BorderWorx began with a vision to revolutionize cross-border logistics. 
-                    Our founder, Dean Wood, brought extensive industry experience from working with some of 
-                    Canada's largest transportation and customs corporations.
-                  </p>
-                  <p>
-                    Today, BorderWorx stands as a trusted partner for businesses navigating the complexities 
-                    of North American trade. We've successfully managed over $3.5 billion in goods across 
-                    borders and processed more than 250,000 customs clearances.
-                  </p>
-                  <p>
-                    Our commitment to excellence and innovation has helped countless companies expand their 
-                    market reach and optimize their supply chain operations across Canada and the United States.
-                  </p>
+                  <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+                    <p>
+                      Founded in 2003, BorderWorx began with a vision to revolutionize cross-border logistics. 
+                      Our founder, Dean Wood, brought extensive industry experience from working with some of 
+                      Canada's largest transportation and customs corporations.
+                    </p>
+                    <p>
+                      Today, BorderWorx stands as a trusted partner for businesses navigating the complexities 
+                      of North American trade. We've successfully managed over $3.5 billion in goods across 
+                      borders and processed more than 250,000 customs clearances.
+                    </p>
+                    <p>
+                      Our commitment to excellence and innovation has helped countless companies expand their 
+                      market reach and optimize their supply chain operations across Canada and the United States.
+                    </p>
+                  </div>
                 </div>
-
-              
-              </div>
+              </AnimationWrapper>
             </div>
           </div>
         </section>
@@ -119,7 +155,7 @@ export default function AboutUsPage() {
         {/* Leadership Section */}
         <section className="py-20 bg-gray-50">
           <div className="container-max section-padding">
-            <div className="text-center mb-16">
+            <AnimationWrapper animation="fadeInUp" className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-6">
                 Leadership Team
               </h2>
@@ -128,9 +164,9 @@ export default function AboutUsPage() {
                 Meet the visionary leader who built BorderWorx from the ground up, 
                 bringing decades of industry expertise to every client relationship.
               </p>
-            </div>
+            </AnimationWrapper>
 
-            <div className="max-w-4xl mx-auto">
+            <AnimationWrapper animation="scaleIn" delay={0.3} className="max-w-4xl mx-auto">
               <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                   {/* Left: Profile Info */}
@@ -173,7 +209,7 @@ export default function AboutUsPage() {
                   </div>
                 </div>
               </div>
-            </div>
+            </AnimationWrapper>
           </div>
         </section>
 
@@ -182,21 +218,21 @@ export default function AboutUsPage() {
           <div className="pointer-events-none absolute -bottom-40 -right-32 w-[30rem] h-[30rem] rounded-full bg-gradient-to-tr from-orange-400/25 via-primary/20 to-orange-400/25 blur-3xl animate-pulse" />
 
           <div className="container-max section-padding relative">
-            <div className="text-center mb-16">
+            <AnimationWrapper animation="fadeInUp" className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-6">Our Core Values</h2>
               <div className="w-16 h-1 bg-primary rounded-full mx-auto mb-8" />
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">Design-forward principles with motion—memorable but refined.</p>
-            </div>
+            </AnimationWrapper>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 items-stretch">
+            <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 items-stretch" staggerDelay={0.2}>
               {/* Card 1 */}
-              <div className="group relative h-full will-change-transform">
+              <StaggerItem className="group relative h-full will-change-transform">
                 <div className="animated-frame h-full p-[2px] rounded-2xl bg-gradient-to-r from-primary via-orange-500 to-primary bg-[length:200%_200%] will-change-transform">
                   <div className="values-card h-full rounded-2xl p-6 md:p-8 bg-white/80 backdrop-blur-xl border border-white/40 relative overflow-hidden flex flex-col will-change-transform">
                     <span className="shine" />
                     <h3 className="text-xl md:text-2xl font-extrabold tracking-tight text-secondary mb-3 text-center">Reliability</h3>
                     <p className="text-gray-700 text-center leading-relaxed text-base md:text-lg break-words">
-                      Predictable operations, transparent updates, and delivery you don’t need to second-guess.
+                      Predictable operations, transparent updates, and delivery you don't need to second-guess.
                     </p>
                     <div className="flex flex-wrap justify-center gap-2 mt-6 md:mt-auto">
                       <span className="pill">On‑Time</span>
@@ -205,10 +241,10 @@ export default function AboutUsPage() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </StaggerItem>
 
               {/* Card 2 */}
-              <div className="group relative h-full will-change-transform">
+              <StaggerItem className="group relative h-full will-change-transform">
                 <div className="animated-frame h-full p-[2px] rounded-2xl bg-gradient-to-r from-primary via-orange-500 to-primary bg-[length:200%_200%] will-change-transform">
                   <div className="values-card h-full rounded-2xl p-6 md:p-8 bg-white/80 backdrop-blur-xl border border-white/40 relative overflow-hidden flex flex-col will-change-transform">
                     <span className="shine" />
@@ -223,10 +259,10 @@ export default function AboutUsPage() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </StaggerItem>
 
               {/* Card 3 */}
-              <div className="group relative h-full will-change-transform">
+              <StaggerItem className="group relative h-full will-change-transform">
                 <div className="animated-frame h-full p-[2px] rounded-2xl bg-gradient-to-r from-primary via-orange-500 to-primary bg-[length:200%_200%] will-change-transform">
                   <div className="values-card h-full rounded-2xl p-6 md:p-8 bg-white/80 backdrop-blur-xl border border-white/40 relative overflow-hidden flex flex-col will-change-transform">
                     <span className="shine" />
@@ -241,38 +277,40 @@ export default function AboutUsPage() {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </StaggerItem>
+            </StaggerContainer>
           </div>
         </section>
 
         {/* CTA Section */}
         <section className="py-20 bg-primary text-white">
           <div className="container-max section-padding">
-            <div className="text-center max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Ready to Partner with Us?
-              </h2>
-              <p className="text-xl text-orange-100 mb-8 leading-relaxed">
-                Join the hundreds of companies that trust BorderWorx for their 
-                cross-border logistics needs. Let's discuss how we can help 
-                optimize your supply chain.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                >
-                  Get in Touch
-                </a>
-                <a
-                  href="/quote"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors"
-                >
-                  Request Quote
-                </a>
+            <AnimationWrapper animation="fadeInUp">
+              <div className="text-center max-w-4xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                  Ready to Partner with Us?
+                </h2>
+                <p className="text-xl text-orange-100 mb-8 leading-relaxed">
+                  Join the hundreds of companies that trust BorderWorx for their 
+                  cross-border logistics needs. Let's discuss how we can help 
+                  optimize your supply chain.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href="/contact"
+                    className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  >
+                    Get in Touch
+                  </a>
+                  <a
+                    href="/quote"
+                    className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors"
+                  >
+                    Request Quote
+                  </a>
+                </div>
               </div>
-            </div>
+            </AnimationWrapper>
           </div>
         </section>
       </main>

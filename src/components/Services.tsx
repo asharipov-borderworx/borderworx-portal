@@ -1,7 +1,11 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import getServiceInfo from '@/utils/serviceInfo'
 import ServiceCard from './ServiceCard'
+import AnimationWrapper from './AnimationWrapper'
+import StaggerContainer, { StaggerItem } from './StaggerContainer'
 
 export default function Services() {
   const featuredServices = getServiceInfo().slice(0,3)
@@ -9,7 +13,7 @@ export default function Services() {
     <section id="services" className="section-padding bg-gray-light">
       <div className="container-max">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <AnimationWrapper animation="fadeInUp" className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
             Our Logistics Services
           </h2>
@@ -17,17 +21,19 @@ export default function Services() {
             From freight forwarding to supply chain management, we provide comprehensive
             logistics solutions tailored to your business needs.
           </p>
-        </div>
+        </AnimationWrapper>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" staggerDelay={0.15}>
           {featuredServices.map((service, index) => (
-            <ServiceCard index={index} service={service} />
+            <StaggerItem key={service.id}>
+              <ServiceCard index={index} service={service} />
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
 
         {/* Learn More CTA */}
-        <div className="text-center mt-16">
+        <AnimationWrapper animation="fadeInUp" delay={0.3} className="text-center mt-16">
           <h3 className="text-2xl font-semibold text-secondary mb-4">
             Explore All Our Services
           </h3>
@@ -40,7 +46,7 @@ export default function Services() {
               View All Services
             </Link>
           </div>
-        </div>
+        </AnimationWrapper>
       </div>
     </section>
   )

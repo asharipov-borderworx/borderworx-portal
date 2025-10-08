@@ -131,21 +131,10 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-center items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
             © {currentYear} {contactInfo.company.name}. All rights reserved.
           </p>
-          <div className="flex space-x-6 text-sm text-gray-400">
-            <Link href="#" className="hover:text-primary transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="hover:text-primary transition-colors">
-              Terms of Service
-            </Link>
-            <Link href="#" className="hover:text-primary transition-colors">
-              Cookie Policy
-            </Link>
-          </div>
         </div>
       </div>
     </footer>

@@ -2156,8 +2156,7 @@ export const blogPosts: BlogPostItem[] = [
           'Expanding to the US Amazon marketplace can be highly rewarding. Understand registration, logistics, and regulations, and apply smart strategies to tap into a massive customer base and increase sales.',
       },
     ],
-  }
-  ,
+  },
   {
     id: '28',
     slug: 'tiktok-shop-3pl-warehousing-and-fulfillment-scale-your-business',
@@ -2231,8 +2230,7 @@ export const blogPosts: BlogPostItem[] = [
           'Borderworx specializes in cross-border ecommerce fulfillment with seamless TikTok Shop integration. Strategic warehouses in the US and Canada enable faster delivery and reduced shipping costs. With technology-driven solutions and exceptional support, Borderworx empowers you to scale confidently while we handle fulfillment.',
       },
     ],
-  }
-  ,
+  },
   {
     id: '29',
     slug: 'how-to-sell-stuff-on-tiktok-shop-registration-walkthrough',
@@ -2321,7 +2319,487 @@ export const blogPosts: BlogPostItem[] = [
           'Follow this guide to navigate registration and launch successfully. Be creative, engage your audience, and leverage TikTok’s unique features to maximize sales potential.',
       },
     ],
+  },
+  {
+    id: '30',
+    slug: 'how-to-connect-your-tiktok-shop-to-shopify',
+    title: 'How to Connect Your TikTok Shop to Shopify: A Step-by-Step Guide',
+    author: 'BorderWorx Team',
+    date: '2024-06-11',
+    category: 'TikTok Shop',
+    excerpt:
+      'Step-by-step guide to integrate TikTok Shop with Shopify: eligibility, setup, connection, optimization, and promotion for social commerce success.',
+    thumbnail: '/images/blog/tiktok-shopify.png',
+    tags: ['TikTok Shop', 'Shopify', 'Social Commerce', 'Integration'],
+    blocks: [
+      {
+        type: 'text',
+        content:
+          'TikTok has emerged as a powerful social commerce platform, allowing businesses to reach a vast audience of potential customers. Integrating your TikTok Shop with Shopify can streamline your operations and enhance your sales potential. Here\'s how to do it:',
+      },
+      { type: 'heading', level: 3, text: '1. Ensure Eligibility:' },
+      {
+        type: 'list',
+        items: [
+          'Location: Confirm that TikTok Shop is available in your region.',
+          'Shopify Plan: You\'ll need a Shopify Basic plan or higher.',
+        ],
+      },
+      { type: 'heading', level: 3, text: '2. Set Up Your TikTok Shop:' },
+      {
+        type: 'list',
+        items: [
+          'Create a TikTok for Business account: If you don\'t have one, sign up for a TikTok for Business account.',
+          'Apply for TikTok Shop: Follow TikTok\'s application process to get approved for TikTok Shop features.',
+        ],
+      },
+      { type: 'heading', level: 3, text: '3. Connect TikTok to Shopify:' },
+      {
+        type: 'list',
+        items: [
+          'Install the TikTok App: From the Shopify App Store, search for and install the official TikTok app.',
+          'Connect Your Accounts: Within the TikTok app, follow the prompts to connect your TikTok for Business account to your Shopify store.',
+          'Sync Your Products: Choose the products you want to feature in your TikTok Shop and sync them between platforms.',
+        ],
+      },
+      { type: 'heading', level: 3, text: '4. Optimize Your Listings:' },
+      {
+        type: 'list',
+        items: [
+          'Compelling Product Descriptions: Craft engaging descriptions that highlight the benefits of your products.',
+          'High-Quality Images and Videos: Use visually appealing media to showcase your products.',
+          'Competitive Pricing: Ensure your prices are attractive to potential customers.',
+        ],
+      },
+      { type: 'heading', level: 3, text: '5. Promote Your Products:' },
+      {
+        type: 'list',
+        items: [
+          'TikTok Ads: Utilize TikTok\'s advertising tools to reach a wider audience.',
+          'Live Shopping: Engage with your audience through live shopping events on TikTok.',
+          'Collaborate with Influencers: Partner with TikTok influencers to promote your products.',
+        ],
+      },
+      { type: 'heading', level: 3, text: 'Benefits of Connecting TikTok Shop to Shopify' },
+      {
+        type: 'text',
+        content:
+          'Integrating your TikTok Shop with Shopify brings numerous benefits:',
+      },
+      {
+        type: 'list',
+        items: [
+          'Streamlined Management: Manage your products, orders, and inventory in one place.',
+          'Expanded Reach: Tap into TikTok\'s massive and engaged user base.',
+          'Increased Sales: Leverage TikTok\'s social commerce features to drive sales.',
+          'Simplified Fulfillment: Handle order fulfillment through your existing Shopify processes.',
+          'Enhanced Brand Visibility: Increase your brand\'s exposure and recognition on TikTok.',
+          'Data-Driven Insights: Gain valuable insights into customer behavior and preferences.',
+        ],
+      },
+      { type: 'heading', level: 3, text: 'Important Considerations:' },
+      {
+        type: 'list',
+        items: [
+          'Content Strategy: Develop a strong content strategy for TikTok to maximize engagement.',
+          'Community Building: Interact with your audience and foster a community around your brand.',
+          'Platform Policies: Adhere to TikTok\'s and Shopify\'s policies to ensure a smooth experience.',
+        ],
+      },
+      {
+        type: 'text',
+        content:
+          'By following these steps and leveraging the benefits of integrating TikTok Shop with Shopify, you can unlock a new level of success in the world of social commerce.',
+      },
+    ],
   }
+  ,
+  {
+    id: '31',
+    slug: 'leveraging-section-321-for-amazon-fba-imports',
+    title: 'Leveraging Section 321 to Streamline Amazon FBA Imports: A Guide for International Sellers',
+    author: 'BorderWorx Team',
+    date: '2024-06-18',
+    category: 'Amazon FBA',
+    excerpt:
+      'Use Section 321 (de minimis $800) to reduce duty costs, speed customs, and simplify paperwork for international Amazon FBA imports—plus how Borderworx helps.',
+    thumbnail: '/images/blog/amazon-FBA.png',
+    tags: ['Section 321', 'Amazon FBA', 'Imports', 'Customs Brokerage', '3PL'],
+    blocks: [
+      {
+        type: 'text',
+        content:
+          'Importing inventory for Amazon FBA from outside the US can be a complex process, involving duties, taxes, and customs clearance. However, a lesser-known provision called Section 321 offers a significant advantage to sellers: duty-free importation for shipments valued under $800.',
+      },
+      { type: 'heading', level: 3, text: 'What is Section 321?' },
+      {
+        type: 'text',
+        content:
+          "Section 321 is a de minimis rule under US customs law. It allows for the duty-free importation of goods if the shipment’s value does not exceed $800 and it’s imported by one person on one day. This presents a fantastic opportunity for Amazon FBA sellers to reduce import costs.",
+      },
+      { type: 'heading', level: 3, text: 'How Section 321 Benefits Amazon FBA Sellers' },
+      {
+        type: 'list',
+        items: [
+          'Reduced Costs: Elimination of import duties can drive meaningful savings over time.',
+          'Faster Customs Clearance: Section 321 shipments typically clear more quickly with less scrutiny.',
+          'Simplified Paperwork: Fewer documentation requirements streamline the process.',
+          'Competitive Advantage: Lower landed costs can translate into sharper pricing on Amazon.',
+        ],
+      },
+      { type: 'heading', level: 3, text: 'How to Use Section 321 for FBA Shipments' },
+      {
+        type: 'list',
+        items: [
+          'Shipment Value: Keep each shipment at or below $800, including goods, shipping, and insurance.',
+          'Consolidation Strategy: Break larger volumes into compliant sub-shipments that meet the limit.',
+          'Accurate Manifesting: Declare as Section 321, use correct HTS codes, and state value precisely.',
+          'Clear Labeling: Include consignee/shipper info, detailed contents, and country of origin on each package.',
+          'Partner with a Customs Broker: Work with experts who know Section 321 to avoid mistakes.',
+          'Leverage a 3PL: Experienced 3PLs can plan, route, and execute Section 321 programs at scale.',
+        ],
+      },
+      { type: 'heading', level: 3, text: 'Important Considerations' },
+      {
+        type: 'list',
+        items: [
+          'Permissible Goods: Some products are restricted or prohibited and may not qualify.',
+          'Record-Keeping: Retain invoices, manifests, and declarations for audit readiness.',
+          'Stay Informed: CBP requirements can change—monitor updates to Section 321 rules.',
+        ],
+      },
+      { type: 'heading', level: 3, text: 'Conclusion' },
+      {
+        type: 'text',
+        content:
+          'Section 321 offers a valuable tool for Amazon FBA sellers importing goods from outside the US. By understanding and leveraging this provision, you can streamline your import process, reduce costs, and gain a competitive edge in the marketplace.',
+      },
+      { type: 'heading', level: 3, text: 'Why Borderworx is the Ideal Partner' },
+      {
+        type: 'list',
+        items: [
+          'Section 321 Expertise: We ensure your shipments are compliant and clear smoothly.',
+          'End-to-End Logistics: From planning and consolidation to customs and FBA delivery.',
+          'Technology-Driven Solutions: Real-time visibility and tracking for peace of mind.',
+          'Cost Savings: Optimization to maximize de minimis benefits and reduce landed costs.',
+          'Customer-Centric Approach: Tailored solutions and dedicated support for your goals.',
+        ],
+      },
+      { type: 'heading', level: 3, text: 'How Borderworx Can Help' },
+      {
+        type: 'list',
+        items: [
+          'Shipment Consolidation: Smart splitting and timing to meet the $800 threshold.',
+          'Customs Compliance: Correct declarations, HTS coding, and documentation.',
+          'FBA Prep Services: Labeling, kitting, bundling, and compliant packaging.',
+          'Inventory Management: Flexible warehousing and order fulfillment options.',
+          'Returns Management: Receive, inspect, disposition, and reduce future returns.',
+        ],
+      },
+      { type: 'heading', level: 3, text: 'Partner with Borderworx for Section 321 Success' },
+      {
+        type: 'text',
+        content:
+          "Don’t let the complexities of importing hold you back. Partner with Borderworx and unlock the potential of Section 321 for your Amazon FBA business. We’ll handle the logistics so you can focus on growth and success.",
+      }
+    ],
+  },
+  {
+    id: '32',
+    slug: '3pl-fulfillment-the-key-to-unlocking-omnichannel',
+    title: '3PL Fulfillment: The Key to Unlocking Omnichannel Success',
+    author: 'BorderWorx Team',
+    date: '2024-06-25',
+    category: '3PL',
+    excerpt:
+      'How 3PL fulfillment powers omnichannel: optimized inventory, faster shipping, scalable ops, cost savings, and better CX—plus Borderworx cross‑border advantages.',
+    thumbnail: '/images/blog/assessing-3pl.png',
+    tags: ['3PL', 'Omnichannel', 'Fulfillment', 'Logistics', 'E-commerce'],
+    blocks: [
+      {
+        type: 'text',
+        content:
+          'In the ever-evolving retail landscape, omnichannel sales have become a necessity rather than a luxury. Customers expect a seamless shopping experience across online platforms, brick-and-mortar stores, social media, and more. This complexity presents a significant logistical challenge for businesses. This is where 3PL (third-party logistics) fulfillment providers step in, offering a strategic solution to streamline operations, enhance customer satisfaction, and drive business growth.',
+      },
+      { type: 'heading', level: 3, text: 'How 3PL Fulfillment Powers Omnichannel Sales' },
+      { type: 'heading', level: 4, text: 'Optimized Inventory Management' },
+      {
+        type: 'list',
+        items: [
+          'Centralized Inventory: Consolidate inventory from multiple channels into strategic locations to avoid overselling and stockouts.',
+          'Real-Time Visibility: Up-to-the-minute stock data enables faster replenishment and smarter decisions.',
+          'Demand Forecasting: Analytics anticipate channel demand and maintain optimal inventory levels.',
+        ],
+      },
+      { type: 'heading', level: 4, text: 'Efficient Order Fulfillment' },
+      {
+        type: 'list',
+        items: [
+          'Pick, Pack, and Ship Expertise: Trained teams and tech deliver accurate, fast fulfillment.',
+          'Faster Shipping Times: Strategic warehouses and carrier partnerships shorten transit times.',
+          'Returns Management: Receive, inspect, restock or dispose to protect CX and save resources.',
+        ],
+      },
+      { type: 'heading', level: 4, text: 'Scalability and Flexibility' },
+      {
+        type: 'list',
+        items: [
+          'Peak Season Management: Rapidly scale during promotions and holidays to capture demand.',
+          'Market Expansion: Leverage established 3PL networks to enter new regions with confidence.',
+          'Focus on Core Business: Free internal teams to build product, brand, and CX.',
+        ],
+      },
+      { type: 'heading', level: 4, text: 'Cost Savings' },
+      {
+        type: 'list',
+        items: [
+          'Reduced Overhead: Avoid warehouse leases, staffing, and large tech investments.',
+          'Negotiated Shipping Rates: Benefit from 3PL carrier discounts and optimized routing.',
+          'Operational Efficiencies: Automation and SOPs reduce errors and labor.',
+        ],
+      },
+      { type: 'heading', level: 3, text: 'Case Study Example' },
+      {
+        type: 'list',
+        items: [
+          '25% faster order processing: Improved satisfaction and repeat purchases.',
+          '15% lower shipping costs: Volume discounts and smarter carrier selection.',
+          '50% fewer shipping-related tickets: Accuracy and proactive comms eased support load.',
+        ],
+      },
+      { type: 'heading', level: 3, text: 'The Bottom Line' },
+      {
+        type: 'text',
+        content:
+          '3PL fulfillment is a game-changer for omnichannel brands. By optimizing inventory, streamlining fulfillment, scaling seamlessly, and reducing costs, 3PLs enable exceptional customer experiences while businesses focus on core strengths and growth.',
+      },
+      { type: 'heading', level: 3, text: 'Borderworx: Your Cross-Border Fulfillment Experts' },
+      {
+        type: 'text',
+        content:
+          'Borderworx is the ideal 3PL partner for US–Canada cross-border operations. With over 20 years of customs expertise, we offer efficient warehousing, streamlined order fulfillment, and strategic facilities in both countries for faster delivery and lower cost. Our customer-first approach and data-driven tools help omnichannel brands scale with confidence.',
+      }
+    ],
+  },
+  {
+    id: '33',
+    slug: 'how-to-lower-import-costs-canadian-businesses',
+    title: 'How to Lower Import Costs: A Guide for Canadian Businesses',
+    author: 'BorderWorx Team',
+    date: '2024-07-16',
+    category: 'Trade Compliance',
+    excerpt:
+      'Practical strategies for Canadian importers to reduce landed costs: tariff classification, FTAs, duty deferral, shipping optimization, brokers, FX, and more.',
+    thumbnail: '/images/blog/lower-import-costs.png',
+    tags: ['Canada', 'Imports', 'Duties', 'FTAs', 'Logistics', 'Cost Reduction'],
+    blocks: [
+      {
+        type: 'text',
+        content:
+          'In the interconnected global marketplace, Canadian businesses frequently rely on imported goods and materials. However, the costs associated with importing can significantly impact a company’s bottom line. Understanding and optimizing these costs is essential for maintaining competitiveness and profitability. Let’s delve into a comprehensive guide to reducing import expenses for Canadian enterprises.',
+      },
+      { type: 'heading', level: 3, text: '1. Strategic Tariff Classification' },
+      {
+        type: 'text',
+        content:
+          'Correct tariff classification is paramount. Misclassification can lead to overpayment of duties and taxes. Work with an experienced customs broker to ensure accurate HS codes and identify potential duty drawbacks or exemptions.',
+      },
+      { type: 'heading', level: 3, text: '2. Leveraging Free Trade Agreements (FTAs)' },
+      {
+        type: 'text',
+        content:
+          'Canada has numerous FTAs. Using the correct rules of origin for eligible goods can reduce or eliminate duties. Validate supplier origin documentation and keep audit-ready records.',
+      },
+      { type: 'heading', level: 3, text: '3. Exploring Duty Deferral Programs' },
+      {
+        type: 'text',
+        content:
+          'Programs like the Duty Deferral Program (DDP) and Customs Bonded Warehouse Program allow postponement of duty/tax payments, improving cash flow.',
+      },
+      { type: 'heading', level: 3, text: '4. Optimizing Shipping Methods' },
+      {
+        type: 'list',
+        items: [
+          'LTL Consolidation: Combine smaller shipments to lower transportation and clearance costs.',
+          'Negotiate with Carriers: Compare quotes and leverage relationships for better rates and SLAs.',
+          'Shipment Consolidation: Fewer, properly planned shipments can reduce per-unit costs and fees.',
+        ],
+      },
+      { type: 'heading', level: 3, text: '5. Partnering with a Customs Broker' },
+      {
+        type: 'text',
+        content:
+          'Brokers streamline entries, prevent delays, and ensure compliance—treat fees as an investment in speed and risk mitigation.',
+      },
+      { type: 'heading', level: 3, text: '6. Value-Added Tax (VAT) / GST/HST Recovery' },
+      {
+        type: 'text',
+        content:
+          'If you incur foreign VAT or Canadian GST/HST, investigate recovery mechanisms and partner with specialists to navigate claims.',
+      },
+      { type: 'heading', level: 3, text: '7. Currency Exchange Strategies' },
+      {
+        type: 'text',
+        content:
+          'Hedge FX exposure or work with an FX provider to stabilize landed costs and improve budgeting.',
+      },
+      { type: 'heading', level: 3, text: '8. Streamlining Supply Chain Management' },
+      {
+        type: 'text',
+        content:
+          'Use technology for inventory tracking, demand forecasting, and vendor performance to reduce waste and expedite flow.',
+      },
+      { type: 'heading', level: 3, text: '9. Due Diligence on Suppliers' },
+      {
+        type: 'text',
+        content:
+          'Vet suppliers to avoid delays, compliance issues, and quality problems. Establish clear expectations in contracts.',
+      },
+      { type: 'heading', level: 3, text: '10. Continuous Improvement' },
+      {
+        type: 'text',
+        content:
+          'Review import processes regularly, watch regulatory changes, and pursue ongoing cost-reduction opportunities.',
+      },
+      { type: 'heading', level: 3, text: 'Key Considerations' },
+      {
+        type: 'list',
+        items: [
+          'Accurate Documentation: Avoid delays and penalties with complete, correct paperwork.',
+          'Insurance: Protect against loss or damage in transit.',
+          'Lead Time: Plan for clearance and transport to prevent disruptions.',
+        ],
+      },
+      { type: 'heading', level: 3, text: 'In Conclusion' },
+      {
+        type: 'text',
+        content:
+          'With careful planning and execution, Canadian businesses can significantly reduce import costs while maintaining compliance. Implementing the strategies above improves competitiveness and profitability.',
+      },
+      { type: 'heading', level: 3, text: 'Borderworx: Your Strategic Partner in Seamless Import Management' },
+      {
+        type: 'text',
+        content:
+          'With 20+ years across Canada and the US, Borderworx combines expert brokerage, compliant tariff classification, and proactive consulting to uncover savings, streamline supply chains, and mitigate risk—backed by transparent communication and tailored service.',
+      },
+    ],
+  },
+  {
+    id: '34',
+    slug: 'understanding-hs-codes-accurate-classification-and-cost-savings',
+    title: 'Understanding HS Codes: Your Key to Accurate Classification and Import Cost Savings',
+    author: 'BorderWorx Team',
+    date: '2024-07-23',
+    category: 'Trade Compliance',
+    excerpt:
+      'What HS codes are, why they matter for duties and compliance, how to classify correctly, and resources to get it right.',
+    tags: ['HS Codes', 'Tariff Classification', 'CBSA', 'HTS', 'Compliance'],
+    blocks: [
+      {
+        type: 'text',
+        content:
+          'The Harmonized System (HS) is a globally standardized numerical system used to classify traded products. It impacts duties, taxes, compliance, and customs clearance. For Canadian importers, understanding and correctly applying HS codes can materially affect landed costs and timelines.',
+      },
+      { type: 'heading', level: 3, text: 'What is the HS Code?' },
+      {
+        type: 'text',
+        content:
+          'An HS code is a six-digit numerical identifier. The first two digits are the chapter, the next two are the heading, and the final two are the subheading. Countries often add further digits (e.g., Canada/US) for greater specificity.',
+      },
+      { type: 'heading', level: 3, text: 'Why are HS Codes Important?' },
+      {
+        type: 'list',
+        items: [
+          'Accurate Duty Calculation: The HS code drives duty rates and taxes—misclassification risks over/underpayment and penalties.',
+          'Regulatory Compliance: Certain goods face restrictions or special requirements by HS code.',
+          'Efficient Clearance: Correct codes reduce delays and associated costs.',
+          'Policy & Analytics: HS data powers trade stats and policy decisions.',
+        ],
+      },
+      { type: 'heading', level: 3, text: 'How to Determine the Correct HS Code' },
+      {
+        type: 'list',
+        items: [
+          'Detailed Product Description: Capture function, materials, composition, and intended use.',
+          'Lookup Tools: Use CBSA’s TCIS and WCO resources to search relevant codes.',
+          'General Rules of Interpretation (GRIs): Apply the six GRIs when tariff text isn’t explicit.',
+          'Explanatory Notes: Consult for clarifications and scope detail.',
+          'Binding Rulings: Request a CBSA ruling when uncertain for a legally binding determination.',
+        ],
+      },
+      { type: 'heading', level: 3, text: 'Tips for Accurate Classification' },
+      {
+        type: 'list',
+        items: [
+          'Be Specific: The richer the description, the easier the match.',
+          'Consult Experts: Leverage customs brokers or trade consultants.',
+          'Stay Current: HS updates occur periodically—use the latest tariff.',
+        ],
+      },
+      { type: 'heading', level: 3, text: 'Borderworx: Your Partner in HS Code Expertise' },
+      {
+        type: 'text',
+        content:
+          'HS codes are foundational to import cost control and compliance. Borderworx brokers help classify accurately, minimize duties, and streamline entries—so you avoid surprises and keep goods moving.',
+      },
+      { type: 'heading', level: 3, text: 'Useful Links' },
+      {
+        type: 'list',
+        items: [
+          'CBSA Tariff Classification Information System (TCIS): https://www.cbsa-asfc.gc.ca/trade-commerce/tariff-tarif/menu-eng.html',
+          'CBSA Guide to Tariff Classification: https://www.cbsa-asfc.gc.ca/trade-commerce/tariff-tarif/guide/cct-tdc-eng.html',
+          'USITC HTS Search: https://hts.usitc.gov/search',
+          'CBP CROSS Rulings: https://rulings.cbp.gov/',
+        ],
+      }
+    ],
+  },
+  {
+    id: '35',
+    slug: 'what-is-shopify-marketplace-connect',
+    title: 'What is Shopify Marketplace Connect? Effortlessly Sell Your Products on Multiple Marketplaces',
+    author: 'BorderWorx Team',
+    date: '2024-08-20',
+    category: 'Shopify',
+    excerpt:
+      'Connect Shopify to Amazon, Walmart, eBay, Etsy, and more to sync listings, orders, inventory, and performance from one place—grow multi‑marketplace sales efficiently.',
+    thumbnail: '/images/blog/shopify.png',
+    tags: ['Shopify', 'Marketplaces', 'Amazon', 'Walmart', 'eBay', 'Etsy', 'Omnichannel'],
+    blocks: [
+      {
+        type: 'text',
+        content:
+          'Shopify Marketplace Connect is an app that allows you to sell your products on Amazon, Target Plus, Walmart, eBay, and Etsy. It connects and integrates your Shopify product catalog with multiple marketplaces to effortlessly manage and synchronize listings, orders, inventory, and measure performance all from one place.',
+      },
+      { type: 'heading', level: 3, text: 'Benefits of using Shopify Marketplace Connect' },
+      {
+        type: 'list',
+        items: [
+          'Effortlessly sell on multiple marketplaces: List products across channels to expand reach and sales potential.',
+          'Centralized management: Sync listings, orders, inventory, and data automatically across connected marketplaces.',
+          'Measure performance: View sales, orders, and performance reports in one hub to inform decisions.',
+          'Operational efficiency: Manage multi‑marketplace selling from a single Shopify‑based workflow.',
+        ],
+      },
+      { type: 'heading', level: 3, text: 'How to use Shopify Marketplace Connect' },
+      {
+        type: 'list',
+        items: [
+          'Install the Shopify Marketplace Connect app from the Shopify App Store (free).',
+          'Connect your Shopify store to each marketplace you want to sell on.',
+          'List your products—listings automatically sync across connected marketplaces.',
+          'Manage your listings, orders, and inventory centrally.',
+          'Measure performance with detailed reports across marketplaces.',
+        ],
+      },
+      { type: 'heading', level: 3, text: 'Beyond Listing: Why It Matters' },
+      {
+        type: 'text',
+        content:
+          'Beyond listing products, Marketplace Connect creates a streamlined ecosystem for multi‑marketplace selling. Automated inventory sync helps prevent overselling, centralized order management simplifies fulfillment, and per‑channel controls let you tailor product data, pricing, and shipping to each marketplace’s requirements—maximizing sales potential and customer satisfaction.',
+      }
+    ],
+  },
 ]
 
 

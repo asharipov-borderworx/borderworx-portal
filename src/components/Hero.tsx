@@ -1,21 +1,77 @@
+'use client'
+
 import Link from 'next/link'
+import { motion } from 'framer-motion'
+import TypingAnimation from './TypingAnimation'
 
 export default function Hero() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3
+      }
+    }
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: [0.25, 0.4, 0.25, 1] as const
+      }
+    }
+  }
+
+  const cardVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        ease: [0.25, 0.4, 0.25, 1] as const
+      }
+    }
+  }
+
   return (
     <section id="home" className="hero-gradient min-h-screen flex items-center pt-52 ">
       <div className="container-max section-padding">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Hero Content */}
-          <div className="text-white">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+          <motion.div
+            className="text-white"
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
+          >
+            <motion.h1 
+              className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
+              variants={itemVariants}
+            >
               Global Logistics
               <span className="block">Solutions</span>
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-orange-100 leading-relaxed">
-              Streamline your supply chain with our comprehensive freight forwarding 
-              and logistics services. Reliable, efficient, and globally connected.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            </motion.h1>
+            <motion.div 
+              className="text-xl md:text-2xl mb-8 text-orange-100 leading-relaxed"
+              variants={itemVariants}
+            >
+              <p className="mb-2">Your Trusted Partner for</p>
+              <TypingAnimation 
+                words={['Warehousing', 'Transportation', 'Customs Brokerage', 'Trade Compliance', 'Fulfillment Services']}
+                className="text-2xl md:text-3xl font-semibold text-white"
+              />
+            </motion.div>
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-4"
+              variants={itemVariants}
+            >
               <Link
                 href="#contact"
                 className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 text-center"
@@ -28,37 +84,93 @@ export default function Hero() {
               >
                 Our Services
               </Link>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Hero Visual */}
-          <div className="relative">
+          <motion.div 
+            className="relative"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.5, ease: [0.25, 0.4, 0.25, 1] as const }}
+          >
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8">
-              <div className="grid grid-cols-2 gap-6">
+              <motion.div 
+                className="grid grid-cols-2 gap-6"
+                initial="hidden"
+                animate="visible"
+                variants={{
+                  visible: {
+                    transition: {
+                      staggerChildren: 0.1,
+                      delayChildren: 0.8
+                    }
+                  }
+                }}
+              >
                 {/* Stats Cards */}
-                <div className="bg-white bg-opacity-20 rounded-xl p-6 text-center">
+                <motion.div 
+                  className="bg-white bg-opacity-20 rounded-xl p-6 text-center"
+                  variants={cardVariants}
+                  whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                >
                   <div className="text-3xl font-bold text-white mb-2">100+</div>
                   <div className="text-orange-100">Global Partners</div>
-                </div>
-                <div className="bg-white bg-opacity-20 rounded-xl p-6 text-center">
+                </motion.div>
+                <motion.div 
+                  className="bg-white bg-opacity-20 rounded-xl p-6 text-center"
+                  variants={cardVariants}
+                  whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                >
                   <div className="text-3xl font-bold text-white mb-2">$3 Billion+</div>
                   <div className="text-orange-100">Goods Managed</div>
-                </div>
-                <div className="bg-white bg-opacity-20 rounded-xl p-6 text-center">
+                </motion.div>
+                <motion.div 
+                  className="bg-white bg-opacity-20 rounded-xl p-6 text-center"
+                  variants={cardVariants}
+                  whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                >
                   <div className="text-3xl font-bold text-white mb-2">24/7</div>
                   <div className="text-orange-100">Support</div>
-                </div>
-                <div className="bg-white bg-opacity-20 rounded-xl p-6 text-center">
+                </motion.div>
+                <motion.div 
+                  className="bg-white bg-opacity-20 rounded-xl p-6 text-center"
+                  variants={cardVariants}
+                  whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                >
                   <div className="text-3xl font-bold text-white mb-2">99%</div>
                   <div className="text-orange-100">On-Time</div>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             </div>
 
             {/* Floating Elements */}
-            <div className="absolute -top-4 -right-4 w-20 h-20 bg-white bg-opacity-20 rounded-full animate-pulse"></div>
-            <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-white bg-opacity-30 rounded-full animate-pulse delay-1000"></div>
-          </div>
+            <motion.div 
+              className="absolute -top-4 -right-4 w-20 h-20 bg-white bg-opacity-20 rounded-full"
+              animate={{ 
+                scale: [1, 1.2, 1],
+                opacity: [0.5, 0.8, 0.5]
+              }}
+              transition={{ 
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
+            <motion.div 
+              className="absolute -bottom-6 -left-6 w-12 h-12 bg-white bg-opacity-30 rounded-full"
+              animate={{ 
+                scale: [1, 1.3, 1],
+                opacity: [0.3, 0.6, 0.3]
+              }}
+              transition={{ 
+                duration: 2.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.5
+              }}
+            />
+          </motion.div>
         </div>
       </div>
 
