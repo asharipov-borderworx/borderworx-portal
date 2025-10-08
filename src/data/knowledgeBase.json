@@ -1,0 +1,130 @@
+{
+  "knowledgeBase": [
+    {
+      "id": "1",
+      "question": "What services does Borderworx offer?",
+      "answer": "Borderworx offers comprehensive logistics and trade services including warehousing & distribution, customs brokerage, trade compliance consulting, Amazon FBA prep services, container freight stations (CFS), centralized examination stations (CES), and CTPAT certification assistance.",
+      "keywords": ["services", "what do you do", "solutions", "offer", "warehousing", "distribution", "customs", "brokerage", "trade", "compliance", "amazon", "fba", "cfs", "ces", "ctpat", "logistics", "3pl"]
+    },
+    {
+      "id": "1a",
+      "question": "Do you provide warehousing and distribution?",
+      "answer": "Yes, we provide secure warehousing and distribution with inventory management, pick & pack, cross‑docking, and value‑added services tailored for e‑commerce and B2B.",
+      "keywords": ["warehouse", "storage", "fulfillment", "pick", "pack", "cross dock", "distribution", "inventory"]
+    },
+    {
+      "id": "1b",
+      "question": "Do you handle customs brokerage?",
+      "answer": "Yes. Our licensed customs brokerage manages tariff classification, entries, compliance, duties/taxes, and release coordination for cross‑border shipments.",
+      "keywords": ["customs", "broker", "brokerage", "tariff", "duties", "entry", "release", "import", "export"]
+    },
+    {
+      "id": "2",
+      "question": "What is Section 321?",
+      "answer": "Section 321 allows duty‑free entry for shipments valued at $800 USD or less when properly declared and compliant with CBP rules.",
+      "keywords": ["section 321", "de minimis", "$800", "duty free", "tax free", "cbp", "threshold", "ecommerce"]
+    },
+    {
+      "id": "2a",
+      "question": "How can Borderworx help with Section 321?",
+      "answer": "We assess eligibility, structure shipments to meet the $800 threshold, and ensure correct documentation to prevent delays and extra costs.",
+      "keywords": ["321 support", "321 program", "plan shipments", "documentation", "eligibility"]
+    },
+    {
+      "id": "3",
+      "question": "What is a Foreign Trade Zone (FTZ)?",
+      "answer": "An FTZ is a designated area near a port or airport where goods are treated as outside U.S. commerce for duty purposes, enabling duty deferral, reduction, or elimination and streamlined customs procedures.",
+      "keywords": ["foreign trade zone", "ftz", "duty deferral", "zone", "port", "airport", "inventory", "bonded"]
+    },
+    {
+      "id": "4",
+      "question": "What is a Centralized Examination Station (CES)?",
+      "answer": "A CES is a CBP‑supervised facility where selected cargo is examined. It centralizes inspections to speed releases and maintain compliance.",
+      "keywords": ["ces", "centralized examination", "inspection", "cbp exam", "hold", "release"]
+    },
+    {
+      "id": "5",
+      "question": "What is a Container Freight Station (CFS)?",
+      "answer": "A CFS consolidates and de‑consolidates Less‑than‑Container‑Load (LCL) cargo, provides short‑term storage, and supports customs processing for efficient flow.",
+      "keywords": ["cfs", "container freight station", "lcl", "consolidation", "deconsolidation", "stuffing", "destuffing", "transload"]
+    },
+    {
+      "id": "6",
+      "question": "What is CTPAT certification?",
+      "answer": "CTPAT is a voluntary CBP program that strengthens supply chain security. Benefits include fewer inspections, prioritized processing, and FAST lane eligibility.",
+      "keywords": ["ctpat", "security", "supply chain", "validation", "benefits", "fast lane", "cbp"]
+    },
+    {
+      "id": "7",
+      "question": "How can I track my UPS shipment?",
+      "answer": "Track your shipment at https://www.ups.com/track?loc=en_CA&requester=ST/ for real‑time updates using your tracking number.",
+      "keywords": ["ups", "track", "tracking", "package", "parcel", "status", "delivery"]
+    },
+    {
+      "id": "7a",
+      "question": "Where do I track my package?",
+      "answer": "Use the UPS tracking portal above. Enter your tracking ID to view the latest scan events and estimated delivery.",
+      "keywords": ["where is my order", "wismo", "track parcel", "package tracking", "shipment status"]
+    },
+    {
+      "id": "8",
+      "question": "What is Amazon FBA?",
+      "answer": "Fulfillment by Amazon (FBA) stores, picks, packs, ships, and handles customer service/returns for your products. Borderworx provides compliant FBA prep and storage.",
+      "keywords": ["amazon", "fba", "prime", "prep", "inbound", "label", "poly bag", "case pack", "warehouse"]
+    },
+    {
+      "id": "9",
+      "question": "What is Amazon FBM?",
+      "answer": "Fulfillment by Merchant (FBM) lets you handle inventory, shipping, and customer service directly—more control and branding, without automatic Prime eligibility.",
+      "keywords": ["amazon", "fbm", "merchant fulfilled", "seller fulfilled", "own shipping", "branding"]
+    },
+    {
+      "id": "10",
+      "question": "How do I get a quote for warehouse services?",
+      "answer": "Contact us with your product type, monthly volumes, storage duration, and special handling needs. We’ll provide a tailored quote.",
+      "keywords": ["quote", "pricing", "estimate", "rate", "warehouse", "storage", "fulfillment cost"]
+    },
+    {
+      "id": "10a",
+      "question": "What information do you need for a quote?",
+      "answer": "SKUs, units/month, avg order lines, pallet or bin storage needs, packaging/labeling requirements, and destination mix (Canada/USA).",
+      "keywords": ["quote requirements", "what info", "pricing details", "estimate inputs"]
+    },
+    {
+      "id": "11",
+      "question": "What are your office locations?",
+      "answer": "Canada: 6060 Burnside Court Unit 3, Mississauga, ON L5T 2T5. USA: 6405 Inducon Drive West, Sanborn, NY 14132.",
+      "keywords": ["locations", "offices", "canada", "usa", "mississauga", "ontario", "new york", "sanborn", "address"]
+    },
+    {
+      "id": "12",
+      "question": "How can I contact Borderworx?",
+      "answer": "Canada: +1‑905‑877‑6036. USA: +1‑716‑216‑6714. Email: mail@borderworx.com. You can also use our website contact form.",
+      "keywords": ["contact", "phone", "email", "support", "help", "sales", "mail@borderworx.com"]
+    },
+    {
+      "id": "13",
+      "question": "Do you help Canadian sellers ship to the USA (Amazon/Shopify)?",
+      "answer": "Yes. We specialize in cross‑border logistics Canada→USA, including Section 321 strategies, FBA/FBM prep, and customs brokerage.",
+      "keywords": ["canada to usa", "ship to usa", "cross border", "amazon usa", "shopify", "321", "brokerage"]
+    },
+    {
+      "id": "14",
+      "question": "Do you offer returns processing in the USA?",
+      "answer": "Yes. We provide U.S. returns receiving, inspection, consolidation, and return‑to‑stock or disposal workflows to suit your policy.",
+      "keywords": ["returns", "rma", "reverse logistics", "returns processing", "restock", "inspection"]
+    },
+    {
+      "id": "15",
+      "question": "What are typical fulfillment lead times?",
+      "answer": "Standard SLA targets are same‑day or next‑day order processing depending on cut‑off times and volumes. Peak season SLAs can be arranged.",
+      "keywords": ["lead time", "sla", "handling time", "turnaround", "cutoff", "same day", "next day"]
+    },
+    {
+      "id": "16",
+      "question": "Do you support trade compliance consulting?",
+      "answer": "Yes. We offer HS classification, origin analysis, valuation guidance, documentation reviews, and compliance program setup/audits.",
+      "keywords": ["trade compliance", "hs code", "classification", "origin", "valuation", "audit", "consulting"]
+    }
+  ]
+}

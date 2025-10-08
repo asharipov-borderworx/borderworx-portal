@@ -11,74 +11,12 @@ interface Message {
   timestamp: Date
 }
 
-interface FAQ {
-  question: string
+interface ChatbotResponse {
   answer: string
-  keywords: string[]
+  confidence: number
+  source: string | null
+  suggestions?: string[]
 }
-
-const getFaqs = (contactInfo: any): FAQ[] => [
-  {
-    question: "What services do you offer?",
-    answer: "We offer comprehensive logistics services including freight forwarding, warehousing, customs clearance, express delivery, supply chain analytics, and global tracking.",
-    keywords: ["services", "what", "offer", "do", "freight", "shipping", "logistics"]
-  },
-  {
-    question: "How can I track my shipment?",
-    answer: `You can track your shipment using our global tracking system. Simply provide your tracking number through our contact form or call us at ${contactInfo.contact.phone.display}.`,
-    keywords: ["track", "tracking", "shipment", "where", "package", "delivery"]
-  },
-  {
-    question: "What countries do you ship to?",
-    answer: "We provide logistics services to over 50 countries worldwide through our extensive network of global partners.",
-    keywords: ["countries", "international", "global", "worldwide", "ship", "deliver"]
-  },
-  {
-    question: "How much does shipping cost?",
-    answer: "Shipping costs depend on various factors including destination, weight, dimensions, and service type. Contact us for a personalized quote.",
-    keywords: ["cost", "price", "expensive", "cheap", "rate", "quote", "pricing"]
-  },
-  {
-    question: "How long does delivery take?",
-    answer: "Delivery times vary by destination and service type. Standard freight typically takes 5-15 business days, while express delivery takes 1-3 business days.",
-    keywords: ["time", "long", "delivery", "fast", "quick", "when", "duration"]
-  },
-  {
-    question: "Do you handle customs clearance?",
-    answer: "Yes, we provide expert customs clearance services to ensure smooth international trade compliance and avoid delays.",
-    keywords: ["customs", "clearance", "import", "export", "duties", "taxes", "documentation"]
-  },
-  {
-    question: "What are your business hours?",
-    answer: `Our business hours are ${contactInfo.businessHours.weekdays}, ${contactInfo.businessHours.hours}. ${contactInfo.businessHours.support}`,
-    keywords: ["hours", "open", "time", "support", "available", "24/7"]
-  },
-  {
-    question: "How can I get a quote?",
-    answer: `You can get a quote by filling out our contact form, calling us at ${contactInfo.contact.phone.display}, or emailing us at ${contactInfo.contact.email.primary} with your shipment details.`,
-    keywords: ["quote", "estimate", "price", "cost", "how", "get"]
-  },
-  {
-    question: "What documents do I need for shipping?",
-    answer: "Required documents typically include commercial invoice, packing list, bill of lading, and any necessary permits or certificates. Our team will guide you through the specific requirements for your shipment.",
-    keywords: ["documents", "paperwork", "invoice", "bill", "lading", "requirements"]
-  },
-  {
-    question: "Do you provide insurance for shipments?",
-    answer: "Yes, we offer comprehensive cargo insurance options to protect your shipments against loss or damage during transit.",
-    keywords: ["insurance", "protection", "damage", "loss", "coverage", "protect"]
-  },
-  {
-    question: "Can you handle oversized or special cargo?",
-    answer: "Yes, we specialize in handling oversized, heavy, and special cargo including machinery, vehicles, and hazardous materials with proper certifications.",
-    keywords: ["oversized", "heavy", "special", "machinery", "vehicles", "hazardous", "large"]
-  },
-  {
-    question: "What payment methods do you accept?",
-    answer: "We accept various payment methods including bank transfers, credit cards, and letters of credit. Payment terms can be discussed based on your business needs.",
-    keywords: ["payment", "pay", "methods", "credit", "bank", "transfer", "money"]
-  }
-]
 
 export default function Chatbot() {
   const contactInfo = getContactInfo()
@@ -104,27 +42,33 @@ export default function Chatbot() {
     scrollToBottom()
   }, [messages])
 
-  const findBestMatch = (userMessage: string): FAQ | null => {
-    const faqs = getFaqs(contactInfo)
-    const lowercaseMessage = userMessage.toLowerCase()
-    let bestMatch: FAQ | null = null
-    let maxMatches = 0
+  const callChatbotAPI = async (query: string): Promise<ChatbotResponse> => {
+    try {
+      const response = await fetch('/api/chatbot', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ query }),
+      })
 
-    faqs.forEach(faq => {
-      const matches = faq.keywords.filter(keyword => 
-        lowercaseMessage.includes(keyword.toLowerCase())
-      ).length
-
-      if (matches > maxMatches && matches > 0) {
-        maxMatches = matches
-        bestMatch = faq
+      if (!response.ok) {
+        throw new Error('Failed to get response from chatbot')
       }
-    })
 
-    return bestMatch
+      return await response.json()
+    } catch (error) {
+      console.error('Chatbot API error:', error)
+      return {
+        answer: "I'm sorry, I'm having trouble processing your request right now. Please try again or contact our support team for assistance.",
+        confidence: 0,
+        source: null
+      }
+    }
   }
 
   const handleSendMessage = async () => {
+    if (isTyping) return
     if (!inputValue.trim()) return
 
     const userMessage: Message = {
@@ -135,23 +79,32 @@ export default function Chatbot() {
     }
 
     setMessages(prev => [...prev, userMessage])
+    const currentInput = inputValue
     setInputValue('')
     setIsTyping(true)
 
-    // Simulate typing delay
-    setTimeout(() => {
-      const bestMatch = findBestMatch(inputValue)
-      
+    try {
+      // Ensure the typing indicator shows for at least 1 second
+      const minimumTypingMs = 1000
+      const apiPromise = callChatbotAPI(currentInput)
+      const timerPromise = new Promise<void>(resolve => setTimeout(resolve, minimumTypingMs))
+
+      // Wait for BOTH to complete to guarantee minimum delay
+      await Promise.all([apiPromise, timerPromise])
+      const apiResponse = await apiPromise
+
       let botResponse: Message
 
-      if (bestMatch) {
+      if (apiResponse.confidence > 0.3) {
+        // Good confidence - use the API response
         botResponse = {
           id: (Date.now() + 1).toString(),
-          text: bestMatch.answer,
+          text: apiResponse.answer,
           isBot: true,
           timestamp: new Date()
         }
       } else {
+        // Low confidence - offer to book a meeting
         botResponse = {
           id: (Date.now() + 1).toString(),
           text: "I'm not sure about that specific question. Would you like to book a meeting with one of our logistics experts? They can provide detailed answers to your questions and help with your specific needs.",
@@ -162,9 +115,11 @@ export default function Chatbot() {
 
       setMessages(prev => [...prev, botResponse])
       setIsTyping(false)
-
-      // If no match found, add a booking button after a delay
-      if (!bestMatch) {
+      console.log(apiResponse)
+      console.log(apiResponse.confidence)
+      console.log(apiResponse.suggestions)
+      // If confidence is low or we have suggestions, add booking button or suggestions
+      if (apiResponse.confidence <= 0.1) {
         setTimeout(() => {
           const bookingButton: Message = {
             id: (Date.now() + 2).toString(),
@@ -174,8 +129,29 @@ export default function Chatbot() {
           }
           setMessages(prev => [...prev, bookingButton])
         }, 500)
+      } else if (apiResponse.suggestions && apiResponse.suggestions.length > 0) {
+        // Add suggestions if provided
+        setTimeout(() => {
+          const suggestionsMessage: Message = {
+            id: (Date.now() + 2).toString(),
+            text: "Here are some related questions you might find helpful:\n\n" + apiResponse.suggestions!.map(s => `• ${s}`).join('\n'),
+            isBot: true,
+            timestamp: new Date()
+          }
+          setMessages(prev => [...prev, suggestionsMessage])
+        }, 500)
       }
-    }, 1000)
+    } catch (error) {
+      console.error('Error sending message:', error)
+      const errorResponse: Message = {
+        id: (Date.now() + 1).toString(),
+        text: "I'm sorry, I'm having trouble processing your request right now. Please try again or contact our support team for assistance.",
+        isBot: true,
+        timestamp: new Date()
+      }
+      setMessages(prev => [...prev, errorResponse])
+      setIsTyping(false)
+    }
   }
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -186,10 +162,10 @@ export default function Chatbot() {
   }
 
   const quickQuestions = [
-    "What services do you offer?",
-    "How can I track my shipment?", 
-    "How much does shipping cost?",
-    "What are your business hours?"
+    "What services does Borderworx offer?",
+    "How can I track my UPS shipment?", 
+    "What is Amazon FBA?",
+    "How do I contact Borderworx?"
   ]
 
   const handleQuickQuestion = (question: string) => {
@@ -221,9 +197,9 @@ export default function Chatbot() {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-24 right-6 z-[60] w-96 h-[500px] bg-white rounded-lg shadow-2xl border border-gray-200 flex flex-col">
+        <div className="fixed inset-0 md:inset-auto md:bottom-24 md:right-6 md:z-[60] md:w-96 md:h-[500px] z-[70] bg-white md:rounded-lg shadow-2xl md:border md:border-gray-200 flex flex-col">
           {/* Header */}
-          <div className="bg-primary text-white p-4 rounded-t-lg flex items-center justify-between">
+          <div className="bg-primary text-white p-4 md:rounded-t-lg flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div className="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
