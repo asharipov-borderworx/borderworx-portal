@@ -41,8 +41,32 @@ export default function BlogDynamicPage({ params }: { params: { slug: string } }
              } else if (block.type === 'image') {
                  inner = `<div class=\"relative mx-auto w-full max-w-3xl h-56 md:h-72 rounded-xl overflow-hidden bg-white\"><img src=\"${block.src}\" alt=\"${block.alt || ''}\" class=\"w-full h-full object-contain p-4\" /></div>`
             } else if (block.type === 'heading') {
-                const lvl = block.level === 4 ? 4 : 3
-                const classes = lvl === 3 ? 'text-2xl font-semibold text-secondary' : 'text-xl font-semibold text-secondary'
+                const lvl = Math.max(1, Math.min(6, block.level)) // Ensure level is between 1-6
+                let classes = ''
+                
+                switch (lvl) {
+                    case 1:
+                        classes = 'text-4xl font-bold text-secondary mb-4'
+                        break
+                    case 2:
+                        classes = 'text-3xl font-bold text-secondary mb-4'
+                        break
+                    case 3:
+                        classes = 'text-2xl font-semibold text-secondary mb-3'
+                        break
+                    case 4:
+                        classes = 'text-xl font-semibold text-secondary mb-3'
+                        break
+                    case 5:
+                        classes = 'text-lg font-semibold text-secondary mb-2'
+                        break
+                    case 6:
+                        classes = 'text-base font-semibold text-secondary mb-2'
+                        break
+                    default:
+                        classes = 'text-2xl font-semibold text-secondary mb-3'
+                }
+                
                 inner = `<h${lvl} class=\"${classes}\">${block.text}</h${lvl}>`
             }
             if (!inner) return ''
