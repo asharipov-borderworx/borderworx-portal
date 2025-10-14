@@ -10,14 +10,30 @@ export default function Footer() {
     { name: 'Services', href: '/services' },
     { name: 'Resources', href: '/resources' },
     { name: 'Blog', href: '/blog' },
-    { name: 'About', href: '/about' },
+    { name: 'About Us', href: '/about-us' },
+    { name: 'Company Passion', href: '/company-passion' },
     { name: 'Contact', href: '/contact' },
+    { name: 'Get Quote', href: '/quote' },
   ]
 
   const services = [
     { name: 'Warehousing', href: '/services/warehousing' },
+    { name: 'Warehousing & Distribution', href: '/services/warehousing-distribution' },
     { name: 'Customs Brokerage', href: '/services/customs-brokerage' },
- 
+    { name: 'Trade Compliance', href: '/services/trade-compliance' },
+    { name: 'Section 321 Fulfillment', href: '/services/section-321' },
+    { name: 'Amazon FBM', href: '/services/amazon-fbm' },
+    { name: 'FBA Prep Center', href: '/services/amazon-fba-prep' },
+    { name: 'CFS Shipping', href: '/services/cfs-shipping' },
+  ]
+
+  const resources = [
+    { name: 'What is Section 321?', href: '/resources/section-321-information' },
+    { name: 'What is FTZ?', href: '/resources/foreign-trade-zone-ftz-information' },
+    { name: 'What is CES?', href: '/resources/centralized-examination-station-ces-information' },
+    { name: 'What is CFS?', href: '/resources/container-freight-station-cfs-information' },
+    { name: 'What is CTPAT?', href: '/resources/ctpat-certification-information' },
+    { name: 'UPS Tracking', href: '/resources/ups-shipment-tracking' },
   ]
 
   const socialLinks = [
@@ -35,7 +51,7 @@ export default function Footer() {
   return (
     <footer className="bg-secondary text-white">
       <div className="container-max section-padding">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <Link href="/" className="text-2xl font-bold mb-4 inline-block">
@@ -66,7 +82,7 @@ export default function Footer() {
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-primary transition-colors duration-300"
+                    className="text-gray-300 hover:text-primary transition-colors duration-300 text-sm"
                   >
                     {link.name}
                   </Link>
@@ -83,9 +99,26 @@ export default function Footer() {
                 <li key={index}>
                   <Link
                     href={service.href}
-                    className="text-gray-300 hover:text-primary transition-colors duration-300"
+                    className="text-gray-300 hover:text-primary transition-colors duration-300 text-sm"
                   >
                     {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+            <ul className="space-y-2">
+              {resources.map((resource, index) => (
+                <li key={index}>
+                  <Link
+                    href={resource.href}
+                    className="text-gray-300 hover:text-primary transition-colors duration-300 text-sm"
+                  >
+                    {resource.name}
                   </Link>
                 </li>
               ))}
