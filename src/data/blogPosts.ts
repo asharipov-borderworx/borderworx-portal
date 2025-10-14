@@ -25,7 +25,7 @@ export const blogPosts: BlogPostItem[] = [
     slug: 'ceo-insights-canadian-businesses-moving-to-us',
     title: 'CEO Insights: Canadian Businesses Moving Operations to the US',
     author: 'BorderWorx Team',
-    date: '2024-01-15',
+    date: '2025-10-05',
     category: 'Industry Insights',
     excerpt:
       'Our CEO discusses the growing trend of Canadian businesses relocating their operations to the United States, exploring the logistics challenges and opportunities this presents.',
