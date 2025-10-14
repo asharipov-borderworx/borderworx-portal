@@ -345,7 +345,7 @@ export default function CFSShippingPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="section-padding bg-gradient-to-r from-primary to-orange-600 text-white">
+        <section className="section-padding hero-gradient text-white">
           <div className="container-max">
             <div className="text-center max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">

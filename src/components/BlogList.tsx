@@ -272,7 +272,7 @@ export default function BlogList({ posts }: BlogListProps) {
             <div className="flex items-center gap-4">
               <button
                 onClick={() => setShowFilters(!showFilters)}
-                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary to-orange-600 text-white rounded-lg hover:from-orange-600 hover:to-primary transition-all shadow-md hover:shadow-lg"
+                className="flex items-center gap-2 px-4 py-2 hero-gradient text-white rounded-lg hover:from-orange-600 hover:to-primary transition-all shadow-md hover:shadow-lg"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
@@ -485,7 +485,7 @@ export default function BlogList({ posts }: BlogListProps) {
           </p>
           <button
             onClick={clearAllFilters}
-            className="px-6 py-3 bg-gradient-to-r from-primary to-orange-600 text-white rounded-lg hover:from-orange-600 hover:to-primary transition-all shadow-md hover:shadow-lg"
+            className="px-6 py-3 hero-gradient text-white rounded-lg hover:from-orange-600 hover:to-primary transition-all shadow-md hover:shadow-lg"
           >
             Clear All Filters
           </button>

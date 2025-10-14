@@ -7,7 +7,7 @@ export default function AboutUsPage() {
 
   function HeroSection() {
     return (
-              <section className="relative bg-gradient-to-r from-primary to-orange-600 text-white pt-72 overflow-hidden">
+              <section className="relative hero-gradient text-white pt-72 overflow-hidden">
               {/* Background Image */}
               <div className="absolute inset-0 z-0">
                 <img

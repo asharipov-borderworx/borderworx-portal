@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function HeroSection({ title, description, breadcrumb }: { title: string, description: string, breadcrumb: string }) {
     return (
-        <section className="relative bg-gradient-to-r from-primary to-orange-600 text-white pt-40 sm:pt-44 md:pt-44 lg:pt-44 xl:pt-48 overflow-hidden">
+        <section className="relative hero-gradient text-white pt-40 sm:pt-44 md:pt-44 lg:pt-44 xl:pt-48 overflow-hidden">
         <div className="container-max section-padding relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             {/* Breadcrumb */}

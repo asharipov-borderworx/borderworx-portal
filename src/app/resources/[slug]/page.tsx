@@ -28,7 +28,7 @@ export default function ResourcePage({ params }: Params) {
 
       <main className="flex-grow">
         {/* Hero */}
-        <section className="relative bg-gradient-to-r from-primary to-orange-600 text-white pt-60 overflow-hidden">
+        <section className="relative hero-gradient text-white pt-60 overflow-hidden">
           <div className="container-max section-padding relative z-10">
             <div className="max-w-4xl mx-auto">
               <div className="mb-6">

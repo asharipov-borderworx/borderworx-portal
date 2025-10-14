@@ -8,8 +8,10 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isResourcesOpen, setIsResourcesOpen] = useState(false)
+  const [isAboutOpen, setIsAboutOpen] = useState(false)
   const hoverTimer = useRef<NodeJS.Timeout | null>(null)
   const hoverResourcesTimer = useRef<NodeJS.Timeout | null>(null)
+  const hoverAboutTimer = useRef<NodeJS.Timeout | null>(null)
 
   const openServices = () => {
     if (hoverTimer.current) clearTimeout(hoverTimer.current)
@@ -26,6 +28,14 @@ export default function Header() {
   const closeResources = () => {
     if (hoverResourcesTimer.current) clearTimeout(hoverResourcesTimer.current)
     hoverResourcesTimer.current = setTimeout(() => setIsResourcesOpen(false), 120)
+  }
+  const openAbout = () => {
+    if (hoverAboutTimer.current) clearTimeout(hoverAboutTimer.current)
+    setIsAboutOpen(true)
+  }
+  const closeAbout = () => {
+    if (hoverAboutTimer.current) clearTimeout(hoverAboutTimer.current)
+    hoverAboutTimer.current = setTimeout(() => setIsAboutOpen(false), 120)
   }
   
   const navigation = [
@@ -142,6 +152,48 @@ export default function Header() {
                             className="group flex items-center justify-between px-3 py-2 rounded-lg transition-colors"
                           >
                             <span className="text-sm font-medium text-secondary group-hover:text-primary">{r.name}</span>
+                            <svg className="w-4 h-4 text-gray-400 group-hover:text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                              <path d="M5 12h14M13 5l7 7-7 7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )
+              }
+              if (item.name === 'About us') {
+                return (
+                  <div
+                    key={item.name}
+                    className="relative"
+                    onMouseEnter={openAbout}
+                    onMouseLeave={closeAbout}
+                  >
+                    <Link
+                      href={item.href}
+                      className="relative inline-block text-gray-700 hover:text-primary transition-colors duration-300 font-medium nav-underline px-1"
+                    >
+                      {item.name}
+                    </Link>
+                    <div
+                      className={`absolute left-1/2 -translate-x-1/2 top-full mt-3 w-[280px] rounded-xl bg-white/70 backdrop-blur-md border border-white/30 shadow-2xl p-4 transition-[opacity,transform] duration-300 ease-out will-change-transform ${
+                        isAboutOpen ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 -translate-y-2 scale-95 pointer-events-none'
+                      }`}
+                      onMouseEnter={openAbout}
+                      onMouseLeave={closeAbout}
+                    >
+                      <div className="flex flex-col gap-2">
+                        {[
+                          { name: 'About Us', href: '/about-us' },
+                          { name: 'Company Passion', href: '/company-passion' },
+                        ].map((a) => (
+                          <Link
+                            key={a.name}
+                            href={a.href}
+                            className="group flex items-center justify-between px-3 py-2 rounded-lg transition-colors"
+                          >
+                            <span className="text-sm font-medium text-secondary group-hover:text-primary">{a.name}</span>
                             <svg className="w-4 h-4 text-gray-400 group-hover:text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                               <path d="M5 12h14M13 5l7 7-7 7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>

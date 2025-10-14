@@ -100,7 +100,7 @@ export default function MeetingBooking({ isOpen, onClose }: MeetingBookingProps)
               </p>
               
               {/* Quick Calendly Option */}
-              <div className="bg-gradient-to-r from-primary to-orange-600 rounded-xl p-6 text-white mb-6">
+              <div className="hero-gradient rounded-xl p-6 text-white mb-6">
                 <h3 className="text-xl font-semibold mb-3">📅 Instant Scheduling</h3>
                 <p className="text-orange-100 mb-4">
                   Book directly using our calendar - choose your preferred time and receive an instant confirmation email.

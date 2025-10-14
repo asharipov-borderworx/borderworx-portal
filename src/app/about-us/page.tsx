@@ -220,61 +220,46 @@ export default function AboutUsPage() {
           <div className="container-max section-padding relative">
             <AnimationWrapper animation="fadeInUp" className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-6">Our Core Values</h2>
-              <div className="w-16 h-1 bg-primary rounded-full mx-auto mb-8" />
+              <div className="w-16 h-1 hero-gradient rounded-full mx-auto mb-8" />
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">Design-forward principles with motion—memorable but refined.</p>
             </AnimationWrapper>
 
             <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 items-stretch" staggerDelay={0.2}>
               {/* Card 1 */}
               <StaggerItem className="group relative h-full will-change-transform">
-                <div className="animated-frame h-full p-[2px] rounded-2xl bg-gradient-to-r from-primary via-orange-500 to-primary bg-[length:200%_200%] will-change-transform">
+                <div className="animated-frame h-full p-[2px] rounded-2xl hero-gradient bg-[length:200%_200%] will-change-transform">
                   <div className="values-card h-full rounded-2xl p-6 md:p-8 bg-white/80 backdrop-blur-xl border border-white/40 relative overflow-hidden flex flex-col will-change-transform">
                     <span className="shine" />
                     <h3 className="text-xl md:text-2xl font-extrabold tracking-tight text-secondary mb-3 text-center">Reliability</h3>
                     <p className="text-gray-700 text-center leading-relaxed text-base md:text-lg break-words">
                       Predictable operations, transparent updates, and delivery you don't need to second-guess.
                     </p>
-                    <div className="flex flex-wrap justify-center gap-2 mt-6 md:mt-auto">
-                      <span className="pill">On‑Time</span>
-                      <span className="pill">Consistent</span>
-                      <span className="pill">Proactive</span>
-                    </div>
                   </div>
                 </div>
               </StaggerItem>
 
               {/* Card 2 */}
               <StaggerItem className="group relative h-full will-change-transform">
-                <div className="animated-frame h-full p-[2px] rounded-2xl bg-gradient-to-r from-primary via-orange-500 to-primary bg-[length:200%_200%] will-change-transform">
+                <div className="animated-frame h-full p-[2px] rounded-2xl hero-gradient bg-[length:200%_200%] will-change-transform">
                   <div className="values-card h-full rounded-2xl p-6 md:p-8 bg-white/80 backdrop-blur-xl border border-white/40 relative overflow-hidden flex flex-col will-change-transform">
                     <span className="shine" />
                     <h3 className="text-xl md:text-2xl font-extrabold tracking-tight text-secondary mb-3 text-center">Innovation</h3>
                     <p className="text-gray-700 text-center leading-relaxed text-base md:text-lg break-words">
                       Practical, measurable improvements—from smarter routing to scalable warehousing.
                     </p>
-                    <div className="flex flex-wrap justify-center gap-2 mt-6 md:mt-auto">
-                      <span className="pill">Data‑Driven</span>
-                      <span className="pill">Pragmatic</span>
-                      <span className="pill">Adaptive</span>
-                    </div>
                   </div>
                 </div>
               </StaggerItem>
 
               {/* Card 3 */}
               <StaggerItem className="group relative h-full will-change-transform">
-                <div className="animated-frame h-full p-[2px] rounded-2xl bg-gradient-to-r from-primary via-orange-500 to-primary bg-[length:200%_200%] will-change-transform">
+                <div className="animated-frame h-full p-[2px] rounded-2xl hero-gradient bg-[length:200%_200%] will-change-transform">
                   <div className="values-card h-full rounded-2xl p-6 md:p-8 bg-white/80 backdrop-blur-xl border border-white/40 relative overflow-hidden flex flex-col will-change-transform">
                     <span className="shine" />
                     <h3 className="text-xl md:text-2xl font-extrabold tracking-tight text-secondary mb-3 text-center">Partnership</h3>
                     <p className="text-gray-700 text-center leading-relaxed text-base md:text-lg break-words">
                       Long‑term alignment—your milestones shape our roadmap and daily priorities.
                     </p>
-                    <div className="flex flex-wrap justify-center gap-2 mt-6 md:mt-auto">
-                      <span className="pill">Transparent</span>
-                      <span className="pill">Collaborative</span>
-                      <span className="pill">Outcome‑Focused</span>
-                    </div>
                   </div>
                 </div>
               </StaggerItem>
@@ -283,7 +268,7 @@ export default function AboutUsPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-primary text-white">
+        <section className="py-20 hero-gradient text-white">
           <div className="container-max section-padding">
             <AnimationWrapper animation="fadeInUp">
               <div className="text-center max-w-4xl mx-auto">

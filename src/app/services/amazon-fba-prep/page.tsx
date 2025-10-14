@@ -184,7 +184,7 @@ export default function AmazonFBAPrepPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-primary to-orange-600 text-white">
+        <section className="py-16 hero-gradient text-white">
           <div className="container-max section-padding text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Streamline Your Amazon FBA Process?
