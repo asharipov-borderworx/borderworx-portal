@@ -3,7 +3,6 @@ import Hero from '@/components/Hero'
 import ProfessionalServices from '@/components/ProfessionalServices'
 import Services from '@/components/Services'
 import IntegrationPartners from '@/components/IntegrationPartners'
-import Contact from '@/components/Contact'
 
 export default function Home() {
   return (
