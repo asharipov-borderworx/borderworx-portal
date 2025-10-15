@@ -22,26 +22,26 @@ export default function ProfessionalServices() {
           </AnimationWrapper>
 
           {/* Main Content */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Column - Experience Stats */}
-            <div className="space-y-8">
+            <div className="space-y-6 lg:space-y-8 order-2 lg:order-1">
               <AnimationWrapper animation="fadeInLeft" delay={0.2}>
                 <div 
-                  className="rounded-xl p-8 text-white shadow-2xl shadow-orange-900/50 border border-orange-500/20"
+                  className="rounded-xl p-4 sm:p-6 lg:p-8 text-white shadow-2xl shadow-orange-900/50 border border-orange-500/20"
                   style={{ background: 'linear-gradient(135deg, #FF6B00 0%, #FF7A00 50%, #FF8C00 100%)' }}
                 >
-                  <div className="grid grid-cols-2 gap-6 text-center">
+                  <div className="grid grid-cols-2 gap-4 sm:gap-6 text-center">
                     <div>
-                      <div className="text-4xl font-bold mb-2">$3B+</div>
-                      <div className="text-orange-50 text-sm">Goods Managed</div>
+                      <div className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-1 sm:mb-2">$3B+</div>
+                      <div className="text-orange-50 text-xs sm:text-sm">Goods Managed</div>
                     </div>
                     <div>
-                      <div className="text-4xl font-bold mb-2">100K+</div>
-                      <div className="text-orange-50 text-sm">Customs Clearances</div>
+                      <div className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-1 sm:mb-2">100K+</div>
+                      <div className="text-orange-50 text-xs sm:text-sm">Customs Clearances</div>
                     </div>
-                    <div className="col-span-2 pt-4 border-t border-white/30">
-                      <div className="text-3xl font-bold mb-2">Since 2003</div>
-                      <div className="text-orange-50 text-sm">Years of Excellence</div>
+                    <div className="col-span-2 pt-3 sm:pt-4 border-t border-white/30">
+                      <div className="text-xl sm:text-2xl lg:text-3xl font-bold mb-1 sm:mb-2">Since 2003</div>
+                      <div className="text-orange-50 text-xs sm:text-sm">Years of Excellence</div>
                     </div>
                   </div>
                 </div>
@@ -49,20 +49,20 @@ export default function ProfessionalServices() {
 
               {/* Locations */}
               <AnimationWrapper animation="fadeInLeft" delay={0.4}>
-                <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6 border border-gray-700 shadow-xl">
-                  <h3 className="text-xl font-bold text-white mb-4">Our Locations</h3>
-                  <div className="space-y-3">
+                <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-4 sm:p-6 border border-gray-700 shadow-xl">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">Our Locations</h3>
+                  <div className="space-y-2 sm:space-y-3">
                     <div className="flex items-center">
-                      <div className="w-3 h-3 bg-orange-500 rounded-full mr-3 shadow-lg shadow-orange-500/50"></div>
-                      <span className="text-gray-200">Greater Toronto Area (GTA)</span>
+                      <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-orange-500 rounded-full mr-2 sm:mr-3 shadow-lg shadow-orange-500/50 flex-shrink-0"></div>
+                      <span className="text-gray-200 text-sm sm:text-base">Greater Toronto Area (GTA)</span>
                     </div>
                     <div className="flex items-center">
-                      <div className="w-3 h-3 bg-orange-500 rounded-full mr-3 shadow-lg shadow-orange-500/50"></div>
-                      <span className="text-gray-200">Niagara Falls</span>
+                      <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-orange-500 rounded-full mr-2 sm:mr-3 shadow-lg shadow-orange-500/50 flex-shrink-0"></div>
+                      <span className="text-gray-200 text-sm sm:text-base">Niagara Falls</span>
                     </div>
                     <div className="flex items-center">
-                      <div className="w-3 h-3 bg-orange-500 rounded-full mr-3 shadow-lg shadow-orange-500/50"></div>
-                      <span className="text-gray-200">Buffalo</span>
+                      <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-orange-500 rounded-full mr-2 sm:mr-3 shadow-lg shadow-orange-500/50 flex-shrink-0"></div>
+                      <span className="text-gray-200 text-sm sm:text-base">Buffalo</span>
                     </div>
                   </div>
                 </div>
@@ -71,9 +71,9 @@ export default function ProfessionalServices() {
 
             {/* Right Column - Description */}
             <AnimationWrapper animation="fadeInRight" delay={0.3}>
-              <div className="space-y-6">
-                <div className="prose prose-lg max-w-none">
-                  <p className="text-gray-300 leading-relaxed mb-6">
+              <div className="space-y-4 sm:space-y-6 order-1 lg:order-2">
+                <div className="prose prose-sm sm:prose-base lg:prose-lg max-w-none">
+                  <p className="text-gray-300 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base lg:text-lg">
                     Since 2003, <strong className="text-orange-400">Borderworx Logistics</strong> has managed more than 
                     <strong className="text-white"> $3 Billion in goods</strong> across the border and more than 
                     <strong className="text-white"> 100,000 customs clearances</strong>. We are a 3PL fulfillment 
@@ -81,7 +81,7 @@ export default function ProfessionalServices() {
                     locations in the GTA, Niagara Falls and Buffalo.
                   </p>
 
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-gray-300 leading-relaxed text-sm sm:text-base lg:text-lg">
                     We at Borderworx Logistics <strong className="text-orange-400">pride ourselves in the mastering</strong> of 
                     the most challenging part of a shipment journey which is why we 
                     <strong className="text-white"> simplified and fastened this process</strong> making us a 
@@ -90,16 +90,16 @@ export default function ProfessionalServices() {
                 </div>
 
                 {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 pt-6">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 sm:pt-6">
                   <a
                     href="/services"
-                    className="bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors duration-300 text-center shadow-lg shadow-orange-500/30"
+                    className="bg-orange-500 text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors duration-300 text-center shadow-lg shadow-orange-500/30 text-sm sm:text-base"
                   >
                     View Our Services
                   </a>
                   <a
                     href="/contact"
-                    className="border-2 border-orange-500 text-orange-400 px-6 py-3 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 text-center"
+                    className="border-2 border-orange-500 text-orange-400 px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 text-center text-sm sm:text-base"
                   >
                     Get Started Today
                   </a>
