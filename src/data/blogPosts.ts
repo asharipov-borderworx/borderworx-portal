@@ -1389,7 +1389,7 @@ export const blogPosts: BlogPostItem[] = [
     excerpt:
       'A practical guide for Canadian sellers to ship inventory to US Amazon FBA, from registration and documents to customs, Section 321, and prep.',
     thumbnail: '/images/blog/amazon-FBA.png',
-    tags: ['Amazon FBA', 'Cross-Border', 'Section 321', 'Customs'],
+    tags: ['Amazon FBA', 'Cross-Border', 'Customs'],
     blocks: [
       {
         type: 'text',
@@ -1416,13 +1416,13 @@ export const blogPosts: BlogPostItem[] = [
       {
         type: 'text',
         content:
-          'Select a method that fits speed, cost, and volume. Courier services are ideal for smaller shipments; freight forwarders suit larger volumes. Consider leveraging Section 321 for eligible shipments under $800 USD to enter duty-free.',
+          'Select a method that fits speed, cost, and volume. Courier services are ideal for smaller shipments; freight forwarders suit larger volumes.',
       },
       { type: 'heading', level: 3, text: 'Dealing with Customs' },
       {
         type: 'text',
         content:
-          'Determine accurate HS codes and applicable duties/taxes. Partnering with a customs broker can ease compliance and avoid delays. Section 321 can streamline costs for qualifying shipments, enabling duty-free entry when criteria are met.',
+          'Determine accurate HS codes and applicable duties/taxes. Partnering with a customs broker can ease compliance and avoid delays.',
       },
       { type: 'heading', level: 3, text: 'Preparing for Amazon FBA' },
       {
@@ -2414,96 +2414,6 @@ export const blogPosts: BlogPostItem[] = [
     ],
   }
   ,
-  {
-    id: '31',
-    slug: 'leveraging-section-321-for-amazon-fba-imports',
-    title: 'Leveraging Section 321 to Streamline Amazon FBA Imports: A Guide for International Sellers',
-    author: 'BorderWorx Team',
-    date: '2024-06-18',
-    category: 'Amazon FBA',
-    excerpt:
-      'Use Section 321 (de minimis $800) to reduce duty costs, speed customs, and simplify paperwork for international Amazon FBA imports—plus how Borderworx helps.',
-    thumbnail: '/images/blog/amazon-FBA.png',
-    tags: ['Section 321', 'Amazon FBA', 'Imports', 'Customs Brokerage', '3PL'],
-    blocks: [
-      {
-        type: 'text',
-        content:
-          'Importing inventory for Amazon FBA from outside the US can be a complex process, involving duties, taxes, and customs clearance. However, a lesser-known provision called Section 321 offers a significant advantage to sellers: duty-free importation for shipments valued under $800.',
-      },
-      { type: 'heading', level: 3, text: 'What is Section 321?' },
-      {
-        type: 'text',
-        content:
-          "Section 321 is a de minimis rule under US customs law. It allows for the duty-free importation of goods if the shipment’s value does not exceed $800 and it’s imported by one person on one day. This presents a fantastic opportunity for Amazon FBA sellers to reduce import costs.",
-      },
-      { type: 'heading', level: 3, text: 'How Section 321 Benefits Amazon FBA Sellers' },
-      {
-        type: 'list',
-        items: [
-          'Reduced Costs: Elimination of import duties can drive meaningful savings over time.',
-          'Faster Customs Clearance: Section 321 shipments typically clear more quickly with less scrutiny.',
-          'Simplified Paperwork: Fewer documentation requirements streamline the process.',
-          'Competitive Advantage: Lower landed costs can translate into sharper pricing on Amazon.',
-        ],
-      },
-      { type: 'heading', level: 3, text: 'How to Use Section 321 for FBA Shipments' },
-      {
-        type: 'list',
-        items: [
-          'Shipment Value: Keep each shipment at or below $800, including goods, shipping, and insurance.',
-          'Consolidation Strategy: Break larger volumes into compliant sub-shipments that meet the limit.',
-          'Accurate Manifesting: Declare as Section 321, use correct HTS codes, and state value precisely.',
-          'Clear Labeling: Include consignee/shipper info, detailed contents, and country of origin on each package.',
-          'Partner with a Customs Broker: Work with experts who know Section 321 to avoid mistakes.',
-          'Leverage a 3PL: Experienced 3PLs can plan, route, and execute Section 321 programs at scale.',
-        ],
-      },
-      { type: 'heading', level: 3, text: 'Important Considerations' },
-      {
-        type: 'list',
-        items: [
-          'Permissible Goods: Some products are restricted or prohibited and may not qualify.',
-          'Record-Keeping: Retain invoices, manifests, and declarations for audit readiness.',
-          'Stay Informed: CBP requirements can change—monitor updates to Section 321 rules.',
-        ],
-      },
-      { type: 'heading', level: 3, text: 'Conclusion' },
-      {
-        type: 'text',
-        content:
-          'Section 321 offers a valuable tool for Amazon FBA sellers importing goods from outside the US. By understanding and leveraging this provision, you can streamline your import process, reduce costs, and gain a competitive edge in the marketplace.',
-      },
-      { type: 'heading', level: 3, text: 'Why Borderworx is the Ideal Partner' },
-      {
-        type: 'list',
-        items: [
-          'Section 321 Expertise: We ensure your shipments are compliant and clear smoothly.',
-          'End-to-End Logistics: From planning and consolidation to customs and FBA delivery.',
-          'Technology-Driven Solutions: Real-time visibility and tracking for peace of mind.',
-          'Cost Savings: Optimization to maximize de minimis benefits and reduce landed costs.',
-          'Customer-Centric Approach: Tailored solutions and dedicated support for your goals.',
-        ],
-      },
-      { type: 'heading', level: 3, text: 'How Borderworx Can Help' },
-      {
-        type: 'list',
-        items: [
-          'Shipment Consolidation: Smart splitting and timing to meet the $800 threshold.',
-          'Customs Compliance: Correct declarations, HTS coding, and documentation.',
-          'FBA Prep Services: Labeling, kitting, bundling, and compliant packaging.',
-          'Inventory Management: Flexible warehousing and order fulfillment options.',
-          'Returns Management: Receive, inspect, disposition, and reduce future returns.',
-        ],
-      },
-      { type: 'heading', level: 3, text: 'Partner with Borderworx for Section 321 Success' },
-      {
-        type: 'text',
-        content:
-          "Don’t let the complexities of importing hold you back. Partner with Borderworx and unlock the potential of Section 321 for your Amazon FBA business. We’ll handle the logistics so you can focus on growth and success.",
-      }
-    ],
-  },
   {
     id: '32',
     slug: '3pl-fulfillment-the-key-to-unlocking-omnichannel',
