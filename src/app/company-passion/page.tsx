@@ -307,7 +307,7 @@ export default function CompanyPassionPage() {
                 Donate to Hope Thailand
               </Link>
               <Link
-                href="/contact-us"
+                href="/contact"
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-white text-white rounded-xl font-semibold text-lg hover:bg-white hover:text-primary transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 Learn More

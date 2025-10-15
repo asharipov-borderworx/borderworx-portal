@@ -52,8 +52,9 @@ export default function ContactInfoCard({ country }: { country: string }) {
     <div className={`relative p-8 rounded-xl shadow-lg overflow-hidden border border-gray-100 animate-[fadeIn_0.6s_ease-out]
     [@keyframes_fadeIn]{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}} `}
     >
+      {/* Background Images - Behind content */}
       {country === "Canada" && (
-        <div className="absolute inset-0 opacity-20 rounded-xl">
+        <div className="absolute inset-0 opacity-20 rounded-xl z-0">
           <Image
             src="/images/services/canadianFlag.png"
             alt="Canadian Flag Background"
@@ -63,51 +64,50 @@ export default function ContactInfoCard({ country }: { country: string }) {
         </div>
       )}
       {country === "USA" && (
-        <div>
-
-          <div className="absolute inset-0 opacity-20">
-            <Image
-              src="/images/services/usaFlag.png"
-              alt="USA Flag Background"
-              fill
-              className="object-cover"
-            />
-          </div>
+        <div className="absolute inset-0 opacity-20 rounded-xl z-0">
+          <Image
+            src="/images/services/usaFlag.png"
+            alt="USA Flag Background"
+            fill
+            className="object-cover"
+          />
         </div>
       )}
 
-      <h2 className="text-2xl font-bold text-secondary mb-6">Get in touch {country === "Canada" ? "(Canadian office)" : "(USA office)"}</h2>
-      <div className="space-y-5">
-        {contacts.filter(Boolean).map((c: any, i: number) => (
-          <div key={i} className="flex items-start gap-4">
-            <div className="w-11 h-11 rounded-lg bg-gradient-to-br from-primary to-orange-600 text-white flex items-center justify-center flex-shrink-0">
-              {c.icon}
+      {/* Content - Above background */}
+      <div className="relative z-10">
+        <h2 className="text-2xl font-bold text-secondary mb-6">Get in touch {country === "Canada" ? "(Canadian office)" : "(USA office)"}</h2>
+        <div className="space-y-5">
+          {contacts.filter(Boolean).map((c: any, i: number) => (
+            <div key={i} className="flex items-start gap-4">
+              <div className="w-11 h-11 rounded-lg bg-gradient-to-br from-primary to-orange-600 text-white flex items-center justify-center flex-shrink-0">
+                {c.icon}
+              </div>
+              <div>
+                <p className="text-sm text-gray-500">{c.label}</p>
+                <p className="text-secondary font-semibold break-words">{c.value}</p>
+              </div>
             </div>
-            <div>
-              <p className="text-sm text-gray-500">{c.label}</p>
-              <p className="text-secondary font-semibold break-words">{c.value}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-
-      {/* Socials */}
-      {info.social?.linkedin ? (
-        <div className="mt-8">
-          <a
-            href={info.social.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-primary hover:text-orange-600 font-semibold transition"
-          >
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-            </svg>
-            Follow on LinkedIn
-          </a>
+          ))}
         </div>
-      ) : null}
+
+        {/* Socials */}
+        {info.social?.linkedin ? (
+          <div className="mt-8">
+            <a
+              href={info.social.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-primary hover:text-orange-600 font-semibold transition relative z-20"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+              Follow on LinkedIn
+            </a>
+          </div>
+        ) : null}
+      </div>
     </div>
   )
 }
