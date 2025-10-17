@@ -56,20 +56,6 @@
     "detailsLink": "/services/trade-compliance"
   },
   {
-    "id": "section-321",
-    "title": "Section 321 Fulfillment Canada",
-    "description": "Specialized fulfillment services leveraging Section 321 de minimis provisions for duty-free shipments under $800 USD to the United States.",
-    "features": [
-      "Duty-free shipments under $800",
-      "Cross-border e-commerce",
-      "Expedited processing",
-      "Cost-effective solutions"
-    ],
-    "imageUrl": "/images/services/Section321.png",
-    "imageAlt": "Cross-border shipping packages for e-commerce fulfillment",
-    "detailsLink": "/services/section-321"
-  },
-  {
     "id": "amazon-fbm",
     "title": "Amazon FBM Fulfillment",
     "description": "Professional Fulfillment by Merchant (FBM) services to help Amazon sellers manage inventory, orders, and shipping without using Amazon warehouses.",
