@@ -136,6 +136,7 @@ export default function QuoteFormWizard() {
   const [submitting, setSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({})
 
   const totalSteps = 5
   const progress = useMemo(() => Math.round((step / totalSteps) * 100), [step])
@@ -144,6 +145,15 @@ export default function QuoteFormWizard() {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) {
     const { name, value } = e.target
+    
+    // Clear field error when user starts typing
+    if (fieldErrors[name]) {
+      setFieldErrors(prev => {
+        const newErrors = { ...prev }
+        delete newErrors[name]
+        return newErrors
+      })
+    }
     
     // Check if this is a payload field (Step 3 fields)
     const payloadFields = [
@@ -167,62 +177,80 @@ export default function QuoteFormWizard() {
     }
   }
 
-  function validateCurrentStep(): string | null {
+  function validateCurrentStep(): { hasErrors: boolean; fieldErrors: Record<string, string> } {
+    const errors: Record<string, string> = {}
+    
     if (step === 1) {
-      if (!form.name.trim()) return 'Please enter your name.'
-      if (!form.email.trim()) return 'Please enter your email.'
-      if (!form.company.trim()) return 'Please enter your company.'
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) return 'Please enter a valid email.'
-      return null
+      if (!form.name.trim()) errors.name = 'Name is required'
+      if (!form.email.trim()) errors.email = 'Email is required'
+      else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) errors.email = 'Please enter a valid email address'
+      if (!form.company.trim()) errors.company = 'Company is required'
+      
+      // Optional field validations
+      if (form.phone && !/^[\+]?[1-9][\d]{0,15}$/.test(form.phone.replace(/[\s\-\(\)]/g, ''))) {
+        errors.phone = 'Please enter a valid phone number'
+      }
+      if (form.websiteUrl && !/^https?:\/\/.+/.test(form.websiteUrl)) {
+        errors.websiteUrl = 'Please enter a valid URL (starting with http:// or https://)'
+      }
     }
+    
     if (step === 2) {
-      if (!form.service.trim()) return 'Please select a service.'
-      return null
+      if (!form.service.trim()) errors.service = 'Please select a service'
     }
+    
     if (step === 3) {
       const payload = (form as any).payload || {}
       
       if (form.service === 'Freight Shipping') {
-        if (!payload.weight?.trim()) return 'Please enter the weight.'
-        if (!payload.commodity?.trim()) return 'Please enter the commodity.'
+        if (!payload.weight?.trim()) errors.weight = 'Weight is required'
+        if (!payload.commodity?.trim()) errors.commodity = 'Commodity is required'
       }
       
       if (form.service === 'Warehousing') {
-        if (!payload.warehouseLocationPreference?.trim()) return 'Please enter your ideal warehouse location.'
-        if (!payload.squareFeetNeeded?.trim()) return 'Please enter the square feet needed.'
-        if (!payload.productType?.trim()) return 'Please enter the product type.'
-        if (!payload.anticipatedContractLength?.trim()) return 'Please enter the anticipated contract length.'
-        if (!payload.anticipatedMonthlyInventoryTurns?.trim()) return 'Please enter the anticipated monthly inventory turns.'
+        if (!payload.warehouseLocationPreference?.trim()) errors.warehouseLocationPreference = 'Warehouse location is required'
+        if (!payload.squareFeetNeeded?.trim()) errors.squareFeetNeeded = 'Square feet needed is required'
+        if (!payload.productType?.trim()) errors.productType = 'Product type is required'
+        if (!payload.anticipatedContractLength?.trim()) errors.anticipatedContractLength = 'Contract length is required'
+        if (!payload.anticipatedMonthlyInventoryTurns?.trim()) errors.anticipatedMonthlyInventoryTurns = 'Monthly inventory turns is required'
       }
       
       if (form.service === 'Customs Brokerage – Canada & USA') {
-        if (!payload.shippingOrigin?.trim()) return 'Please enter the shipping origin.'
-        if (!payload.shippingDestination?.trim()) return 'Please enter the shipping destination.'
-        if (!payload.productType?.trim()) return 'Please enter the product type.'
-        if (!payload.dateNeeded?.trim()) return 'Please select the date needed.'
+        if (!payload.shippingOrigin?.trim()) errors.shippingOrigin = 'Shipping origin is required'
+        if (!payload.shippingDestination?.trim()) errors.shippingDestination = 'Shipping destination is required'
+        if (!payload.productType?.trim()) errors.productType = 'Product type is required'
+        if (!payload.dateNeeded?.trim()) {
+          errors.dateNeeded = 'Date needed is required'
+        } else if (!/^\d{4}-\d{2}-\d{2}$/.test(payload.dateNeeded)) {
+          errors.dateNeeded = 'Use format YYYY-MM-DD'
+        }
       }
       
       if (form.service === 'Trade Compliance Consulting') {
-        if (!payload.productType?.trim()) return 'Please enter the product type.'
-        if (!payload.industryType?.trim()) return 'Please enter the industry type.'
-        if (!payload.tradingActivity?.trim()) return 'Please select the trading activity.'
-        if (!payload.helpNeededType?.length) return 'Please select at least one help needed type.'
+        if (!payload.productType?.trim()) errors.productType = 'Product type is required'
+        if (!payload.industryType?.trim()) errors.industryType = 'Industry type is required'
+        if (!payload.tradingActivity?.trim()) errors.tradingActivity = 'Trading activity is required'
+        if (!payload.helpNeededType?.length) errors.helpNeededType = 'Please select at least one help needed type'
       }
-      
-      return null
     }
-    return null
+    
+    return { hasErrors: Object.keys(errors).length > 0, fieldErrors: errors }
   }
 
   function nextStep(e?: React.MouseEvent) {
     e?.preventDefault()
     e?.stopPropagation()
     
-    const validationError = validateCurrentStep()
-    if (validationError) {
-      setError(validationError)
+    const validation = validateCurrentStep()
+    if (validation.hasErrors) {
+      setFieldErrors(validation.fieldErrors)
+      setError('Please fix the errors below before continuing.')
       return
     }
+    
+    setFieldErrors({})
+    setError(null)
+    
     if(step === 2) {
       if(form.service === 'Freight Shipping') {
         setForm({...form, payload: freightInitialState});
@@ -236,9 +264,7 @@ export default function QuoteFormWizard() {
       else if(form.service === 'Trade Compliance Consulting') {
         setForm({...form, payload: tradeComplianceInitialState});
       }
-
     }
-    setError(null)
     setSubmitting(false) // Ensure submitting is false
     setStep((s) => Math.min(4, s + 1)) // Don't go beyond step 4
   }
@@ -256,11 +282,14 @@ export default function QuoteFormWizard() {
       return
     }
     
-    const validationError = validateCurrentStep()
-    if (validationError) {
-      setError(validationError)
+    const validation = validateCurrentStep()
+    if (validation.hasErrors) {
+      setFieldErrors(validation.fieldErrors)
+      setError('Please fix the errors below before submitting.')
       return
     }
+    
+    setFieldErrors({})
     setError(null)
     setSubmitting(true)
 
@@ -342,18 +371,18 @@ export default function QuoteFormWizard() {
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* <VisibleFields step={step} form={form} onChange={handleChange} /> */}
         {step === 1 && (
-          <StepOne form={form} handleChange={handleChange} />
+          <StepOne form={form} handleChange={handleChange} fieldErrors={fieldErrors} />
         )}
 
         {step === 2 && (
-          <StepTwo form={form} handleChange={handleChange} />
+          <StepTwo form={form} handleChange={handleChange} fieldErrors={fieldErrors} />
         )}
 
         {step === 3 && (
-          <StepThree form={form} handleChange={handleChange} />
+          <StepThree form={form} handleChange={handleChange} fieldErrors={fieldErrors} />
         )}
         {step === 4 && (
-          <StepFour form={form} handleChange={handleChange} />
+          <StepFour form={form} handleChange={handleChange} fieldErrors={fieldErrors} />
         )}
 
 

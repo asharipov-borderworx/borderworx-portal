@@ -23,37 +23,56 @@ export default function ContactForm() {
   const [submitting, setSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({})
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) {
     const { name, value } = e.target
+    if (fieldErrors[name]) {
+      setFieldErrors(prev => {
+        const next = { ...prev }
+        delete next[name]
+        return next
+      })
+    }
     setForm((prev) => ({ ...prev, [name]: value }))
   }
 
-  function validate(): string | null {
-    if (!form.name.trim()) return 'Please enter your name.'
-    if (!form.email.trim()) return 'Please enter your email.'
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
-      return 'Please enter a valid email.'
-    if (!form.subject.trim()) return 'Please enter a subject.'
-    if (!form.message.trim()) return 'Please enter a message.'
-    return null
+  function validate(): { hasErrors: boolean; fieldErrors: Record<string, string> } {
+    const errors: Record<string, string> = {}
+
+    if (!form.name.trim()) errors.name = 'Name is required'
+    if (!form.email.trim()) errors.email = 'Email is required'
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) errors.email = 'Please enter a valid email address'
+
+    if (form.phone) {
+      const normalized = form.phone.replace(/[\s\-\(\)]/g, '')
+      if (!/^[\+]?[1-9][\d]{0,15}$/.test(normalized)) errors.phone = 'Please enter a valid phone number'
+    }
+
+    if (!form.subject.trim()) errors.subject = 'Subject is required'
+    if (!form.message.trim()) errors.message = 'Message is required'
+
+    return { hasErrors: Object.keys(errors).length > 0, fieldErrors: errors }
   }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    const validationError = validate()
-    if (validationError) {
-      setError(validationError)
+    const validation = validate()
+    if (validation.hasErrors) {
+      setFieldErrors(validation.fieldErrors)
+      setError('Please fix the errors below before submitting.')
       return
     }
     setError(null)
+    setFieldErrors({})
     setSubmitting(true)
 
     async function sendEmail() {
       const data = await fetch('/api/sendEmail', {
         method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form)
       })
       .then(response => response.json())
@@ -93,9 +112,12 @@ export default function ContactForm() {
               name="name"
               value={form.name}
               onChange={handleChange}
-              className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-secondary placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
+              className={`w-full px-4 py-3 rounded-lg border bg-white text-secondary placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent transition ${fieldErrors.name ? 'border-red-500 focus:ring-red-500' : 'border-gray-200 focus:ring-primary'}`}
               placeholder="Your full name"
             />
+            {fieldErrors.name && (
+              <p className="mt-1 text-sm text-red-600">{fieldErrors.name}</p>
+            )}
           </div>
           <div className="group">
             <label className="block text-sm font-medium text-secondary mb-2">Email*</label>
@@ -104,9 +126,12 @@ export default function ContactForm() {
               name="email"
               value={form.email}
               onChange={handleChange}
-              className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-secondary placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
+              className={`w-full px-4 py-3 rounded-lg border bg-white text-secondary placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent transition ${fieldErrors.email ? 'border-red-500 focus:ring-red-500' : 'border-gray-200 focus:ring-primary'}`}
               placeholder="you@example.com"
             />
+            {fieldErrors.email && (
+              <p className="mt-1 text-sm text-red-600">{fieldErrors.email}</p>
+            )}
           </div>
         </div>
 
@@ -117,9 +142,12 @@ export default function ContactForm() {
             name="phone"
             value={form.phone}
             onChange={handleChange}
-            className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-secondary placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
+            className={`w-full px-4 py-3 rounded-lg border bg-white text-secondary placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent transition ${fieldErrors.phone ? 'border-red-500 focus:ring-red-500' : 'border-gray-200 focus:ring-primary'}`}
             placeholder="+1 (555) 000-0000"
           />
+          {fieldErrors.phone && (
+            <p className="mt-1 text-sm text-red-600">{fieldErrors.phone}</p>
+          )}
         </div>
 
         <div className="group">
@@ -129,9 +157,12 @@ export default function ContactForm() {
             name="subject"
             value={form.subject}
             onChange={handleChange}
-            className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-secondary placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
+            className={`w-full px-4 py-3 rounded-lg border bg-white text-secondary placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent transition ${fieldErrors.subject ? 'border-red-500 focus:ring-red-500' : 'border-gray-200 focus:ring-primary'}`}
             placeholder="What is this about?"
           />
+          {fieldErrors.subject && (
+            <p className="mt-1 text-sm text-red-600">{fieldErrors.subject}</p>
+          )}
         </div>
 
         <div className="group">
@@ -141,9 +172,12 @@ export default function ContactForm() {
             value={form.message}
             onChange={handleChange}
             rows={6}
-            className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-secondary placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
+            className={`w-full px-4 py-3 rounded-lg border bg-white text-secondary placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent transition ${fieldErrors.message ? 'border-red-500 focus:ring-red-500' : 'border-gray-200 focus:ring-primary'}`}
             placeholder="How can we help you?"
           />
+          {fieldErrors.message && (
+            <p className="mt-1 text-sm text-red-600">{fieldErrors.message}</p>
+          )}
         </div>
 
         <div className="flex items-center gap-4">

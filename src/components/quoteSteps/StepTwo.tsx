@@ -1,6 +1,14 @@
 import { QuoteWizardState } from "../QuoteFormWizard";
 
-export default function StepTwo({form, handleChange}: {form: QuoteWizardState, handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void }) {
+export default function StepTwo({
+  form, 
+  handleChange, 
+  fieldErrors 
+}: {
+  form: QuoteWizardState, 
+  handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void,
+  fieldErrors: Record<string, string>
+}) {
     return (
         <div className="">
             <div className="group">
@@ -10,7 +18,11 @@ export default function StepTwo({form, handleChange}: {form: QuoteWizardState, h
                   name="service"
                   value={form.service}
                   onChange={handleChange}
-                  className="w-full px-4 pr-12 py-3 rounded-lg border border-gray-200 bg-white text-secondary focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition appearance-none shadow-sm"
+                  className={`w-full px-4 pr-12 py-3 rounded-lg border bg-white text-secondary focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition appearance-none shadow-sm ${
+                    fieldErrors.service 
+                      ? 'border-red-500 focus:ring-red-500' 
+                      : 'border-gray-200'
+                  }`}
                 >
                   <option value="">Select a service</option>
                   <option value="Warehousing">Warehousing</option>
@@ -24,6 +36,9 @@ export default function StepTwo({form, handleChange}: {form: QuoteWizardState, h
                   </svg>
                 </span>
               </div>
+              {fieldErrors.service && (
+                <p className="mt-1 text-sm text-red-600">{fieldErrors.service}</p>
+              )}
             </div>
           </div>
     )

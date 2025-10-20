@@ -1,6 +1,38 @@
 import { QuoteWizardState } from "../QuoteFormWizard";
+import { useRef } from 'react'
 
-export default function StepThree({ form, handleChange }: { form: QuoteWizardState, handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void }) {
+export default function StepThree({ 
+  form, 
+  handleChange, 
+  fieldErrors 
+}: { 
+  form: QuoteWizardState, 
+  handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void,
+  fieldErrors: Record<string, string>
+}) {
+    const dateInputRef = useRef<HTMLInputElement>(null)
+
+    // Helper function to get validation classes
+    const getValidationClasses = (fieldName: string) => {
+        return `w-full px-4 py-3 rounded-lg border bg-white text-secondary placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition ${
+            fieldErrors[fieldName] 
+                ? 'border-red-500 focus:ring-red-500' 
+                : 'border-gray-200'
+        }`
+    }
+
+    // Ensure YYYY-MM-DD mask as user types
+    const handleMaskedDateChange = (raw: string) => {
+        const digits = raw.replace(/\D/g, '').slice(0, 8)
+        const year = digits.slice(0, 4)
+        const month = digits.slice(4, 6)
+        const day = digits.slice(6, 8)
+        let formatted = year
+        if (digits.length > 4) formatted += `-${month}`
+        if (digits.length > 6) formatted += `-${day}`
+        handleChange({ target: { name: 'dateNeeded', value: formatted } } as any)
+    }
+
     return (
         <div className="space-y-5">
             {form.service === 'Freight Shipping' && (
@@ -37,9 +69,12 @@ export default function StepThree({ form, handleChange }: { form: QuoteWizardSta
                                 name="weight"
                                 value={form.payload.weight}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-secondary placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
-                                placeholder="Describe your goods"
+                                className={getValidationClasses('weight')}
+                                placeholder="e.g., 1000 lbs"
                             />
+                            {fieldErrors.weight && (
+                                <p className="mt-1 text-sm text-red-600">{fieldErrors.weight}</p>
+                            )}
                         </div>
                         <div className="group">
                             <label className="block text-sm font-medium text-secondary mb-2">Commodity*</label>
@@ -48,9 +83,12 @@ export default function StepThree({ form, handleChange }: { form: QuoteWizardSta
                                 name="commodity"
                                 value={form.payload.commodity}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-secondary placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
-                                placeholder="Describe your goods"
+                                className={getValidationClasses('commodity')}
+                                placeholder="e.g., Electronics, Clothing"
                             />
+                            {fieldErrors.commodity && (
+                                <p className="mt-1 text-sm text-red-600">{fieldErrors.commodity}</p>
+                            )}
                         </div>
                     </div>
 
@@ -66,9 +104,12 @@ export default function StepThree({ form, handleChange }: { form: QuoteWizardSta
                                 name="warehouseLocationPreference"
                                 value={form.payload.warehouseLocationPreference}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-secondary placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
+                                className={getValidationClasses('warehouseLocationPreference')}
                                 placeholder="e.g., Toronto, Buffalo, Niagara Falls"
                             />
+                            {fieldErrors.warehouseLocationPreference && (
+                                <p className="mt-1 text-sm text-red-600">{fieldErrors.warehouseLocationPreference}</p>
+                            )}
                         </div>
                         <div className="group">
                             <label className="block text-sm font-medium text-secondary mb-2">Square Feet Needed*</label>
@@ -77,9 +118,12 @@ export default function StepThree({ form, handleChange }: { form: QuoteWizardSta
                                 name="squareFeetNeeded"
                                 value={form.payload.squareFeetNeeded}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-secondary placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
+                                className={getValidationClasses('squareFeetNeeded')}
                                 placeholder="e.g., 5000 sq ft"
                             />
+                            {fieldErrors.squareFeetNeeded && (
+                                <p className="mt-1 text-sm text-red-600">{fieldErrors.squareFeetNeeded}</p>
+                            )}
                         </div>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -90,9 +134,12 @@ export default function StepThree({ form, handleChange }: { form: QuoteWizardSta
                                 name="productType"
                                 value={form.payload.productType}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-secondary placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
+                                className={getValidationClasses('productType')}
                                 placeholder="e.g., Electronics, Apparel, Food"
                             />
+                            {fieldErrors.productType && (
+                                <p className="mt-1 text-sm text-red-600">{fieldErrors.productType}</p>
+                            )}
                         </div>
                         <div className="group">
                             <label className="flex text-sm font-medium text-secondary mb-2 min-h-[2.5rem] items-start">How is your product stored*</label>
@@ -125,9 +172,12 @@ export default function StepThree({ form, handleChange }: { form: QuoteWizardSta
                                 name="anticipatedContractLength"
                                 value={form.payload.anticipatedContractLength}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-secondary placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
+                                className={getValidationClasses('anticipatedContractLength')}
                                 placeholder="e.g., 12 months, 2 years"
                             />
+                            {fieldErrors.anticipatedContractLength && (
+                                <p className="mt-1 text-sm text-red-600">{fieldErrors.anticipatedContractLength}</p>
+                            )}
                         </div>
                         <div className="group">
                             <label className="flex text-sm font-medium text-secondary mb-2 min-h-[2.5rem] items-start">Anticipated Monthly Inventory Turns*</label>
@@ -136,9 +186,12 @@ export default function StepThree({ form, handleChange }: { form: QuoteWizardSta
                                 name="anticipatedMonthlyInventoryTurns"
                                 value={form.payload.anticipatedMonthlyInventoryTurns}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-secondary placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
+                                className={getValidationClasses('anticipatedMonthlyInventoryTurns')}
                                 placeholder="e.g., 2-3 turns per month"
                             />
+                            {fieldErrors.anticipatedMonthlyInventoryTurns && (
+                                <p className="mt-1 text-sm text-red-600">{fieldErrors.anticipatedMonthlyInventoryTurns}</p>
+                            )}
                         </div>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -195,9 +248,12 @@ export default function StepThree({ form, handleChange }: { form: QuoteWizardSta
                                 name="shippingOrigin"
                                 value={(form.payload as any).shippingOrigin || ''}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-secondary placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
+                                className={getValidationClasses('shippingOrigin')}
                                 placeholder="e.g., Toronto, Canada"
                             />
+                            {fieldErrors.shippingOrigin && (
+                                <p className="mt-1 text-sm text-red-600">{fieldErrors.shippingOrigin}</p>
+                            )}
                         </div>
                         <div className="group">
                             <label className="flex text-sm font-medium text-secondary mb-2 min-h-[2.5rem] items-start">Shipping Destination*</label>
@@ -206,9 +262,12 @@ export default function StepThree({ form, handleChange }: { form: QuoteWizardSta
                                 name="shippingDestination"
                                 value={(form.payload as any).shippingDestination || ''}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-secondary placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
+                                className={getValidationClasses('shippingDestination')}
                                 placeholder="e.g., Buffalo, USA"
                             />
+                            {fieldErrors.shippingDestination && (
+                                <p className="mt-1 text-sm text-red-600">{fieldErrors.shippingDestination}</p>
+                            )}
                         </div>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -219,19 +278,60 @@ export default function StepThree({ form, handleChange }: { form: QuoteWizardSta
                                 name="productType"
                                 value={(form.payload as any).productType || ''}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-secondary placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
+                                className={getValidationClasses('productType')}
                                 placeholder="e.g., Electronics, Machinery"
                             />
+                            {fieldErrors.productType && (
+                                <p className="mt-1 text-sm text-red-600">{fieldErrors.productType}</p>
+                            )}
                         </div>
                         <div className="group">
                             <label className="flex text-sm font-medium text-secondary mb-2 min-h-[2.5rem] items-start">Date Needed*</label>
-                            <input
-                                type="date"
-                                name="dateNeeded"
-                                value={(form.payload as any).dateNeeded || ''}
-                                onChange={handleChange}
-                                className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-secondary focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
-                            />
+                            <div className="relative">
+                                <input
+                                    type="text"
+                                    name="dateNeeded"
+                                    value={(form.payload as any).dateNeeded || ''}
+                                    onChange={(e) => handleMaskedDateChange(e.target.value)}
+                                    inputMode="numeric"
+                                    placeholder="yyyy-mm-dd"
+                                    className={getValidationClasses('dateNeeded')}
+                                    title="Use format YYYY-MM-DD or pick from calendar"
+                                />
+                                <button
+                                    type="button"
+                                    onClick={() => {
+                                        const el = dateInputRef.current
+                                        if (!el) return
+                                        // Try modern picker
+                                        // @ts-ignore
+                                        if (typeof el.showPicker === 'function') {
+                                            // @ts-ignore
+                                            el.showPicker()
+                                        } else {
+                                            el.focus()
+                                            el.click()
+                                        }
+                                    }}
+                                    className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-primary transition"
+                                    aria-label="Open calendar"
+                                >
+                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                </button>
+                                {/* Hidden native date input to get a real calendar */}
+                                <input
+                                    ref={dateInputRef}
+                                    type="date"
+                                    className="sr-only"
+                                    value={(form.payload as any).dateNeeded || ''}
+                                    onChange={(e) => handleMaskedDateChange(e.target.value)}
+                                />
+                            </div>
+                            {fieldErrors.dateNeeded && (
+                                <p className="mt-1 text-sm text-red-600">{fieldErrors.dateNeeded}</p>
+                            )}
                         </div>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
