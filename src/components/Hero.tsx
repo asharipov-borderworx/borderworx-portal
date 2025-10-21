@@ -80,7 +80,7 @@ export default function Hero() {
               <TypingAnimation 
                 words={['Warehousing', 'Transportation', 'Customs Brokerage', 'Trade Compliance', 'Fulfillment Services']}
                 finalText="One stop shop for 3PL"
-                className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-primary"
+                className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gradient"
               />
             </motion.div>
             <motion.div 
