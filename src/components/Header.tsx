@@ -12,6 +12,7 @@ export default function Header() {
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false)
   const [isMobileResourcesOpen, setIsMobileResourcesOpen] = useState(false)
   const [isMobileAboutOpen, setIsMobileAboutOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
   const hoverTimer = useRef<NodeJS.Timeout | null>(null)
   const hoverResourcesTimer = useRef<NodeJS.Timeout | null>(null)
   const hoverAboutTimer = useRef<NodeJS.Timeout | null>(null)
@@ -40,6 +41,17 @@ export default function Header() {
     if (hoverAboutTimer.current) clearTimeout(hoverAboutTimer.current)
     hoverAboutTimer.current = setTimeout(() => setIsAboutOpen(false), 120)
   }
+
+  // Scroll detection
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY
+      setIsScrolled(scrollTop > 50)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
   
   const navigation = [
     { name: 'Home', href: '/' },
@@ -51,7 +63,11 @@ export default function Header() {
   ]
 
   return (
-    <header className="fixed w-full top-0 z-50 h-20 bg-transparent">
+    <header className={`fixed w-full top-0 z-50 h-20 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-white shadow-md' 
+        : 'bg-transparent'
+    }`}>
         <nav className="container-max px-4 sm:px-6 lg:px-8 h-full">
         <div className="h-full flex items-center justify-between">
           {/* Logo */}
@@ -69,7 +85,9 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className={`hidden md:flex items-center space-x-6 ${
+                        isScrolled ? 'text-gray-700' : 'text-white'
+                      } `}>
             {navigation.map((item) => {
               if (item.name === 'Services') {
                 return (
@@ -81,7 +99,7 @@ export default function Header() {
                   >
                     <Link
                       href={item.href}
-                      className="relative inline-block text-white hover:text-orange-300 transition-colors duration-300 font-medium nav-underline px-1"
+                      className="relative inline-block hover:text-orange-300 transition-colors duration-300 font-medium nav-underline px-1"
                     >
                       {item.name}
                     </Link>
@@ -129,7 +147,7 @@ export default function Header() {
                   >
                     <Link
                       href={item.href}
-                      className="relative inline-block text-white hover:text-orange-300 transition-colors duration-300 font-medium nav-underline px-1"
+                      className="relative inline-block hover:text-orange-300 transition-colors duration-300 font-medium nav-underline px-1"
                     >
                       {item.name}
                     </Link>
@@ -175,7 +193,7 @@ export default function Header() {
                   >
                     <Link
                       href={item.href}
-                      className="relative inline-block text-white hover:text-orange-300 transition-colors duration-300 font-medium nav-underline px-1"
+                      className="relative inline-block hover:text-orange-300 transition-colors duration-300 font-medium nav-underline px-1"
                     >
                       {item.name}
                     </Link>
@@ -211,7 +229,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="relative inline-block text-white hover:text-orange-300 transition-colors duration-300 font-medium nav-underline"
+                  className="relative inline-block hover:text-orange-300 transition-colors duration-300 font-medium nav-underline"
                 >
                   {item.name}
                 </Link>
@@ -219,7 +237,11 @@ export default function Header() {
             })}
             <Link
               href="/quote"
-              className="btn-primary bg-white text-primary hover:bg-gray-100"
+              className={`btn-primary transition-all duration-300 ${
+                isScrolled 
+                  ? 'bg-primary text-white hover:bg-primary/90' 
+                  : 'bg-white text-primary hover:bg-gray-100'
+              }`}
             >
               Get Quote
             </Link>
@@ -229,7 +251,9 @@ export default function Header() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-orange-300 focus:outline-none focus:ring-2 focus:ring-primary"
+              className={`inline-flex items-center justify-center p-2 rounded-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary ${
+                isScrolled ? 'text-gray-700 hover:text-primary' : 'text-white hover:text-orange-300'
+              }`}
             >
               <span className="sr-only">Open main menu</span>
               {!isMenuOpen ? (
@@ -286,7 +310,7 @@ export default function Header() {
                       <div key={item.name} className="border-b border-gray-100 pb-4">
                         <button
                           onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-                          className="flex items-center justify-between w-full px-3 py-3 text-white hover:text-orange-300 transition-colors duration-300 font-semibold text-lg"
+                          className="flex items-center justify-between w-full px-3 py-3 ${isScrolled ? 'text-gray-700 hover:text-primary' : 'text-white hover:text-orange-300'} transition-colors duration-300 font-semibold text-lg"
                         >
                           <span>{item.name}</span>
                           <svg
@@ -331,7 +355,7 @@ export default function Header() {
                       <div key={item.name} className="border-b border-gray-100 pb-4">
                         <button
                           onClick={() => setIsMobileResourcesOpen(!isMobileResourcesOpen)}
-                          className="flex items-center justify-between w-full px-3 py-3 text-white hover:text-orange-300 transition-colors duration-300 font-semibold text-lg"
+                          className="flex items-center justify-between w-full px-3 py-3 ${isScrolled ? 'text-gray-700 hover:text-primary' : 'text-white hover:text-orange-300'} transition-colors duration-300 font-semibold text-lg"
                         >
                           <span>{item.name}</span>
                           <svg
@@ -374,7 +398,7 @@ export default function Header() {
                       <div key={item.name} className="border-b border-gray-100 pb-4">
                         <button
                           onClick={() => setIsMobileAboutOpen(!isMobileAboutOpen)}
-                          className="flex items-center justify-between w-full px-3 py-3 text-white hover:text-orange-300 transition-colors duration-300 font-semibold text-lg"
+                          className="flex items-center justify-between w-full px-3 py-3 ${isScrolled ? 'text-gray-700 hover:text-primary' : 'text-white hover:text-orange-300'} transition-colors duration-300 font-semibold text-lg"
                         >
                           <span>{item.name}</span>
                           <svg
@@ -411,7 +435,7 @@ export default function Header() {
                     <div key={item.name} className="border-b border-gray-100 pb-4">
                       <Link
                         href={item.href}
-                        className="block px-3 py-3 text-white hover:text-orange-300 transition-colors duration-300 font-semibold text-lg"
+                        className="block px-3 py-3 ${isScrolled ? 'text-gray-700 hover:text-primary' : 'text-white hover:text-orange-300'} transition-colors duration-300 font-semibold text-lg"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {item.name}
