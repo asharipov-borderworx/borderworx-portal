@@ -219,7 +219,7 @@ export default function AboutUsPage() {
 
           <div className="container-max section-padding relative">
             <AnimationWrapper animation="fadeInUp" className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-6">Our Core Values</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-6">Our Core Value</h2>
               <div className="w-16 h-1 hero-gradient rounded-full mx-auto mb-8" />
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">Design-forward principles with motion—memorable but refined.</p>
             </AnimationWrapper>
