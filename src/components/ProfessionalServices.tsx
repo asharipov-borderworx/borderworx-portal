@@ -31,15 +31,7 @@ export default function ProfessionalServices() {
                   style={{ background: 'linear-gradient(135deg, #FF6B00 0%, #FF7A00 50%, #FF8C00 100%)' }}
                 >
                   <div className="grid grid-cols-2 gap-4 sm:gap-6 text-center">
-                    <div>
-                      <div className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-1 sm:mb-2">$3B+</div>
-                      <div className="text-orange-50 text-xs sm:text-sm">Goods Managed</div>
-                    </div>
-                    <div>
-                      <div className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-1 sm:mb-2">100K+</div>
-                      <div className="text-orange-50 text-xs sm:text-sm">Customs Clearances</div>
-                    </div>
-                    <div className="col-span-2 pt-3 sm:pt-4 border-t border-white/30">
+                    <div className="col-span-2">
                       <div className="text-xl sm:text-2xl lg:text-3xl font-bold mb-1 sm:mb-2">Since 2003</div>
                       <div className="text-orange-50 text-xs sm:text-sm">Years of Excellence</div>
                     </div>
