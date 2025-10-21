@@ -74,7 +74,7 @@ export default function Header() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <Image
-                src="/images/logo.png"
+                src={isScrolled ? '/images/logo-gray.png' : '/images/logo-white.png'}
                 alt="BorderWorx Logistics Logo"
                 width={200}
                 height={72}
