@@ -238,9 +238,7 @@ export default function Header() {
             <Link
               href="/quote"
               className={`btn-primary transition-all duration-300 ${
-                isScrolled 
-                  ? 'bg-primary text-white hover:bg-primary/90' 
-                  : 'bg-white text-primary hover:bg-gray-100'
+                'hero-gradient text-white'
               }`}
             >
               Get Quote
