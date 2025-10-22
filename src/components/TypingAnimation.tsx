@@ -15,6 +15,17 @@ export default function TypingAnimation({ words, className = '', finalText }: Ty
   const [isDeleting, setIsDeleting] = useState(false)
   const [typingSpeed, setTypingSpeed] = useState(50)
   const [isComplete, setIsComplete] = useState(false)
+  const [showCursor, setShowCursor] = useState(true)
+
+  // Reset animation on mount
+  useEffect(() => {
+    setCurrentWordIndex(0)
+    setDisplayedText('')
+    setIsDeleting(false)
+    setTypingSpeed(50)
+    setIsComplete(false)
+    setShowCursor(true)
+  }, [])
 
   useEffect(() => {
     if (isComplete) return
@@ -32,6 +43,7 @@ export default function TypingAnimation({ words, className = '', finalText }: Ty
           if (finalText && currentWordIndex >= words.length) {
             // We've reached the final text, stop here
             setIsComplete(true)
+            setShowCursor(false)
           } else {
             // Wait before deleting
             setTimeout(() => setIsDeleting(true), 500)
@@ -56,22 +68,27 @@ export default function TypingAnimation({ words, className = '', finalText }: Ty
 
   return (
     <>
-      {!isComplete ? (
-        <span className={className}>
-          {displayedText}
-          <motion.span
-            animate={{ opacity: [1, 0] }}
-            transition={{ duration: 0.7, repeat: Infinity, repeatType: "reverse" }}
-            className="inline-block ml-1"
-          >
-            |
-          </motion.span>
-        </span>
-      ) : (
         <span className={className} style={{ textShadow: '0 0 20px rgba(237, 90, 40, 0.4), 0 0 40px rgba(255, 165, 0, 0.3)' }}>
           {displayedText}
+            <motion.span
+              animate={{ opacity: [1, 0] }}
+              transition={{ duration: 0.4, repeat: Infinity, repeatType: "reverse" }}
+              className="inline-block ml-1 text-gradient font-bold"
+              style={{ 
+                fontSize: 'inherit',
+                lineHeight: 'inherit',
+                color: '#ffffff',
+                fontWeight: 'bold',
+                backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                padding: '0 2px',
+                borderRadius: '2px'
+              }}
+            >
+              |
+            </motion.span>
+          
         </span>
-      )}
+
     </>
   )
 }
