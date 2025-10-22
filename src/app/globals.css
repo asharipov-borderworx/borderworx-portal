@@ -61,6 +61,16 @@ a {
   background: linear-gradient(135deg, #FF6B00 0%, #FF7A00 50%, #FF8C00 100%);
 }
 
+.hero-bg-image {
+  object-position: center center;
+}
+
+@media (min-width: 1920px) {
+  .hero-bg-image {
+    object-position: 60% center;
+  }
+}
+
 .section-padding {
   @apply py-16 px-4 sm:px-6 lg:px-8;
 }

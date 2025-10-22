@@ -46,11 +46,12 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/background-images/image.png"
+          src="/images/background-images/bizons-orange.png"
           alt="Logistics operations background"
           fill
-          className="object-cover"
+          className="object-cover hero-bg-image"
           priority
+          sizes="100vw"
         />
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/60"></div>
