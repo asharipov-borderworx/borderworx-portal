@@ -55,6 +55,182 @@ export default function Hero() {
         />
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/60"></div>
+        
+        {/* Persistent Thought Bubble - Right Side */}
+        <div className="absolute inset-0 z-10">
+          {/* Main Bubble - Right Side */}
+          <motion.div
+            className="absolute top-24 sm:top-1/4 md:top-20 lg:top-1/4 right-4 sm:right-8 md:right-12 lg:right-16 transform -translate-y-1/2"
+            initial={{ opacity: 0, scale: 0, x: 50, rotate: -10 }}
+            animate={{ 
+              opacity: 1,
+              scale: 1,
+              x: 0,
+              rotate: 0
+            }}
+            transition={{ 
+              duration: 1.2,
+              delay: 1,
+              ease: [0.25, 0.4, 0.25, 1]
+            }}
+          >
+            <Link href="/buffalo-culture" className="group cursor-pointer">
+              <div className="relative">
+                {/* Thought Bubble */}
+                <motion.div 
+                  className="bg-gradient-to-br from-white via-orange-50/90 to-white backdrop-blur-md rounded-xl sm:rounded-2xl md:rounded-3xl px-3 py-2 sm:px-4 sm:py-3 md:px-6 md:py-5 shadow-lg sm:shadow-xl md:shadow-2xl border border-orange-200/50 group-hover:border-orange-300 transition-all duration-500 relative overflow-hidden"
+                  whileHover={{ 
+                    scale: 1.08, 
+                    rotate: [0, -1, 1, 0],
+                    boxShadow: "0 25px 50px rgba(237, 90, 40, 0.25)"
+                  }}
+                  animate={{ 
+                    y: [0, -6, 0],
+                    rotate: [0, 0.5, -0.5, 0],
+                    boxShadow: [
+                      "0 15px 35px rgba(0,0,0,0.1)",
+                      "0 20px 45px rgba(237, 90, 40, 0.15)",
+                      "0 15px 35px rgba(0,0,0,0.1)"
+                    ]
+                  }}
+                  transition={{ 
+                    y: { duration: 2.5, repeat: Infinity, ease: "easeInOut" },
+                    rotate: { duration: 4, repeat: Infinity, ease: "easeInOut" },
+                    boxShadow: { duration: 3, repeat: Infinity, ease: "easeInOut" }
+                  }}
+                >
+                  {/* Subtle Background Pattern */}
+                  <div className="absolute inset-0 opacity-5">
+                    <div className="absolute top-2 left-2 w-8 h-8 border border-orange-400 rounded-full"></div>
+                    <div className="absolute bottom-2 right-2 w-6 h-6 border border-orange-300 rounded-full"></div>
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 border border-orange-500 rounded-full"></div>
+                  </div>
+                  
+                  <div className="text-center relative z-10">
+                    <motion.div 
+                      className="text-sm sm:text-lg md:text-xl font-black text-gray-900 group-hover:text-orange-600 transition-colors duration-500 mb-1 sm:mb-2 tracking-wide"
+                      animate={{
+                        textShadow: [
+                          "0 0 0px rgba(237, 90, 40, 0)",
+                          "0 0 10px rgba(237, 90, 40, 0.3)",
+                          "0 0 0px rgba(237, 90, 40, 0)"
+                        ]
+                      }}
+                      transition={{
+                        duration: 2.5,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
+                    >
+                      🦬 Buffalo Culture?
+                    </motion.div>
+                    <motion.div 
+                      className="text-xs sm:text-xs md:text-sm font-bold text-orange-500 group-hover:text-orange-600 transition-colors duration-300 uppercase tracking-wider"
+                      animate={{
+                        scale: [1, 1.05, 1],
+                        opacity: [0.8, 1, 0.8],
+                        letterSpacing: ["0.1em", "0.15em", "0.1em"]
+                      }}
+                      transition={{
+                        duration: 1.8,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
+                    >
+                      Click me!
+                    </motion.div>
+                  </div>
+                </motion.div>
+                
+                {/* Speech Bubble Tail */}
+                <motion.div 
+                  className="absolute top-1/2 -left-2 transform -translate-y-1/2 w-0 h-0 border-t-8 border-b-8 border-r-8 border-t-transparent border-b-transparent"
+                  animate={{
+                    borderRightColor: ["rgba(255,255,255,0.95)", "rgba(255,255,255,0.8)", "rgba(255,255,255,0.95)"]
+                  }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                  style={{ borderRightColor: "rgba(255,255,255,0.95)" }}
+                />
+                
+                
+                {/* Pulsing Dot */}
+                <motion.div
+                  className="absolute top-1/2 -left-16 sm:-left-20 md:-left-24 lg:-left-28 transform -translate-y-1/2 w-2 h-2 sm:w-3 sm:h-3 md:w-4 md:h-4 bg-gradient-to-br from-orange-400 to-orange-500 rounded-full shadow-lg"
+                  animate={{ 
+                    scale: [1, 1.8, 1],
+                    opacity: [0.6, 1, 0.6],
+                    rotate: [0, 180, 360],
+                    boxShadow: [
+                      "0 0 0px rgba(237, 90, 40, 0)",
+                      "0 0 15px rgba(237, 90, 40, 0.6)",
+                      "0 0 0px rgba(237, 90, 40, 0)"
+                    ]
+                  }}
+                  transition={{ duration: 2.2, repeat: Infinity }}
+                />
+                
+                {/* Additional Pulsing Rings */}
+                <motion.div
+                  className="absolute top-1/2 -left-16 sm:-left-20 md:-left-24 lg:-left-28 transform -translate-y-1/2 w-2 h-2 sm:w-3 sm:h-3 md:w-4 md:h-4 border-2 border-orange-400/60 rounded-full"
+                  animate={{ 
+                    scale: [1, 2.5, 1],
+                    opacity: [0.8, 0, 0.8]
+                  }}
+                  transition={{ duration: 2.2, repeat: Infinity }}
+                />
+                <motion.div
+                  className="absolute top-1/2 -left-16 sm:-left-20 md:-left-24 lg:-left-28 transform -translate-y-1/2 w-2 h-2 sm:w-3 sm:h-3 md:w-4 md:h-4 border border-orange-300/40 rounded-full"
+                  animate={{ 
+                    scale: [1, 3, 1],
+                    opacity: [0.6, 0, 0.6]
+                  }}
+                  transition={{ duration: 2.2, repeat: Infinity, delay: 0.3 }}
+                />
+              </div>
+            </Link>
+          </motion.div>
+
+          {/* Floating Particles */}
+          <motion.div
+            className="absolute top-1/4 right-1/4 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-orange-400/60 rounded-full"
+            animate={{ 
+              y: [0, -20, 0],
+              opacity: [0.3, 1, 0.3],
+              scale: [0.5, 1, 0.5]
+            }}
+            transition={{ 
+              duration: 3,
+              repeat: Infinity,
+              delay: 0.5
+            }}
+          />
+          <motion.div
+            className="absolute top-1/3 right-1/3 w-1 h-1 sm:w-1.5 sm:h-1.5 bg-orange-300/60 rounded-full"
+            animate={{ 
+              y: [0, -15, 0],
+              opacity: [0.4, 1, 0.4],
+              scale: [0.3, 1, 0.3]
+            }}
+            transition={{ 
+              duration: 2.5,
+              repeat: Infinity,
+              delay: 1.5
+            }}
+          />
+          <motion.div
+            className="absolute bottom-1/3 right-1/3 w-0.5 h-0.5 sm:w-1 sm:h-1 bg-orange-500/60 rounded-full"
+            animate={{ 
+              y: [0, -10, 0],
+              opacity: [0.5, 1, 0.5],
+              scale: [0.4, 1, 0.4]
+            }}
+            transition={{ 
+              duration: 2,
+              repeat: Infinity,
+              delay: 2
+            }}
+          />
+        </div>
       </div>
       
       <div className="container-max section-padding relative z-10">
