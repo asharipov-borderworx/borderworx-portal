@@ -78,7 +78,7 @@ export default function Hero() {
               <div className="relative">
                 {/* Thought Bubble */}
                 <motion.div 
-                  className="bg-gradient-to-br from-white via-orange-50/90 to-white backdrop-blur-md rounded-xl sm:rounded-2xl md:rounded-3xl px-3 py-2 sm:px-4 sm:py-3 md:px-6 md:py-5 shadow-lg sm:shadow-xl md:shadow-2xl border border-orange-200/50 group-hover:border-orange-300 transition-all duration-500 relative overflow-hidden"
+                  className="bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl md:rounded-3xl px-3 py-2 sm:px-4 sm:py-3 md:px-6 md:py-5 shadow-lg sm:shadow-xl md:shadow-2xl border border-white/20 group-hover:border-white/30 transition-all duration-500 relative overflow-hidden"
                   whileHover={{ 
                     scale: 1.08, 
                     rotate: [0, -1, 1, 0],
@@ -108,7 +108,7 @@ export default function Hero() {
                   
                   <div className="text-center relative z-10">
                     <motion.div 
-                      className="text-sm sm:text-lg md:text-lg font-black text-gray-900 group-hover:text-orange-600 transition-colors duration-500 mb-1 sm:mb-2 tracking-wide"
+                      className="text-sm sm:text-lg md:text-lg font-black text-white group-hover:text-orange-300 transition-colors duration-500 mb-1 sm:mb-2 tracking-wide"
                       animate={{
                         textShadow: [
                           "0 0 0px rgba(237, 90, 40, 0)",
@@ -125,7 +125,7 @@ export default function Hero() {
                       We follow Buffalo Culture
                     </motion.div>
                     <motion.div 
-                      className="text-xs sm:text-xs md:text-sm font-bold text-orange-500 group-hover:text-orange-600 transition-colors duration-300 uppercase tracking-wider"
+                      className="text-xs sm:text-xs md:text-sm font-bold text-orange-200 group-hover:text-orange-300 transition-colors duration-300 uppercase tracking-wider"
                       animate={{
                         scale: [1, 1.05, 1],
                         opacity: [0.8, 1, 0.8],
