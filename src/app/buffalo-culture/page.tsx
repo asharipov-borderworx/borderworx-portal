@@ -66,7 +66,7 @@ export default function BuffaloCulturePage() {
                 <span className="text-gray-200 text-4xl md:text-6xl animate-fadeInUp delay-200">CULTURE</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-200 leading-relaxed mb-12 max-w-4xl mx-auto animate-fadeInUp delay-400">
-                Where strategic logistics meets fearless innovation. We don't just move freight—we move mountains.
+                Where strategic logistics meets fearless innovation. We don't just move freight - we move mountains.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fadeInUp delay-600">
                 <Link href="/about-us" className="group relative px-8 py-4 bg-white text-primary font-bold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
@@ -199,7 +199,7 @@ export default function BuffaloCulturePage() {
                     Ready to Join the Herd?
                   </h3>
                   <p className="text-lg text-orange-100 mb-8 text-center leading-relaxed">
-                    If you're looking for more than just a logistics provider—if you want to partner with a company that values strategic thinking, authentic leadership, and proactive problem-solving—we'd love to discuss how we can streamline your cross-border operations.
+                    If you're looking for more than just a logistics provider, if you want to partner with a company that values strategic thinking, authentic leadership, and proactive problem-solving We'd love to discuss how we can streamline your cross-border operations.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Link href="/contact" className="flex-1 bg-white text-orange-600 px-6 py-4 rounded-xl font-bold text-center hover:bg-gray-100 transition-colors duration-300">
@@ -229,17 +229,12 @@ export default function BuffaloCulturePage() {
               <div className="relative">
                 {/* Quote Marks */}
                 <div className="absolute -top-8 -left-8 text-white text-8xl font-bold opacity-20">"</div>
-                <div className="absolute -bottom-8 -right-8 text-white text-8xl font-bold opacity-20">"</div>
+                <div className="absolute -bottom-16 -right-8 text-white text-8xl font-bold opacity-20">"</div>
                 
                 <blockquote className="text-3xl md:text-4xl font-bold text-white leading-relaxed mb-8 relative z-10">
                   Buffalo culture represents our commitment to proactive logistics management, strategic customs planning, and fearless problem-solving in cross-border trade.
                 </blockquote>
                 
-                <div className="flex items-center justify-center space-x-4">
-                  <div className="w-16 h-1 bg-gradient-to-r from-white to-white"></div>
-                  <div className="w-2 h-2 bg-white rounded-full"></div>
-                  <div className="w-16 h-1 bg-gradient-to-r from-white to-white"></div>
-                </div>
               </div>
             </div>
           </div>
