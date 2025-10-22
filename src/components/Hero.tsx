@@ -108,7 +108,7 @@ export default function Hero() {
                   
                   <div className="text-center relative z-10">
                     <motion.div 
-                      className="text-sm sm:text-lg md:text-xl font-black text-gray-900 group-hover:text-orange-600 transition-colors duration-500 mb-1 sm:mb-2 tracking-wide"
+                      className="text-sm sm:text-lg md:text-lg font-black text-gray-900 group-hover:text-orange-600 transition-colors duration-500 mb-1 sm:mb-2 tracking-wide"
                       animate={{
                         textShadow: [
                           "0 0 0px rgba(237, 90, 40, 0)",
@@ -122,7 +122,7 @@ export default function Hero() {
                         ease: "easeInOut"
                       }}
                     >
-                      🦬 Buffalo Culture?
+                      We follow Buffalo Culture
                     </motion.div>
                     <motion.div 
                       className="text-xs sm:text-xs md:text-sm font-bold text-orange-500 group-hover:text-orange-600 transition-colors duration-300 uppercase tracking-wider"
@@ -137,7 +137,7 @@ export default function Hero() {
                         ease: "easeInOut"
                       }}
                     >
-                      Click me!
+                      Click to know more!
                     </motion.div>
                   </div>
                 </motion.div>

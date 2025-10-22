@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import AnimationWrapper from '@/components/AnimationWrapper'
+import { Truck, Package, Zap } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Buffalo Culture | Our Core Principles | BorderWorx Logistics',
@@ -161,7 +162,7 @@ export default function BuffaloCulturePage() {
                 <div className="space-y-8">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-xl">🚛</span>
+                      <Truck className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold mb-2">Cross-Border Excellence</h3>
@@ -171,7 +172,7 @@ export default function BuffaloCulturePage() {
                   
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-xl">📦</span>
+                      <Package className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold mb-2">Warehousing Innovation</h3>
@@ -181,7 +182,7 @@ export default function BuffaloCulturePage() {
                   
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-xl">⚡</span>
+                      <Zap className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold mb-2">Proactive Solutions</h3>
