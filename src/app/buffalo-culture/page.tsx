@@ -115,13 +115,13 @@ export default function BuffaloCulturePage() {
                     <div className="absolute inset-0 p-8 flex flex-col justify-between">
                       {/* Image */}
                       <div className="relative mb-6">
-                        <div className="w-24 h-24 mx-auto bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+                        <div className="w-32 h-32 mx-auto bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
                           <Image
                             src={characteristic.imagePlaceholder}
                             alt={characteristic.title}
-                            width={60}
-                            height={60}
-                            className="w-12 h-12 object-contain"
+                            width={80}
+                            height={80}
+                            className="w-20 h-20 object-contain"
                           />
                         </div>
                       </div>
