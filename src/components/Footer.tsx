@@ -12,6 +12,7 @@ export default function Footer() {
     { name: 'Blog', href: '/blog' },
     { name: 'About Us', href: '/about-us' },
     { name: 'Company Passion', href: '/company-passion' },
+    { name: 'Buffalo Culture', href: '/buffalo-culture' },
     { name: 'Contact', href: '/contact' },
     { name: 'Get Quote', href: '/quote' },
   ]

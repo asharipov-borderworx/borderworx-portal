@@ -223,6 +223,7 @@ export default function Header() {
                         {[
                           { name: 'About Us', href: '/about-us' },
                           { name: 'Company Passion', href: '/company-passion' },
+                          { name: 'Buffalo Culture', href: '/buffalo-culture' },
                         ].map((a) => (
                           <Link
                             key={a.name}
@@ -426,6 +427,7 @@ export default function Header() {
                             {[
                               { name: 'About Us', href: '/about-us', isMain: true },
                               { name: 'Company Passion', href: '/company-passion' },
+                              { name: 'Buffalo Culture', href: '/buffalo-culture' },
                             ].map((a) => (
                               <Link
                                 key={a.name}
