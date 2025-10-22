@@ -21,14 +21,12 @@ export default function Footer() {
     { name: 'Warehousing & Distribution', href: '/services/warehousing-distribution' },
     { name: 'Customs Brokerage', href: '/services/customs-brokerage' },
     { name: 'Trade Compliance', href: '/services/trade-compliance' },
-    { name: 'Section 321 Fulfillment', href: '/services/section-321' },
     { name: 'Amazon FBM', href: '/services/amazon-fbm' },
     { name: 'FBA Prep Center', href: '/services/amazon-fba-prep' },
     { name: 'CFS Shipping', href: '/services/cfs-shipping' },
   ]
 
   const resources = [
-    { name: 'What is Section 321?', href: '/resources/section-321-information' },
     { name: 'What is FTZ?', href: '/resources/foreign-trade-zone-ftz-information' },
     { name: 'What is CES?', href: '/resources/centralized-examination-station-ces-information' },
     { name: 'What is CFS?', href: '/resources/container-freight-station-cfs-information' },

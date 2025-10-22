@@ -125,7 +125,6 @@ export default function Header() {
                             { name: 'Warehousing & Distribution', href: '/services/warehousing-distribution' },
                             { name: 'Customs Brokerage – Canada & USA', href: '/services/customs-brokerage' },
                             { name: 'Trade Compliance Consulting', href: '/services/trade-compliance' },
-                            { name: 'Section 321 Fulfillment Canada', href: '/services/section-321' },
                             { name: 'Amazon FBM Fulfillment', href: '/services/amazon-fbm' },
                             { name: 'FBA Prep Center', href: '/services/amazon-fba-prep' },
                             { name: 'CFS Shipping Services', href: '/services/cfs-shipping' },
@@ -173,7 +172,6 @@ export default function Header() {
                     >
                       <div className="grid grid-cols-2 gap-2">
                         {[
-                          { name: 'What is Section 321?', href: '/resources/section-321-information' },
                           { name: 'What is a Foreign Trade Zone (FTZ)?', href: '/resources/foreign-trade-zone-ftz-information' },
                           { name: 'What is a Centralized Examination Station (CES)?', href: '/resources/centralized-examination-station-ces-information' },
                           { name: 'What is a CFS?', href: '/resources/container-freight-station-cfs-information' },
@@ -254,11 +252,7 @@ export default function Header() {
             })}
             <Link
               href="/quote"
-              className={`btn-primary transition-all duration-300 ${
-                isHomePage 
-                  ? (isScrolled ? 'bg-primary text-white hover:bg-primary/90' : 'bg-white text-primary hover:bg-gray-100')
-                  : 'bg-primary text-white hover:bg-primary/90'
-              }`}
+              className={`btn-primary transition-all duration-300 hero-gradient text-white`}
             >
               Get Quote
             </Link>
@@ -349,7 +343,6 @@ export default function Header() {
                               { name: 'Warehousing & Distribution', href: '/services/warehousing-distribution' },
                               { name: 'Customs Brokerage – Canada & USA', href: '/services/customs-brokerage' },
                               { name: 'Trade Compliance Consulting', href: '/services/trade-compliance' },
-                              { name: 'Section 321 Fulfillment Canada', href: '/services/section-321' },
                               { name: 'Amazon FBM Fulfillment', href: '/services/amazon-fbm' },
                               { name: 'FBA Prep Center', href: '/services/amazon-fba-prep' },
                               { name: 'CFS Shipping Services', href: '/services/cfs-shipping' },
@@ -390,7 +383,6 @@ export default function Header() {
                           <div className="pl-6 pr-3 py-2 space-y-2 bg-gray-50 rounded-lg mt-2">
                             {[
                               { name: 'All Resources', href: '/resources', isMain: true },
-                              { name: 'What is Section 321?', href: '/resources/section-321-information' },
                               { name: 'What is a Foreign Trade Zone (FTZ)?', href: '/resources/foreign-trade-zone-ftz-information' },
                               { name: 'What is a Centralized Examination Station (CES)?', href: '/resources/centralized-examination-station-ces-information' },
                               { name: 'What is a CFS?', href: '/resources/container-freight-station-cfs-information' },

@@ -9,7 +9,7 @@ import HeroSection from '@/components/HeroSection'
 
 export const metadata: Metadata = {
   title: 'Warehousing & Distribution Solutions | BorderWorx Logistics',
-  description: 'Canada\'s leading 3PL fulfillment service with 49,000 sqft in GTA and 45,000 sqft in Buffalo. Section 321 compliant, FTZ certified, and CTPAT certified.',
+  description: 'Canada\'s leading 3PL fulfillment service with 49,000 sqft in GTA and 45,000 sqft in Buffalo. FTZ and CTPAT certified.',
 }
 
 export default function WarehousingDistributionPage() {
@@ -58,15 +58,6 @@ export default function WarehousingDistributionPage() {
       icon: (
         <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-        </svg>
-      )
-    },
-    {
-      title: "Section 321 Compliant",
-      description: "We will process your shipments in compliance with Section 321 to avoid unnecessary duties on shipments.",
-      icon: (
-        <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
         </svg>
       )
     },
@@ -267,10 +258,6 @@ export default function WarehousingDistributionPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
                   </svg>
                 </div>
-                <h3 className="text-lg font-bold mb-3">Section 321 Compliance</h3>
-                <p className="text-gray-300 text-sm">
-                  Specialized processing to minimize duties and streamline customs clearance
-                </p>
               </div>
 
               <div className="text-center">

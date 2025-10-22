@@ -8,13 +8,6 @@ export type Resource = {
 
 export const resources: Resource[] = [
   {
-    slug: 'section-321-information',
-    title: 'Section 321 Information',
-    excerpt: 'Understand Section 321 and how $800 de minimis entries can reduce costs when importing into the United States.',
-    category: 'Compliance',
-    readTime: '3 min'
-  },
-  {
     slug: 'foreign-trade-zone-ftz-information',
     title: 'Foreign Trade Zone (FTZ) Information',
     excerpt: 'Learn how FTZs defer, reduce, or eliminate duties while streamlining customs and improving cash flow.',

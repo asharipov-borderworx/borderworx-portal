@@ -14,7 +14,6 @@ export default function ResourcePage({ params }: Params) {
   if (!resource) return notFound()
 
   const headingMap: Record<string, string> = {
-    'section-321-information': 'What is Section 321?',
     'foreign-trade-zone-ftz-information': 'What is a Foreign Trade Zone (FTZ)?',
     'centralized-examination-station-ces-information': 'What is a Centralized Examination Station (CES)?',
     'container-freight-station-cfs-information': 'What is a Container Freight Station (CFS)?',
@@ -69,13 +68,6 @@ export default function ResourcePage({ params }: Params) {
                 <div className="rounded-2xl bg-white shadow-xl p-6 md:p-8">
                   {/* Engaging highlight strip */}
                   <div className="mb-6 flex flex-wrap items-center gap-2">
-                    {(resource.slug === 'section-321-information') && (
-                      <>
-                        <span className="px-3 py-1 rounded-full bg-orange-50 text-primary font-semibold text-sm">$800 de minimis</span>
-                        <span className="px-3 py-1 rounded-full bg-green-50 text-green-700 font-semibold text-sm">Duty‑free</span>
-                        <span className="px-3 py-1 rounded-full bg-blue-50 text-blue-700 font-semibold text-sm">CBP compliant</span>
-                      </>
-                    )}
                     {(resource.slug === 'foreign-trade-zone-ftz-information') && (
                       <>
                         <span className="px-3 py-1 rounded-full bg-orange-50 text-primary font-semibold text-sm">Defer duties</span>
@@ -113,22 +105,6 @@ export default function ResourcePage({ params }: Params) {
                     )}
                   </div>
                   <article className="prose prose-lg max-w-none">
-                {resource.slug === 'section-321-information' && (
-                  <div>
-                    <p>
-                      Section 321 is a shipment type under the United States tariff and trade laws that allows the <strong className="text-secondary">duty‑free</strong> entry of merchandise into the United States. The key feature of Section 321 is that it enables a single shipment of goods valued at <strong className="text-secondary">$800</strong> or less to enter the country without paying duties or taxes, provided it meets certain conditions set forth by the U.S. <strong className="text-secondary">Customs and Border Protection (CBP)</strong>.
-                    </p>
-                    <p>
-                      To utilize these benefits, businesses and individuals must ensure their shipments are properly <strong className="text-secondary">declared and documented</strong>, meeting all <strong className="text-secondary">CBP requirements</strong> for a hassle‑free import process.
-                    </p>
-                    <p>
-                      At <strong className="text-secondary">Borderworx</strong>, we specialize in understanding the nuances of United States tariff and trade laws and their applications. Our expertise lies in identifying <strong className="text-secondary">eligible shipments</strong> and ensuring that they meet all the criteria set by the U.S. CBP. This expertise is critical, as improper <strong className="text-secondary">classification</strong> or <strong className="text-secondary">documentation</strong> can lead to delays and additional costs.
-                    </p>
-                    <p>
-                      For businesses, particularly those in <strong className="text-secondary">e‑commerce</strong>, this can mean substantial savings. By strategically planning shipments to stay within the <strong className="text-secondary">$800 threshold</strong>, businesses can avoid the usual <strong className="text-secondary">duty and tax</strong> expenses associated with importing goods into the United States.
-                    </p>
-                  </div>
-                )}
 
                 {resource.slug === 'foreign-trade-zone-ftz-information' && (
                   <div>
@@ -227,7 +203,6 @@ export default function ResourcePage({ params }: Params) {
 
                 {/* Fallback for placeholders */}
                 {![
-                  'section-321-information',
                   'foreign-trade-zone-ftz-information',
                   'centralized-examination-station-ces-information',
                   'container-freight-station-cfs-information',

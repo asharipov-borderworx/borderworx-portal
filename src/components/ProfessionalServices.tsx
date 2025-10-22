@@ -33,7 +33,7 @@ export default function ProfessionalServices() {
                   <div className="grid grid-cols-2 gap-4 sm:gap-6 text-center">
                     <div className="col-span-2">
                       <div className="text-xl sm:text-2xl lg:text-3xl font-bold mb-1 sm:mb-2">Since 2003</div>
-                      <div className="text-orange-50 text-xs sm:text-sm">Years of Excellence</div>
+                      <div className="text-orange-50 text-xs sm:text-sm">Service Excellence</div>
                     </div>
                   </div>
                 </div>
