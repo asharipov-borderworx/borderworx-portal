@@ -331,7 +331,7 @@ export default function Hero() {
                   variants={cardVariants}
                   whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
                 >
-                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1 sm:mb-2">99%</div>
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1 sm:mb-2">99.9%</div>
                   <div className="text-gray-200 text-xs sm:text-sm lg:text-base">On-Time</div>
                 </motion.div>
               </motion.div>
