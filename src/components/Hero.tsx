@@ -12,7 +12,7 @@ export default function Hero() {
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
-        delayChildren: 0.3
+        delayChildren: 1.3
       }
     }
   }
@@ -70,7 +70,7 @@ export default function Hero() {
             }}
             transition={{ 
               duration: 1.2,
-              delay: 1,
+              delay: 2,
               ease: [0.25, 0.4, 0.25, 1]
             }}
           >
@@ -285,7 +285,7 @@ export default function Hero() {
             className="relative order-1 lg:order-2"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.5, ease: [0.25, 0.4, 0.25, 1] as const }}
+            transition={{ duration: 0.8, delay: 1.5, ease: [0.25, 0.4, 0.25, 1] as const }}
           >
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 lg:p-8 border-2 border-white/20">
               <motion.div 
@@ -296,7 +296,7 @@ export default function Hero() {
                   visible: {
                     transition: {
                       staggerChildren: 0.1,
-                      delayChildren: 0.8
+                      delayChildren: 1
                     }
                   }
                 }}
