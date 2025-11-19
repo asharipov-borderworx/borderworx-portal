@@ -188,13 +188,12 @@ export default function WarehousingDistributionPage() {
 
               <div className="grid lg:grid-cols-2 gap-12">
                 {/* Primary Warehouse */}
-                <div className="relative rounded-xl overflow-hidden shadow-2xl">
+                <div className="relative rounded-xl overflow-hidden shadow-2xl h-[400px]">
                   <Image
                     src="/images/services/warehousing.jpg"
                     alt="BorderWorx Warehousing Facility - Primary warehouse operations"
-                    width={600}
-                    height={400}
-                    className="w-full h-auto object-cover"
+                    fill
+                    className="object-cover"
                     priority
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
@@ -204,13 +203,12 @@ export default function WarehousingDistributionPage() {
                 </div>
 
                 {/* Distribution Center */}
-                <div className="relative rounded-xl overflow-hidden shadow-2xl">
+                <div className="relative rounded-xl overflow-hidden shadow-2xl h-[400px]">
                   <Image
                     src="/images/services/warehousingAndDistribution2.png"
                     alt="BorderWorx Distribution Center - Advanced fulfillment operations"
-                    width={600}
-                    height={400}
-                    className="w-full h-auto object-cover"
+                    fill
+                    className="object-cover"
                     priority
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
