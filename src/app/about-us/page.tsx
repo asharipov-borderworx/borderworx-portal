@@ -87,15 +87,15 @@ export default function AboutUsPage() {
                 <div className="text-gray-600 font-medium">Years Experience</div>
               </StaggerItem>
               <StaggerItem className="text-center">
-                <CountUp end={4} decimals={1} prefix="$" suffix="B+" className="text-4xl md:text-5xl font-bold text-primary mb-2" />
+                <CountUp end={4} prefix="$" suffix="B+" className="text-4xl md:text-5xl font-bold text-primary mb-2" />
                 <div className="text-gray-600 font-medium">Goods Managed</div>
               </StaggerItem>
               <StaggerItem className="text-center">
-                <CountUp end={2} suffix="B+" className="text-4xl md:text-5xl font-bold text-primary mb-2" />
+                <CountUp end={2} suffix="M+" className="text-4xl md:text-5xl font-bold text-primary mb-2" />
                 <div className="text-gray-600 font-medium">Customs Clearances</div>
               </StaggerItem>
               <StaggerItem className="text-center">
-                <CountUp end={2} className="text-4xl md:text-5xl font-bold text-primary mb-2" />
+                <CountUp end={50} className="text-4xl md:text-5xl font-bold text-primary mb-2" />
                 <div className="text-gray-600 font-medium">Countries Served</div>
               </StaggerItem>
             </StaggerContainer>
