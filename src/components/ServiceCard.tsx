@@ -45,7 +45,7 @@ export default function ServiceCard({ service, index }: { service: Service, inde
                             <img
                             src={feature.image}
                             alt={featureText}
-                            className="w-8 h-8 mr-2 flex-shrink-0 object-contain"
+                            className="w-16 h-16 mr-2 flex-shrink-0 object-contain"
                             />
                             <span className="text-gray-600 text-xs">{featureText}</span>
                         </>
