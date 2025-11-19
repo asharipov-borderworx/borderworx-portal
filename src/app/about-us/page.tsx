@@ -87,11 +87,11 @@ export default function AboutUsPage() {
                 <div className="text-gray-600 font-medium">Years Experience</div>
               </StaggerItem>
               <StaggerItem className="text-center">
-                <CountUp end={3.5} decimals={1} prefix="$" suffix="B+" className="text-4xl md:text-5xl font-bold text-primary mb-2" />
+                <CountUp end={4} decimals={1} prefix="$" suffix="B+" className="text-4xl md:text-5xl font-bold text-primary mb-2" />
                 <div className="text-gray-600 font-medium">Goods Managed</div>
               </StaggerItem>
               <StaggerItem className="text-center">
-                <CountUp end={250} suffix="K+" className="text-4xl md:text-5xl font-bold text-primary mb-2" />
+                <CountUp end={2} suffix="B+" className="text-4xl md:text-5xl font-bold text-primary mb-2" />
                 <div className="text-gray-600 font-medium">Customs Clearances</div>
               </StaggerItem>
               <StaggerItem className="text-center">
@@ -138,7 +138,7 @@ export default function AboutUsPage() {
                     </p>
                     <p>
                       Today, BorderWorx stands as a trusted partner for businesses navigating the complexities 
-                      of North American trade. We've successfully managed over $3.5 billion in goods across 
+                      of North American trade. We've successfully managed over $4 billion in goods across 
                       borders and processed more than 250,000 customs clearances.
                     </p>
                     <p>
