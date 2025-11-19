@@ -121,8 +121,8 @@ export default function Header() {
                     >
                         <div className="grid grid-cols-2 gap-2">
                           {[
-                            { name: 'Warehousing', href: '/services/warehousing' },
                             { name: 'Warehousing & Distribution', href: '/services/warehousing-distribution' },
+                            { name: 'Transportation & Trucking Services', href: '/services/transportation' },
                             { name: 'Customs Brokerage – Canada & USA', href: '/services/customs-brokerage' },
                             { name: 'Trade Compliance Consulting', href: '/services/trade-compliance' },
                             { name: 'Amazon FBM Fulfillment', href: '/services/amazon-fbm' },
@@ -340,8 +340,8 @@ export default function Header() {
                           <div className="pl-6 pr-3 py-2 space-y-2 bg-gray-50 rounded-lg mt-2">
                             {[
                               { name: 'All Services', href: '/services', isMain: true },
-                              { name: 'Warehousing', href: '/services/warehousing' },
                               { name: 'Warehousing & Distribution', href: '/services/warehousing-distribution' },
+                              { name: 'Transportation & Trucking Services', href: '/services/transportation' },
                               { name: 'Customs Brokerage – Canada & USA', href: '/services/customs-brokerage' },
                               { name: 'Trade Compliance Consulting', href: '/services/trade-compliance' },
                               { name: 'Amazon FBM Fulfillment', href: '/services/amazon-fbm' },

@@ -56,7 +56,6 @@ export default function TransportationPage() {
 
   const capabilities = [
     "Real-time shipment tracking and visibility",
-    "Temperature-controlled transportation for sensitive cargo",
     "Cross-border expertise with seamless customs coordination",
     "Flexible pickup and delivery scheduling",
     "Expedited and time-critical shipping options",
@@ -154,7 +153,7 @@ export default function TransportationPage() {
       {/* Hero Section */}
       <HeroSection
         title="Transportation & Trucking Solutions"
-        description="Comprehensive freight transportation services from small parcels to full truckloads, with seamless international delivery"
+        description="Comprehensive freight transportation services from small parcels to LTL and full truckloads, with seamless international delivery"
         breadcrumb="Transportation Services"
       />
 
@@ -166,7 +165,7 @@ export default function TransportationPage() {
             <div className="max-w-4xl mx-auto text-center mb-16">
               <p className="text-lg text-gray-700 leading-relaxed">
                 Our transportation and trucking services provide flexible, reliable solutions for all your freight needs.
-                Whether you're shipping small parcels, partial loads, full truckloads, or managing international freight,
+                Whether you're shipping small parcels, LTL, full truckloads, or managing international freight,
                 our comprehensive transportation network ensures your cargo reaches its destination on time and in perfect condition.
                 With advanced tracking technology and experienced logistics professionals, we deliver peace of mind with every shipment.
               </p>
