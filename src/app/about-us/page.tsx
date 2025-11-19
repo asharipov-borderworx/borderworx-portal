@@ -95,7 +95,7 @@ export default function AboutUsPage() {
                 <div className="text-gray-600 font-medium">Customs Clearances</div>
               </StaggerItem>
               <StaggerItem className="text-center">
-                <CountUp end={50} className="text-4xl md:text-5xl font-bold text-primary mb-2" />
+                <CountUp end={50} suffix="+" className="text-4xl md:text-5xl font-bold text-primary mb-2" />
                 <div className="text-gray-600 font-medium">Countries Served</div>
               </StaggerItem>
             </StaggerContainer>
