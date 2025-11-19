@@ -15,13 +15,13 @@
   },
   {
     "id": "transportation",
-    "title": "Transportation & Trucking Services",
-    "description": "Comprehensive freight transportation solutions including small parcel consolidations, LTL, truckload, and international freight services with seamless cross-border delivery.",
+    "title": "Transportation and Trucking Services",
+    "description": "Complete trucking services for cross-border shipments as well as local deliveries. In addition, an expansive network of carriers to cover all of North America, including Amazon and Walmart deliveries.",
     "features": [
-      "Small parcel consolidations",
-      "LTL & Truckload services",
-      "International freight",
-      "Drayage and port services"
+      "Company owned and managed fleet",
+      "Integrated warehouse to trucking platform",
+      "Flexible and responsive dispatching",
+      "Small Parcel, LTL, Truckloads for Regular to Expedited to 24/7 Service"
     ],
     "imageUrl": "/images/services/transportation.png",
     "imageAlt": "Modern trucks and freight transportation services",
