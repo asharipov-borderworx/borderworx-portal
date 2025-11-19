@@ -315,7 +315,7 @@ export default function Hero() {
                   variants={cardVariants}
                   whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
                 >
-                  <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-1 sm:mb-2">$3B+</div>
+                  <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-1 sm:mb-2">$4B+</div>
                   <div className="text-gray-200 text-xs sm:text-sm lg:text-base">Goods Managed</div>
                 </motion.div>
                 <motion.div 
@@ -326,13 +326,21 @@ export default function Hero() {
                   <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1 sm:mb-2">24/7</div>
                   <div className="text-gray-200 text-xs sm:text-sm lg:text-base">Support</div>
                 </motion.div>
-                <motion.div 
+                <motion.div
                   className="bg-white/20 rounded-xl p-3 sm:p-4 lg:p-6 text-center backdrop-blur-sm border border-white/10"
                   variants={cardVariants}
                   whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
                 >
                   <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1 sm:mb-2">99.9%</div>
                   <div className="text-gray-200 text-xs sm:text-sm lg:text-base">On-Time</div>
+                </motion.div>
+                <motion.div
+                  className="bg-white/20 rounded-xl p-3 sm:p-4 lg:p-6 text-center backdrop-blur-sm border border-white/10 col-span-2"
+                  variants={cardVariants}
+                  whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                >
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1 sm:mb-2">2M+</div>
+                  <div className="text-gray-200 text-xs sm:text-sm lg:text-base">Customs Clearances Arranged</div>
                 </motion.div>
               </motion.div>
             </div>

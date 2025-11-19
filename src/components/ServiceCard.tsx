@@ -31,14 +31,30 @@ export default function ServiceCard({ service, index }: { service: Service, inde
                 <div className="mb-4 flex-grow">
                 <h4 className="font-semibold text-secondary mb-2 text-sm">Key Features:</h4>
                 <ul className="space-y-1">
-                    {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start">
-                        <svg className="w-4 h-4 text-primary mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    {service.features.map((feature, featureIndex) => {
+                    const isImageFeature = typeof feature === 'object' && 'image' in feature;
+                    const featureText = typeof feature === 'string' ? feature : feature.text;
+
+                    return (
+                    <li key={featureIndex} className="flex items-center">
+                        <svg className="w-4 h-4 text-primary mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
-                        <span className="text-gray-600 text-xs">{feature}</span>
+                        {isImageFeature ? (
+                        <>
+                            <img
+                            src={feature.image}
+                            alt={featureText}
+                            className="w-8 h-8 mr-2 flex-shrink-0 object-contain"
+                            />
+                            <span className="text-gray-600 text-xs">{featureText}</span>
+                        </>
+                        ) : (
+                        <span className="text-gray-600 text-xs">{featureText}</span>
+                        )}
                     </li>
-                    ))}
+                    );
+                    })}
                 </ul>
                 </div>
 

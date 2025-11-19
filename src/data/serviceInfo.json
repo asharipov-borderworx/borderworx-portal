@@ -1,19 +1,5 @@
 [
   {
-    "id": "warehousing",
-    "title": "Warehousing",
-    "description": "Secure, climate-controlled warehouse facilities with advanced inventory management systems. Our strategic locations ensure optimal storage and quick access to your goods.",
-    "features": [
-      "Climate-controlled storage",
-      "Real-time inventory tracking",
-      "Security surveillance 24/7",
-      "Flexible storage solutions"
-    ],
-    "imageUrl": "/images/services/warehousing.jpg",
-    "imageAlt": "Modern warehouse facility with organized storage systems",
-    "detailsLink": "/services/warehousing"
-  },
-  {
     "id": "warehousing-distribution",
     "title": "Warehousing & Distribution",
     "description": "Complete end-to-end warehousing and distribution services that streamline your supply chain from storage to final delivery.",
@@ -23,9 +9,23 @@
       "Multi-channel distribution",
       "Last-mile delivery coordination"
     ],
-    "imageUrl": "/images/services/warehousingAndDistribution.png",
+    "imageUrl": "/images/services/warehousing.jpg",
     "imageAlt": "Distribution center with workers managing order fulfillment",
     "detailsLink": "/services/warehousing-distribution"
+  },
+  {
+    "id": "transportation",
+    "title": "Transportation & Trucking Services",
+    "description": "Comprehensive freight transportation solutions including small parcel consolidations, LTL, truckload, and international freight services with seamless cross-border delivery.",
+    "features": [
+      "Small parcel consolidations",
+      "LTL & Truckload services",
+      "International freight",
+      "Drayage and port services"
+    ],
+    "imageUrl": "/images/services/transportation.png",
+    "imageAlt": "Modern trucks and freight transportation services",
+    "detailsLink": "/services/transportation"
   },
   {
     "id": "customs-brokerage",
@@ -35,7 +35,10 @@
       "CBSA and CBP compliance",
       "Duty and tax optimization",
       "Document preparation",
-      "Expedited clearance"
+      {
+        "text": "Approved carrier",
+        "image": "/images/services/ctpat.png"
+      }
     ],
     "imageUrl": "/images/services/customsBrokerage.png",
     "imageAlt": "Customs clearance documentation and border crossing",

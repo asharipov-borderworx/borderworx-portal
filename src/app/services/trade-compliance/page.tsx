@@ -237,7 +237,7 @@ export default function TradeCompliancePage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
                     </svg>
                   </div>
-                  <h4 className="text-xl font-bold mb-2">CCRA (Canada)</h4>
+                  <h4 className="text-xl font-bold mb-2">CBSA (Canada)</h4>
                   <p className="text-orange-100 text-sm">
                     Direct communication with Canada Customs and Revenue Agency for rulings and compliance matters
                   </p>
@@ -248,7 +248,7 @@ export default function TradeCompliancePage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
                     </svg>
                   </div>
-                  <h4 className="text-xl font-bold mb-2">US Customs</h4>
+                  <h4 className="text-xl font-bold mb-2">CBP (United States)</h4>
                   <p className="text-orange-100 text-sm">
                     Professional liaison with United States Customs and Border Protection for seamless trade
                   </p>

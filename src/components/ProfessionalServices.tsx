@@ -67,8 +67,8 @@ export default function ProfessionalServices() {
                 <div className="prose prose-sm sm:prose-base lg:prose-lg max-w-none">
                   <p className="text-gray-300 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base lg:text-lg">
                     Since 2003, <strong className="text-orange-400">Borderworx Logistics</strong> has managed more than 
-                    <strong className="text-white"> $3 Billion in goods</strong> across the border and more than 
-                    <strong className="text-white"> 100,000 customs clearances</strong>. We are a 3PL fulfillment 
+                    <strong className="text-white"> $4 Billion in goods</strong> across the border and more than 
+                    <strong className="text-white"> 2,000,000 customs clearances</strong>. We are a 3PL fulfillment 
                     and warehousing company focused on the <strong className="text-orange-400">Canada–U.S. trade lane</strong> with 
                     locations in the GTA, Niagara Falls and Buffalo.
                   </p>

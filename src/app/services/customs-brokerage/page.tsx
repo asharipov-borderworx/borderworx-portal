@@ -57,12 +57,12 @@ export default function CustomsBrokeragePage() {
   const canadianServices = [
     "Seamless integration process between transportation and brokerage to ensure non-stop flow of goods across border",
     "Single contact for all brokerage and transportation – parallel focus",
-    "Complete trade compliance and Canada Customs and Revenue Agency (CCRA) compliance",
+    "Complete trade compliance and Canada Border Services Agency (CBSA) compliant",
     "Electronic releases with PARS (Pre-Arrival Review System) and Commercial Driver Registration Program (CDRP) Registered drivers"
   ]
 
   const usServices = [
-    "In-house customs services at all border warehouses",
+    "In-house customs experts at all border warehouses",
     "Transparent clearances for ease of cross-border transfer of goods and optimal distribution in both Canada and the U.S.",
     "On site staff to ensure total compliance and low risk importer status",
     "Electronic releases with PAPS (Pre-Arrival Processing System) and driver registration"
@@ -315,7 +315,7 @@ export default function CustomsBrokeragePage() {
                 <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-8">
                   Why Choose Our Customs Brokerage Services?
                 </h2>
-                <div className="space-y-6 flex flex-col items-center">
+                <div className="space-y-6 flex flex-col">
                   <div className="flex items-start">
                     <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -336,7 +336,7 @@ export default function CustomsBrokeragePage() {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-secondary mb-2">Full Compliance</h3>
-                      <p className="text-gray-600">CCRA and CBP compliance with proactive regulatory monitoring and risk management.</p>
+                      <p className="text-gray-600">Canadian CBSA and U.S. CBP compliance with proactive regulatory monitoring and risk management</p>
                     </div>
                   </div>
                   
