@@ -145,7 +145,7 @@ Submitted via BorderWorx Quote Form
 
         const info = await transporter.sendMail({
             from: `"${name || 'Website Visitor'}" <borderworx403@gmail.com>`,
-            to: 'arturka0505@gmail.com',
+            to: process.env.SEND_EMAIL_TO || 'sales@borderworx.com',
             subject: emailSubject,
             text: emailText,
             html: emailHtml
