@@ -21,6 +21,103 @@ export interface BlogPostItem {
 
 export const blogPosts: BlogPostItem[] = [
   {
+    id: '59',
+    slug: 'mississauga-cusma-compliance-workshop-2026',
+    title: 'Mississauga CUSMA Compliance Workshop – Avoiding the U.S. Tariff Trap',
+    author: 'BorderWorx Team',
+    date: '2026-03-10',
+    category: 'Trade Compliance',
+    excerpt:
+      'Join our in-person CUSMA Compliance Workshop in Mississauga on March 10, 2026, and learn how to protect your margins while staying compliant under evolving U.S. tariff rules.',
+    thumbnail: '/images/blog/cusma-workshop.png',
+    tags: [
+      'CUSMA',
+      'Trade Compliance',
+      'Exports',
+      'Mississauga',
+      'Tariffs',
+      'Business Growth',
+      'Dean Wood',
+    ],
+    blocks: [
+      {
+        type: 'text',
+        content:
+          'Canadian exporters and trade professionals are facing increasing complexity under evolving U.S. tariff rules. Understanding how to remain compliant while protecting your margins has never been more critical.',
+      },
+      {
+        type: 'heading',
+        level: 3,
+        text: 'Mississauga CUSMA Compliance Workshop – March 10, 2026',
+      },
+      {
+        type: 'text',
+        content:
+          'If you are navigating complex U.S. tariff regulations under CUSMA and want practical guidance to avoid costly mistakes, join us in Mississauga for this exclusive half-day, in-person workshop.',
+      },
+      {
+        type: 'heading',
+        level: 3,
+        text: 'Who Should Attend?',
+      },
+      {
+        type: 'list',
+        items: [
+          'Canadian exporters managing cross-border trade with the United States',
+          'Business owners seeking to protect profit margins',
+          'Operations and logistics teams handling customs documentation',
+          'Trade compliance professionals managing regulatory risk',
+          'Companies located in the GTA region',
+        ],
+      },
+      {
+        type: 'heading',
+        level: 3,
+        text: 'What You’ll Learn',
+      },
+      {
+        type: 'list',
+        items: [
+          'CUSMA foundations and compliance essentials',
+          'How to avoid common tariff pitfalls',
+          'Strategies to protect your margins during tariff volatility',
+          'Practical tools for managing U.S. trade risk',
+          'Actionable compliance insights for real-world application',
+        ],
+      },
+      {
+        type: 'heading',
+        level: 3,
+        text: 'Delivered in Partnership',
+      },
+      {
+        type: 'text',
+        content:
+          'This workshop is delivered in partnership with the City of Mississauga and the Mississauga Board of Trade, bringing together leading experts and business leaders from across the region.',
+      },
+      {
+        type: 'heading',
+        level: 3,
+        text: 'Featured Speaker: Dean Wood',
+      },
+      {
+        type: 'text',
+        content:
+          'We are proud to announce that our CEO, Dean Wood, will be one of the featured speakers. With extensive experience in CUSMA compliance and tariff risk mitigation, Dean will share practical strategies to help businesses navigate cross-border challenges confidently and effectively.',
+      },
+      {
+        type: 'heading',
+        level: 3,
+        text: 'Register Now',
+      },
+      {
+        type: 'text',
+        content:
+          'Seats are limited. Don\'t miss this opportunity to strengthen your compliance strategy and safeguard your business from costly tariff exposure. <a href="https://bot.com/Events/Mississauga-CUSMA-Compliance-Workshop-Avoiding-the-U-S-Tariff-Trap?_gl=1*13qx993*_gcl_au*MTkyOTA4MDIzOC4xNzY2MDAzMzkz*_ga*MTk5MzA3NDA2Ny4xNzY2MDAzMzk0*_ga_WTNKDMSH6T*czE3NzIwMzI0OTIkbzQkZzEkdDE3NzIwMzI3NTgkajU5JGwwJGgw" target="_blank" rel="noopener noreferrer" class="text-primary underline decoration-2 underline-offset-4 hover:text-orange-600">Register today and avoid the U.S. tariff trap</a>.',
+      },
+    ],
+  },
+  {
     id: '1',
     slug: 'ceo-insights-canadian-businesses-moving-to-us',
     title: 'CEO Insights: Canadian Businesses Moving Operations to the US',
