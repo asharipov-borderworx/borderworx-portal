@@ -87,7 +87,71 @@ export async function POST(request: Request) {
             return formattedData.trim();
         };
 
+        // Format payload data as HTML table rows
+        const formatPayloadDataHtml = (payload: any, service: string) => {
+            if (!payload) return '<tr><td colspan="2" style="padding: 10px; color: #6b7280;">No service-specific data provided.</td></tr>';
+            
+            let rows = '';
+            
+            switch (service) {
+                case 'Freight Shipping':
+                    rows = `
+                        <tr><td style="padding: 8px 12px; font-weight: bold; color: #374151; width: 40%;">Freight Origin:</td><td style="padding: 8px 12px; color: #1f2937;">${payload.freightOrigin || 'Not specified'}</td></tr>
+                        <tr><td style="padding: 8px 12px; font-weight: bold; color: #374151;">Freight Destination:</td><td style="padding: 8px 12px; color: #1f2937;">${payload.freightDestination || 'Not specified'}</td></tr>
+                        <tr><td style="padding: 8px 12px; font-weight: bold; color: #374151;">Weight:</td><td style="padding: 8px 12px; color: #1f2937;">${payload.weight || 'Not specified'}</td></tr>
+                        <tr><td style="padding: 8px 12px; font-weight: bold; color: #374151;">Commodity:</td><td style="padding: 8px 12px; color: #1f2937;">${payload.commodity || 'Not specified'}</td></tr>
+                    `;
+                    break;
+                    
+                case 'Warehousing':
+                    rows = `
+                        <tr><td style="padding: 8px 12px; font-weight: bold; color: #374151; width: 40%;">Warehouse Location Preference:</td><td style="padding: 8px 12px; color: #1f2937;">${payload.warehouseLocationPreference || 'Not specified'}</td></tr>
+                        <tr><td style="padding: 8px 12px; font-weight: bold; color: #374151;">Square Feet Needed:</td><td style="padding: 8px 12px; color: #1f2937;">${payload.squareFeetNeeded || 'Not specified'}</td></tr>
+                        <tr><td style="padding: 8px 12px; font-weight: bold; color: #374151;">Product Type:</td><td style="padding: 8px 12px; color: #1f2937;">${payload.productType || 'Not specified'}</td></tr>
+                        <tr><td style="padding: 8px 12px; font-weight: bold; color: #374151;">Storage Format:</td><td style="padding: 8px 12px; color: #1f2937;">${payload.storedValue || 'Not specified'}</td></tr>
+                        <tr><td style="padding: 8px 12px; font-weight: bold; color: #374151;">Anticipated Contract Length:</td><td style="padding: 8px 12px; color: #1f2937;">${payload.anticipatedContractLength || 'Not specified'}</td></tr>
+                        <tr><td style="padding: 8px 12px; font-weight: bold; color: #374151;">Monthly Inventory Turns:</td><td style="padding: 8px 12px; color: #1f2937;">${payload.anticipatedMonthlyInventoryTurns || 'Not specified'}</td></tr>
+                        <tr><td style="padding: 8px 12px; font-weight: bold; color: #374151;">Transport Service Needed:</td><td style="padding: 8px 12px; color: #1f2937;">${payload.transportServiceNeeded || 'Not specified'}</td></tr>
+                        <tr><td style="padding: 8px 12px; font-weight: bold; color: #374151;">Co-packing Services Needed:</td><td style="padding: 8px 12px; color: #1f2937;">${payload.copackingServicesNeeded || 'Not specified'}</td></tr>
+                    `;
+                    break;
+                    
+                case 'Customs Brokerage – Canada & USA':
+                    rows = `
+                        <tr><td style="padding: 8px 12px; font-weight: bold; color: #374151; width: 40%;">Shipping Origin:</td><td style="padding: 8px 12px; color: #1f2937;">${payload.shippingOrigin || 'Not specified'}</td></tr>
+                        <tr><td style="padding: 8px 12px; font-weight: bold; color: #374151;">Shipping Destination:</td><td style="padding: 8px 12px; color: #1f2937;">${payload.shippingDestination || 'Not specified'}</td></tr>
+                        <tr><td style="padding: 8px 12px; font-weight: bold; color: #374151;">Product Type:</td><td style="padding: 8px 12px; color: #1f2937;">${payload.productType || 'Not specified'}</td></tr>
+                        <tr><td style="padding: 8px 12px; font-weight: bold; color: #374151;">Date Needed:</td><td style="padding: 8px 12px; color: #1f2937;">${payload.dateNeeded || 'Not specified'}</td></tr>
+                        <tr><td style="padding: 8px 12px; font-weight: bold; color: #374151;">Shipping Type:</td><td style="padding: 8px 12px; color: #1f2937;">${payload.shippingType || 'Not specified'}</td></tr>
+                        <tr><td style="padding: 8px 12px; font-weight: bold; color: #374151;">One Time Shipment:</td><td style="padding: 8px 12px; color: #1f2937;">${payload.oneTimeShipment ? 'Yes' : 'No'}</td></tr>
+                    `;
+                    break;
+                    
+                case 'Trade Compliance Consulting':
+                    rows = `
+                        <tr><td style="padding: 8px 12px; font-weight: bold; color: #374151; width: 40%;">Product Type:</td><td style="padding: 8px 12px; color: #1f2937;">${payload.productType || 'Not specified'}</td></tr>
+                        <tr><td style="padding: 8px 12px; font-weight: bold; color: #374151;">Industry Type:</td><td style="padding: 8px 12px; color: #1f2937;">${payload.industryType || 'Not specified'}</td></tr>
+                        <tr><td style="padding: 8px 12px; font-weight: bold; color: #374151;">Trading Activity:</td><td style="padding: 8px 12px; color: #1f2937;">${payload.tradingActivity || 'Not specified'}</td></tr>
+                        <tr><td style="padding: 8px 12px; font-weight: bold; color: #374151;">Help Needed:</td><td style="padding: 8px 12px; color: #1f2937;">${payload.helpNeededType ? payload.helpNeededType.join(', ') : 'Not specified'}</td></tr>
+                    `;
+                    break;
+                    
+                default:
+                    // For unknown services, create rows from JSON object
+                    rows = Object.entries(payload)
+                        .map(([key, value]) => {
+                            const displayKey = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
+                            const displayValue = typeof value === 'object' ? JSON.stringify(value) : String(value);
+                            return `<tr><td style="padding: 8px 12px; font-weight: bold; color: #374151; width: 40%;">${displayKey}:</td><td style="padding: 8px 12px; color: #1f2937;">${displayValue || 'Not specified'}</td></tr>`;
+                        })
+                        .join('');
+            }
+            
+            return rows;
+        };
+
         const payloadData = formatPayloadData(payload, service);
+        const payloadDataHtml = formatPayloadDataHtml(payload, service);
 
         // Generate email content
         const emailText = `
@@ -133,7 +197,11 @@ Submitted via BorderWorx Quote Form
                 <p style="background: #f3f4f6; padding: 10px; border-radius: 5px;">${service || 'Not specified'}</p>
                 
                 <h3 style="color: #374151; margin-top: 20px;">Service-Specific Details</h3>
-                <div style="background: #f9fafb; padding: 15px; border-radius: 5px; white-space: pre-line;">${payloadData}</div>
+                <div style="background: #f9fafb; padding: 15px; border-radius: 5px;">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        ${payloadDataHtml}
+                    </table>
+                </div>
                 
                 <h3 style="color: #374151; margin-top: 20px;">Additional Message</h3>
                 <p style="background: #f3f4f6; padding: 10px; border-radius: 5px;">${message || 'No additional message provided'}</p>
