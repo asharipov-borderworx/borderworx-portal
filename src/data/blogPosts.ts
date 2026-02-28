@@ -29,6 +29,7 @@ export const blogPosts: BlogPostItem[] = [
     category: 'Trade Compliance',
     excerpt:
       'Join our in-person CUSMA Compliance Workshop in Mississauga on March 10, 2026, and learn how to protect your margins while staying compliant under evolving U.S. tariff rules.',
+    thumbnail: '/images/blog/cusma-workshop.png',
     tags: [
       'CUSMA',
       'Trade Compliance',
