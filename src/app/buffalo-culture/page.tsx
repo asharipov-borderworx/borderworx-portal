@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import AnimationWrapper from '@/components/AnimationWrapper'
 import { Truck, Package, Zap } from 'lucide-react'
+import BuffaloCultureVideoButton from '@/components/BuffaloCultureVideoButton'
 
 export const metadata: Metadata = {
   title: 'Buffalo Culture | Our Core Principles | BorderWorx Logistics',
@@ -72,6 +73,7 @@ export default function BuffaloCulturePage() {
                 <Link href="/about-us" className="group relative px-8 py-4 bg-white text-primary font-bold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
                   <span className="relative z-10">Explore Our Story</span>
                 </Link>
+                <BuffaloCultureVideoButton />
                 <Link href="/contact" className="px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-primary transition-all duration-300 transform hover:scale-105">
                   Join the Herd
                 </Link>
