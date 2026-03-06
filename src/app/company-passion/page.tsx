@@ -144,7 +144,7 @@ export default function CompanyPassionPage() {
                 {/* Donate Button */}
                 <div className="mt-8">
                   <Link
-                    href="https://hopethailand.org/donate"
+                    href="https://hope-thailand.org/donate"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary to-orange-600 text-white rounded-xl font-semibold text-lg hover:from-orange-600 hover:to-primary transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
