@@ -43,7 +43,7 @@ function BlogCard({ post }: { post: BlogPostItem }) {
     <article className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col">
       <div className="relative h-48 bg-white overflow-hidden">
         <BlogImage
-          src={post.thumbnail || '/images/logo.png'}
+          src={post.thumbnail || '/images/logo-gray.png'}
           alt={post.title}
           fill
           className={`${
