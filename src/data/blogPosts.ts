@@ -28,7 +28,7 @@ export const blogPosts: BlogPostItem[] = [
     date: '2026-02-15',
     category: 'Cross-Border Trade',
     excerpt:
-      "A short recorded interview with BorderWorx's CEO on what businesses should expect when crossing the U.S. border, and how to avoid common delays.",
+      "Full length Q&A wedinar with BorderWorx's CEO on what businesses should expect when crossing the U.S. border, and how to avoid common delays.",
     tags: [
       'U.S. Border',
       'Border Crossing',
