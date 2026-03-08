@@ -21,6 +21,37 @@ export interface BlogPostItem {
 
 export const blogPosts: BlogPostItem[] = [
   {
+    id: '60',
+    slug: 'dos-and-donts-when-crossing-the-us-border-feb-2026',
+    title: 'Do\'s and Dont\'s when crossing US border - Mississauga Board of Trade webinar with CEO Dean Wood',
+    author: 'BorderWorx Team',
+    date: '2026-02-15',
+    category: 'Cross-Border Trade',
+    excerpt:
+      "A short recorded interview with BorderWorx's CEO on what businesses should expect when crossing the U.S. border, and how to avoid common delays.",
+    tags: [
+      'U.S. Border',
+      'Border Crossing',
+      'Customs',
+      'Compliance',
+      'Documentation',
+      'CEO Insights',
+      'Interview',
+    ],
+    blocks: [
+      {
+        type: 'text',
+        content:
+          'Crossing the U.S. border can be smooth or it can turn into delays, inspections, and unexpected costs. In this Feb 2026 recording (shared screen with speaker view), the BorderWorx CEO shares practical, real-world perspective on cross-border shipping and what commonly slows shipments down.',
+      },
+      {
+        type: 'text',
+        content:
+          'Watch the interview here: <a href="https://us02web.zoom.us/rec/play/4oLuYbgkFf4f-XBa3CuSHumml4cGLLq13F8_5rGo3HP-_0LjxLssJm65m__fG7gcafyKdkmT6xSV41Y6.hy0ulLZfDXGbCpNH?eagerLoadZvaPages=&accessLevel=meeting&canPlayFromShare=true&from=share_recording_detail&continueMode=true&componentName=rec-play&originRequestUrl=https%3A%2F%2Fus02web.zoom.us%2Frec%2Fshare%2FpN9Iuz6_BONuasyELQckpvrTFqYdWWtpo5eYtcwVkLQdYb2Nb0DQumksNGTrG1G2.JmMAiP656VH-2RvZ" target="_blank" rel="noopener noreferrer" class="text-primary underline decoration-2 underline-offset-4 hover:text-orange-600">Do&#39;s and Don&#39;ts When Crossing the U.S. Border (Feb 2026) - recording</a>.',
+      },
+    ],
+  },
+  {
     id: '59',
     slug: 'mississauga-cusma-compliance-workshop-2026',
     title: 'Mississauga CUSMA Compliance Workshop – Avoiding the U.S. Tariff Trap',
