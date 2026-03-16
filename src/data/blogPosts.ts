@@ -21,6 +21,67 @@ export interface BlogPostItem {
 
 export const blogPosts: BlogPostItem[] = [
   {
+    id: '61',
+    slug: 'importance-of-us-as-canadas-closest-neighbor-and-largest-trading-partner',
+    title: "Why the United States Remains Canada's Most Important Trading Partner",
+    author: 'BorderWorx Team',
+    date: '2026-03-15',
+    category: 'Cross-Border Trade',
+    excerpt:
+      'The U.S. is not just a neighbor - it is the engine behind Canadian trade. Understanding this relationship is critical for every business moving goods across the border.',
+    thumbnail: '/images/blog/importance-us.png',
+    tags: [
+      'Canada-US Trade',
+      'Cross-Border',
+      'Exports',
+      'Tariffs',
+      'Trade Policy',
+      'CUSMA',
+    ],
+    blocks: [
+      {
+        type: 'heading',
+        level: 2,
+        text: 'The Indispensable Canada–U.S. Trade Relationship',
+      },
+      {
+        type: 'text',
+        content:
+          "The United States is Canada's closest neighbor — separated by the world's longest undefended border — and by a wide margin, Canada's largest trading partner. Nearly 75% of all Canadian exports flow south to American markets, making the U.S. the single most critical destination for Canadian goods and services. This is not a coincidence; it is the result of deep geographic, cultural, and economic ties built over more than a century.",
+      },
+      {
+        type: 'image',
+        src: '/images/blog/importance-us.JPG',
+        alt: 'Cross-border freight moving between Canada and the United States',
+      },
+      {
+        type: 'text',
+        content:
+          'Two-way trade between Canada and the United States exceeds $1 trillion annually, supporting millions of jobs on both sides of the border. From energy and automotive parts to agriculture and technology, integrated supply chains mean that a disruption at the border is felt immediately by manufacturers, retailers, and consumers in both countries. For Canadian businesses, maintaining frictionless access to U.S. markets is not optional - it is existential.',
+      },
+      {
+        type: 'quote',
+        content:
+          'If the U.S. sneezes, Canada catches a cold. Our two economies are so intertwined that what happens at the border matters to every Canadian business, whether they ship internationally or not.',
+      },
+      {
+        type: 'text',
+        content:
+          'Under CUSMA (the Canada-United States-Mexico Agreement), Canadian exporters benefit from preferential tariff treatment on qualifying goods. However, compliance is not automatic - businesses must understand rules of origin, documentation requirements, and evolving tariff schedules to protect their margins. As trade tensions and policy changes continue to shape North American commerce, working with experienced customs brokers and trade compliance professionals has never been more important.',
+      },
+      {
+        type: 'text',
+        content:
+          'At BorderWorx, we specialize in helping Canadian businesses navigate the complexities of U.S. bound trade - from customs clearance and CUSMA compliance to documentation and duty optimization. The Canada - U.S. corridor is the backbone of our economy, and we are here to make sure your shipments cross it smoothly, every time.',
+      },
+      {
+        type: 'text',
+        content:
+          "This commitment goes beyond the border crossing itself. BorderWorx CEO Dean Wood recently traveled to Washington, D.C., alongside a group of Canadian business leaders to meet with U.S. officials and lobby directly for stronger, more predictable trade conditions between our two countries. Because when the rules are clear and fair, Canadian businesses win - and so do their American partners.",
+      },
+    ],
+  },
+  {
     id: '60',
     slug: 'dos-and-donts-when-crossing-the-us-border-feb-2026',
     title: 'Do\'s and Dont\'s when crossing US border - Mississauga Board of Trade webinar with CEO Dean Wood',
