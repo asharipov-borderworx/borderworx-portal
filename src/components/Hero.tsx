@@ -54,7 +54,7 @@ export default function Hero() {
           sizes="100vw"
         />
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
         
         {/* Persistent Thought Bubble - Right Side */}
         <div className="absolute inset-0 z-10">
