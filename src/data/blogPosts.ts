@@ -21,6 +21,147 @@ export interface BlogPostItem {
 
 export const blogPosts: BlogPostItem[] = [
   {
+    id: '62',
+    slug: 'why-canadian-companies-are-rethinking-where-their-us-inventory-lives',
+    title: 'Why Canadian Companies Are Re-Thinking Where Their U.S. Inventory Lives',
+    author: 'BorderWorx Team',
+    date: '2026-03-29',
+    category: 'Cross-Border Logistics',
+    excerpt:
+      'Staging inventory on the U.S. side of the border is no longer a tactical choice—it\'s a strategic advantage for Canadian manufacturers and e-commerce brands looking to win in the American market.',
+    tags: [
+      'Inventory Management',
+      'Cross-Border Logistics',
+      'E-Commerce',
+      'Duty Savings',
+      'U.S. Fulfillment',
+      'Supply Chain',
+      'First Sale',
+    ],
+    blocks: [
+      {
+        type: 'text',
+        content:
+          'At BorderWorx, we live at the Canada–U.S. border. Every day, we see where supply chains slow down, where costs quietly pile up, and where smart companies pull ahead. One shift is becoming impossible to ignore: staging inventory on the U.S. side of the border is no longer a tactical choice—it\'s a strategic advantage for both manufacturers and e-commerce brands.',
+      },
+      {
+        type: 'heading',
+        level: 2,
+        text: 'Duty Savings Start at the Border',
+      },
+      {
+        type: 'text',
+        content:
+          'For Canadian companies importing goods from overseas, duty costs are often treated as fixed and unavoidable. In reality, how and where inventory enters the United States can materially change the duty payable. By staging inventory on the U.S. side and correctly structuring transactions to use first sale pricing, duties can be calculated on the original factory cost rather than a higher intercompany resale price. Over time, this approach can generate meaningful savings, improve landed cost accuracy, and free up margin that would otherwise be lost at the border.',
+      },
+      {
+        type: 'image',
+        src: '/images/blog/rethinking-US-1.png',
+        alt: 'Canadian inventory staged on the U.S. side of the border for duty savings',
+      },
+      {
+        type: 'heading',
+        level: 2,
+        text: 'Close to the U.S. Market—Without Being Far From Home',
+      },
+      {
+        type: 'text',
+        content:
+          'Border locations such as Buffalo and Niagara Falls offer Canadian companies a rare balance: U.S. domestic access without operational distance. From the Toronto and GTA region, inventory is roughly 1.5 hours away, making same-day access realistic for leadership, planning, and oversight. This proximity allows companies to maintain control and visibility while still positioning product exactly where U.S. customers expect it to be.',
+      },
+      {
+        type: 'heading',
+        level: 2,
+        text: 'Faster Fulfillment With Domestic U.S. Shipping',
+      },
+      {
+        type: 'text',
+        content:
+          'Once inventory is staged in the United States, fulfillment changes immediately. Orders move as domestic U.S. shipments rather than cross-border parcels, eliminating customs delays, brokerage costs, and delivery uncertainty. Same-day pickup from couriers and mail services becomes routine, transit times shorten, and service consistency improves. For customers, the experience feels simple and reliable. For Canadian companies, it removes friction that often shows up only after the sale is made.',
+      },
+      {
+        type: 'image',
+        src: '/images/blog/rethinking-US-2.png',
+        alt: 'Domestic U.S. fulfillment from a border-area warehouse',
+      },
+      {
+        type: 'heading',
+        level: 2,
+        text: 'Longer Order Cut-Off Times That Drive Revenue',
+      },
+      {
+        type: 'text',
+        content:
+          'Shipping directly from Canada often forces early order cut-offs to account for border processing and carrier schedules. With U.S.-side inventory, those constraints largely disappear. Orders can be accepted later in the day, more shipments move out same day, and fewer orders roll into tomorrow\'s backlog. Over time, extended cut-off windows translate into more orders shipped, better peak-season performance, and higher daily throughput without adding labor or overhead.',
+      },
+      {
+        type: 'heading',
+        level: 2,
+        text: 'Returns That Are Easier for Customers and Cheaper for Brands',
+      },
+      {
+        type: 'text',
+        content:
+          'Returns are no longer an exception—they are part of doing business, particularly in e-commerce. When inventory is staged in the U.S., returns stay within the country, avoiding international freight, brokerage, and duty complications. This makes the process faster and less expensive while improving the customer experience. Products can be inspected, restocked, or redirected quickly, protecting both brand reputation and margin.',
+      },
+      {
+        type: 'heading',
+        level: 2,
+        text: 'What This Means for Manufacturers',
+      },
+      {
+        type: 'text',
+        content:
+          'For manufacturers, staging inventory on the U.S. side of the border creates stability and flexibility. It reduces duty exposure through first sale pricing, improves service levels to U.S. distributors and customers, and lowers the risk of border delays disrupting production or delivery commitments. It also supports mixed fulfillment models—bulk distribution, dealer networks, or direct-to-customer—without forcing a complete redesign of the supply chain.',
+      },
+      {
+        type: 'heading',
+        level: 2,
+        text: 'What This Means for E-Commerce Brands',
+      },
+      {
+        type: 'text',
+        content:
+          'For e-commerce brands, the benefits are immediate and highly visible. Faster delivery, same-day carrier pickups, later order cut-offs, and lower per-order landed costs allow Canadian brands to compete directly with U.S.-based sellers. Combined with simpler and more affordable returns, U.S.-side inventory staging helps close the experience gap that often holds Canadian brands back in the American market.',
+      },
+      {
+        type: 'heading',
+        level: 2,
+        text: 'Inventory Placement Is Now a Competitive Advantage',
+      },
+      {
+        type: 'text',
+        content:
+          'In logistics and e-commerce, speed and simplicity have become non-negotiable. Shipping individual orders across the border may work at small volumes, but it quickly becomes a bottleneck as sales grow. Companies gaining ground in the U.S. are not shipping farther—they are positioning inventory smarter, closer to their customers, and on the right side of the border.',
+      },
+      {
+        type: 'image',
+        src: '/images/blog/rethinking-US-3.png',
+        alt: 'BorderWorx warehouse operations near the Canada-U.S. border',
+      },
+      {
+        type: 'heading',
+        level: 2,
+        text: 'The BorderWorx Way',
+      },
+      {
+        type: 'text',
+        content:
+          'At BorderWorx, we don\'t see the border as a barrier—we see it as a tool. Staging inventory on the U.S. side allows Canadian companies to go further into the U.S. market, reach higher service expectations, be better with cost control, and ultimately change the world by reinvesting saved capital where it matters most. That\'s Buffalo Culture in action.',
+      },
+      {
+        type: 'quote',
+        content:
+          'Stay Curious. Be the Buffalo.',
+      },
+      {
+        type: 'text',
+        content:
+          'If you\'re a Canadian manufacturer or e-commerce brand selling into the U.S., let\'s talk about whether staging inventory at the border is the next smart move for your business.',
+      },
+    ],
+  },
+  {
     id: '61',
     slug: 'importance-of-us-as-canadas-closest-neighbor-and-largest-trading-partner',
     title: "Why the United States Remains Canada's Most Important Trading Partner",
