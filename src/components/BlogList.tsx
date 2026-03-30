@@ -89,7 +89,7 @@ function BlogCard({ post }: { post: BlogPostItem }) {
             <div>
               <p className="font-medium text-secondary text-sm">{post.author}</p>
               <p className="text-xs text-gray-500">
-                {new Date(post.date).toLocaleDateString('en-US', {
+                {new Date(post.date + 'T12:00:00').toLocaleDateString('en-US', {
                   month: 'short',
                   day: 'numeric',
                   year: 'numeric',

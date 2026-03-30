@@ -25,7 +25,7 @@ export const blogPosts: BlogPostItem[] = [
     slug: 'why-canadian-companies-are-rethinking-where-their-us-inventory-lives',
     title: 'Why Canadian Companies Are Re-Thinking Where Their U.S. Inventory Lives',
     author: 'BorderWorx Team',
-    date: '2026-03-30',
+    date: '2026-03-29',
     category: 'Cross-Border Logistics',
     excerpt:
       'Staging inventory on the U.S. side of the border is no longer a tactical choice - it\'s a strategic advantage for Canadian manufacturers and e-commerce brands looking to win in the American market.',
