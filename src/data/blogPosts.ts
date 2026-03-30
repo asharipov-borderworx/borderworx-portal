@@ -28,7 +28,7 @@ export const blogPosts: BlogPostItem[] = [
     date: '2026-03-30',
     category: 'Cross-Border Logistics',
     excerpt:
-      'Staging inventory on the U.S. side of the border is no longer a tactical choice—it\'s a strategic advantage for Canadian manufacturers and e-commerce brands looking to win in the American market.',
+      'Staging inventory on the U.S. side of the border is no longer a tactical choice - it\'s a strategic advantage for Canadian manufacturers and e-commerce brands looking to win in the American market.',
     tags: [
       'Inventory Management',
       'Cross-Border Logistics',
@@ -42,7 +42,7 @@ export const blogPosts: BlogPostItem[] = [
       {
         type: 'text',
         content:
-          'At BorderWorx, we live at the Canada–U.S. border. Every day, we see where supply chains slow down, where costs quietly pile up, and where smart companies pull ahead. One shift is becoming impossible to ignore: staging inventory on the U.S. side of the border is no longer a tactical choice—it\'s a strategic advantage for both manufacturers and e-commerce brands.',
+          'At BorderWorx, we live at the Canada - U.S. border. Every day, we see where supply chains slow down, where costs quietly pile up, and where smart companies pull ahead. One shift is becoming impossible to ignore: staging inventory on the U.S. side of the border is no longer a tactical choice—it\'s a strategic advantage for both manufacturers and e-commerce brands.',
       },
       {
         type: 'heading',
